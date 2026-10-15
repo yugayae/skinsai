@@ -1,0 +1,32 @@
+profile: smartphone_clinical
+description: "Close-up clinical smartphone profile trained on PAD-UFES-20 (CC BY 4.0)"
+target_modality: "smartphone_clinical"
+image_settings:
+  input_size: [3, 224, 224]
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+classes:
+  - id: bcc
+    name_en: "Basal cell carcinoma"
+    name_ru: "Базальноклеточная карцинома"
+  - id: scc
+    name_en: "Squamous cell carcinoma"
+    name_ru: "Плоскоклеточная карцинома"
+  - id: ack
+    name_en: "Actinic keratosis"
+    name_ru: "Актинический кератоз"
+  - id: sek
+    name_en: "Seborrheic keratosis"
+    name_ru: "Себорейный кератоз"
+  - id: mel
+    name_en: "Melanoma"
+    name_ru: "Меланома"
+  - id: nev
+    name_en: "Melanocytic nevus"
+    name_ru: "Меланоцитарный невус"
+thresholds:
+  tau_abstain: 0.40
+  tau_referral_melanoma: 0.20
+quality_filters:
+  min_dimension: 128
+  blur_laplacian_threshold: 8.0

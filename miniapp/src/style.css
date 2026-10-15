@@ -1,0 +1,700 @@
+/* ==========================================================================
+   SkinAI Mini App - Premium Medical Design System
+   ========================================================================== */
+
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Color Tokens - Light Mode */
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  --border-subtle: #e2e8f0;
+  --border-focus: #3b82f6;
+
+  /* Clinical Triage Colors */
+  --urgent-bg: #fef2f2;
+  --urgent-border: #fecaca;
+  --urgent-text: #991b1b;
+  --urgent-badge: #dc2626;
+  --urgent-glow: rgba(220, 38, 38, 0.2);
+
+  --routine-bg: #eff6ff;
+  --routine-border: #bfdbfe;
+  --routine-text: #1e40af;
+  --routine-badge: #2563eb;
+  --routine-glow: rgba(37, 99, 235, 0.2);
+
+  --monitoring-bg: #f0fdf4;
+  --monitoring-border: #bbf7d0;
+  --monitoring-text: #166534;
+  --monitoring-badge: #16a34a;
+  --monitoring-glow: rgba(22, 163, 74, 0.2);
+
+  --inconclusive-bg: #f8fafc;
+  --inconclusive-border: #cbd5e1;
+  --inconclusive-text: #334155;
+  --inconclusive-badge: #64748b;
+  --inconclusive-glow: rgba(100, 116, 139, 0.2);
+
+  --accent-primary: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-light: #e0f2fe;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Tokens (supports .dark class and Telegram dark theme) */
+html.dark {
+  --bg-primary: #0b0f17;
+  --bg-surface: #131a26;
+  --bg-surface-elevated: #1a2332;
+  --bg-surface-subtle: #1c2738;
+
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border-subtle: #1e293b;
+  --border-focus: #38bdf8;
+
+  --urgent-bg: #2d1215;
+  --urgent-border: #5c1d24;
+  --urgent-text: #fca5a5;
+  --urgent-badge: #ef4444;
+  --urgent-glow: rgba(239, 68, 68, 0.3);
+
+  --routine-bg: #0f233f;
+  --routine-border: #1d3d6b;
+  --routine-text: #93c5fd;
+  --routine-badge: #3b82f6;
+  --routine-glow: rgba(59, 130, 246, 0.3);
+
+  --monitoring-bg: #0d2818;
+  --monitoring-border: #174d2b;
+  --monitoring-text: #86efac;
+  --monitoring-badge: #22c55e;
+  --monitoring-glow: rgba(34, 197, 94, 0.3);
+
+  --inconclusive-bg: #1e293b;
+  --inconclusive-border: #334155;
+  --inconclusive-text: #cbd5e1;
+  --inconclusive-badge: #94a3b8;
+  --inconclusive-glow: rgba(148, 163, 184, 0.3);
+
+  --accent-primary: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-light: #082f49;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.5;
+  font-size: 15px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+#app {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 12px 14px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo-pulse {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  position: relative;
+}
+
+.brand-logo-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(6px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.brand-text h1 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--text-main) 60%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-text p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Language and Theme buttons */
+.lang-selector {
+  display: flex;
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn.active {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle-btn {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  background: var(--bg-surface-elevated);
+}
+
+/* ==========================================================================
+   Case Switcher Toolbar
+   ========================================================================== */
+
+.case-switcher-bar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.case-tab-btn {
+  flex: 1;
+  min-width: 110px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid transparent;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.case-tab-btn.active {
+  background-color: var(--accent-light);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Triage Banner Component (Decoupled Clinical Triage)
+   ========================================================================== */
+
+.triage-banner {
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 1.5px solid;
+}
+
+.triage-banner.tier-URGENT_REFERRAL {
+  background-color: var(--urgent-bg);
+  border-color: var(--urgent-border);
+  box-shadow: 0 6px 20px var(--urgent-glow);
+}
+
+.triage-banner.tier-ROUTINE_CONSULTATION {
+  background-color: var(--routine-bg);
+  border-color: var(--routine-border);
+  box-shadow: 0 6px 20px var(--routine-glow);
+}
+
+.triage-banner.tier-SELF_MONITORING {
+  background-color: var(--monitoring-bg);
+  border-color: var(--monitoring-border);
+  box-shadow: 0 6px 20px var(--monitoring-glow);
+}
+
+.triage-banner.tier-INCONCLUSIVE_QUALITY {
+  background-color: var(--inconclusive-bg);
+  border-color: var(--inconclusive-border);
+  box-shadow: 0 6px 20px var(--inconclusive-glow);
+}
+
+.triage-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.triage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.triage-banner.tier-URGENT_REFERRAL .triage-badge {
+  background-color: var(--urgent-badge);
+}
+
+.triage-banner.tier-ROUTINE_CONSULTATION .triage-badge {
+  background-color: var(--routine-badge);
+}
+
+.triage-banner.tier-SELF_MONITORING .triage-badge {
+  background-color: var(--monitoring-badge);
+}
+
+.triage-banner.tier-INCONCLUSIVE_QUALITY .triage-badge {
+  background-color: var(--inconclusive-badge);
+}
+
+.triage-badge-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: pulseAnimation 1.6s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+.triage-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.triage-banner.tier-URGENT_REFERRAL .triage-title { color: var(--urgent-text); }
+.triage-banner.tier-ROUTINE_CONSULTATION .triage-title { color: var(--routine-text); }
+.triage-banner.tier-SELF_MONITORING .triage-title { color: var(--monitoring-text); }
+.triage-banner.tier-INCONCLUSIVE_QUALITY .triage-title { color: var(--inconclusive-text); }
+
+.triage-desc {
+  font-size: 0.88rem;
+  opacity: 0.95;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Lesion Photo Card
+   ========================================================================== */
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-main);
+}
+
+.meta-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+}
+
+.lesion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.lesion-image-frame {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background-color: var(--bg-surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesion-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lesion-image-frame:hover img {
+  transform: scale(1.04);
+}
+
+.lesion-details-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 4px 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Glasgow 7-Point Checklist Card
+   ========================================================================== */
+
+.glasgow-score-meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-surface-subtle);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+}
+
+.score-badge {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  min-width: 48px;
+  text-align: center;
+}
+
+.score-progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background-color: var(--border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.score-progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, #10b981 0%, #f59e0b 60%, #ef4444 100%);
+  transition: width 0.4s ease;
+}
+
+.glasgow-group-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
+.checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--bg-surface-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.checklist-item.is-positive {
+  background-color: var(--urgent-bg);
+  border: 1px solid var(--urgent-border);
+}
+
+.checklist-text {
+  flex: 1;
+  margin-right: 12px;
+  color: var(--text-main);
+}
+
+.checklist-status {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.checklist-status.yes {
+  background-color: var(--urgent-badge);
+  color: #ffffff;
+}
+
+.checklist-status.no {
+  background-color: var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.glasgow-citation {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.4;
+  padding: 4px 6px;
+}
+
+/* ==========================================================================
+   ABCD Dermatologist Guide
+   ========================================================================== */
+
+.abcd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.abcd-card {
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abcd-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.abcd-letter {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.abcd-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.abcd-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Doctor Memo & Download Action
+   ========================================================================== */
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+}
+
+.question-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.question-bullet {
+  color: var(--accent-primary);
+  font-weight: 800;
+}
+
+.btn-primary-action {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primary-action:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Regulatory Non-Claim Notice
+   ========================================================================== */
+
+.disclaimer-card {
+  background-color: var(--bg-surface-subtle);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.disclaimer-title {
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   Responsive adjustments
+   ========================================================================== */
+
+@media (max-width: 400px) {
+  .abcd-grid {
+    grid-template-columns: 1fr;
+  }
+}

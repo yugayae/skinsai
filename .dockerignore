@@ -1,0 +1,47 @@
+# Git & VCS
+.git/
+.gitignore
+
+# Data directories (raw datasets must never enter images)
+data/
+data/raw/
+data/splits/
+data/processed/
+
+# Python cache & build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Tests & Coverage
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# IDE & OS files
+.idea/
+.vscode/
+.cursor/
+.gemini/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local environment & SQLite databases
+.env
+*.db
+*.sqlite3
+
+# Temporary docs and notes
+proposal_collegues.md

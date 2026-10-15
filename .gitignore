@@ -1,0 +1,75 @@
+# Environment and Virtualenvs
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Sensitive & Secret Configuration
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# Data & Model Weights (Storage Redirection)
+data/raw/
+data/cache/
+data/metadata/
+data/*.zip
+# Model Weights (Storage Redirection)
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# Temporary & Upload Buffers
+tmp/
+temp/
+*.log
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker / Deployment local state
+postgres_data/
+*.db
+*.sqlite
+
+# Node / Frontend
+node_modules/
+dist/
+miniapp/node_modules/
+miniapp/dist/
+
+# Consilium & Peer Review Working Files (Local Only)
+docs/claude.md
+docs/gpt.md
+docs/gemini.md
+docs/deepseek.md
+docs/grok.md
+proposal_collegues.md
+
+# AI Assistant & Internal Agent Configurations (Local Only)
+.agents/
+AGENTS.md
+.gemini/
+brain/
+scratch/
+
+
+

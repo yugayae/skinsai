@@ -1,0 +1,1 @@
+"""Bot locales package."""

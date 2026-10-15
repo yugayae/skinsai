@@ -1,0 +1,76 @@
+profile: smartphone_clinical
+version: 1.0.0
+backbone: efficientnet_b0
+classes:
+- bcc
+- scc
+- ack
+- sek
+- mel
+- nev
+input_size:
+- 3
+- 224
+- 224
+normalization:
+  mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  std:
+  - 0.229
+  - 0.224
+  - 0.225
+temperature: 1.5812816619873047
+thresholds:
+  tau_abstain: 0.4
+  tau_referral_melanoma: 0.2
+onnx_parity_max_diff: 3.6835670471191406e-05
+sha256: 9e66c808308df2a954b6da50bac262e6864997bfee7bb6dd79830da8de3faace
+metrics:
+  test_accuracy: 0.6445086705202312
+  test_macro_f1: 0.5081545420565879
+  val_best_f1: 0.5593184593184594
+  melanoma_recall: 0.25
+  test_report:
+    bcc:
+      precision: 0.732824427480916
+      recall: 0.7559055118110236
+      f1-score: 0.7441860465116279
+      support: 127.0
+    scc:
+      precision: 0.07407407407407407
+      recall: 0.07407407407407407
+      f1-score: 0.07407407407407407
+      support: 27.0
+    ack:
+      precision: 0.7578947368421053
+      recall: 0.6728971962616822
+      f1-score: 0.7128712871287128
+      support: 107.0
+    sek:
+      precision: 0.5454545454545454
+      recall: 0.6486486486486487
+      f1-score: 0.5925925925925926
+      support: 37.0
+    mel:
+      precision: 0.2857142857142857
+      recall: 0.25
+      f1-score: 0.26666666666666666
+      support: 8.0
+    nev:
+      precision: 0.6428571428571429
+      recall: 0.675
+      f1-score: 0.6585365853658537
+      support: 40.0
+    accuracy: 0.6445086705202312
+    macro avg:
+      precision: 0.5064698687371781
+      recall: 0.5127542384659048
+      f1-score: 0.5081545420565879
+      support: 346.0
+    weighted avg:
+      precision: 0.6483966974393057
+      recall: 0.6445086705202312
+      f1-score: 0.6450565846926081
+      support: 346.0

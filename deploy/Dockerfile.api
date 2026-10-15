@@ -1,0 +1,55 @@
+# SkinAI Inference API Container
+FROM python:3.11-slim
+
+# System setup
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    TMPDIR=/tmp
+
+WORKDIR /app
+
+# Install OS utilities
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install PyTorch CPU & ONNX Runtime first for optimal image layer caching
+RUN pip install --no-cache-dir \
+    torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu \
+    torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+
+# Install application dependencies
+COPY pyproject.toml .
+RUN pip install --no-cache-dir \
+    "fastapi>=0.111.0" \
+    "uvicorn[standard]>=0.29.0" \
+    "python-multipart>=0.0.9" \
+    "pydantic>=2.7.0" \
+    "pydantic-settings>=2.2.1" \
+    "sqlalchemy>=2.0.30" \
+    "psycopg2-binary>=2.9.9" \
+    "python-dotenv>=1.0.1" \
+    "onnxruntime>=1.17.3" \
+    "pillow>=10.3.0" \
+    "pyyaml>=6.0.1" \
+    "numpy>=1.26.4" \
+    "httpx>=0.27.0"
+
+# Copy source code and model artifacts
+COPY backend/ ./backend/
+COPY ml/ ./ml/
+COPY artifacts/ ./artifacts/
+COPY configs/ ./configs/
+
+# Non-root user for security
+RUN useradd -m -u 1000 skinai && chown -R skinai:skinai /app
+USER skinai
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "8000"]

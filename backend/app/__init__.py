@@ -1,0 +1,1 @@
+"""SkinAI backend application package."""
