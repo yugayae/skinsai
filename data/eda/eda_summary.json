@@ -1,0 +1,144 @@
+{
+  "dataset_name": "PAD-UFES-20 (Collection 406)",
+  "total_images": 2298,
+  "unique_patients": 1373,
+  "unique_lesions": 1891,
+  "class_distribution": {
+    "bcc": 845,
+    "ack": 730,
+    "nev": 244,
+    "sek": 235,
+    "scc": 192,
+    "mel": 52
+  },
+  "confirmation_methods": {
+    "nev": {
+      "single image expert consensus": 184,
+      "histopathology": 60
+    },
+    "ack": {
+      "single image expert consensus": 552,
+      "histopathology": 178
+    },
+    "sek": {
+      "single image expert consensus": 220,
+      "histopathology": 15
+    },
+    "bcc": {
+      "histopathology": 845
+    },
+    "scc": {
+      "histopathology": 192
+    },
+    "mel": {
+      "histopathology": 52
+    }
+  },
+  "anatomical_sites": {
+    "nev": {
+      "Trunk": 134,
+      "Upper extremity": 26,
+      "Head and neck": 61,
+      "Lower extremity": 23
+    },
+    "ack": {
+      "Trunk": 79,
+      "Upper extremity": 430,
+      "Head and neck": 199,
+      "Lower extremity": 22
+    },
+    "sek": {
+      "Trunk": 63,
+      "Head and neck": 120,
+      "Upper extremity": 42,
+      "Lower extremity": 10
+    },
+    "bcc": {
+      "Head and neck": 477,
+      "Trunk": 228,
+      "Upper extremity": 130,
+      "Lower extremity": 10
+    },
+    "scc": {
+      "Upper extremity": 68,
+      "Head and neck": 68,
+      "Lower extremity": 17,
+      "Trunk": 39
+    },
+    "mel": {
+      "Lower extremity": 7,
+      "Trunk": 21,
+      "Upper extremity": 14,
+      "Head and neck": 10
+    }
+  },
+  "age_statistics": {
+    "nev": {
+      "mean": 35.40983606557377,
+      "median": 35.0,
+      "min": 5.0,
+      "max": 80.0
+    },
+    "ack": {
+      "mean": 61.66438356164384,
+      "median": 60.0,
+      "min": 20.0,
+      "max": 85.0
+    },
+    "sek": {
+      "mean": 65.76595744680851,
+      "median": 65.0,
+      "min": 20.0,
+      "max": 85.0
+    },
+    "bcc": {
+      "mean": 63.06508875739645,
+      "median": 65.0,
+      "min": 20.0,
+      "max": 85.0
+    },
+    "scc": {
+      "mean": 68.59375,
+      "median": 70.0,
+      "min": 30.0,
+      "max": 85.0
+    },
+    "mel": {
+      "mean": 59.80769230769231,
+      "median": 60.0,
+      "min": 20.0,
+      "max": 85.0
+    }
+  },
+  "spatial_dimensions": {
+    "width_min": 147,
+    "width_max": 3096,
+    "width_median": 751.0,
+    "height_min": 147,
+    "height_max": 3096,
+    "height_median": 751.0,
+    "aspect_ratio_median": 1.0
+  },
+  "color_channel_statistics": {
+    "mean_rgb": [
+      0.6668507068530315,
+      0.5210308945409409,
+      0.4604403365543958
+    ],
+    "std_rgb": [
+      0.08874203097057873,
+      0.09980304822200778,
+      0.09866379983081171
+    ]
+  },
+  "blur_laplacian_statistics": {
+    "median_blur": 40.3534540515029,
+    "p10_blur": 12.083069240264997,
+    "p90_blur": 311.5895445933003
+  },
+  "outlier_counts": {
+    "failed_validation": 151,
+    "dark_images": 0,
+    "overexposed_images": 0
+  }
+}

@@ -1,0 +1,3658 @@
+{
+  "experiment_id": "EXP-017",
+  "title": "Technical Review P0 Diagnostics, De-Confounding & External DDI Audit",
+  "elapsed_seconds": 1663.85,
+  "section_1_data_integrity": {
+    "patient_overlap_train_val": 0,
+    "lesion_overlap_train_val": 0,
+    "embedding_near_duplicates_gt_0995": 0,
+    "cross_source_near_duplicates_gt_0990": 0,
+    "source_breakdown": {
+      "train": {
+        "pad_ufes_20": {
+          "n_images": 1834,
+          "n_patients": 1101,
+          "n_lesions": 1521,
+          "n_malignant": 861,
+          "n_benign": 392,
+          "class_counts": {
+            "nev": 203,
+            "ack": 581,
+            "sek": 189,
+            "bcc": 678,
+            "scc": 146,
+            "mel": 37
+          },
+          "metadata_completeness": {
+            "age_present": 1834,
+            "sex_present": 1192,
+            "site_present": 1834
+          }
+        },
+        "mednode": {
+          "n_images": 136,
+          "n_patients": 136,
+          "n_lesions": 136,
+          "n_malignant": 59,
+          "n_benign": 77,
+          "class_counts": {
+            "mel": 59,
+            "nev": 77
+          },
+          "metadata_completeness": {
+            "age_present": 0,
+            "sex_present": 0,
+            "site_present": 0
+          }
+        },
+        "isic_clinical": {
+          "n_images": 1040,
+          "n_patients": 102,
+          "n_lesions": 1019,
+          "n_malignant": 50,
+          "n_benign": 990,
+          "class_counts": {
+            "scc": 14,
+            "mel": 17,
+            "bcc": 19,
+            "nev": 7,
+            "unmapped": 983
+          },
+          "metadata_completeness": {
+            "age_present": 1033,
+            "sex_present": 1033,
+            "site_present": 994
+          }
+        }
+      },
+      "val": {
+        "pad_ufes_20": {
+          "n_images": 464,
+          "n_patients": 272,
+          "n_lesions": 370,
+          "n_malignant": 228,
+          "n_benign": 87,
+          "class_counts": {
+            "sek": 46,
+            "ack": 149,
+            "nev": 41,
+            "bcc": 167,
+            "scc": 46,
+            "mel": 15
+          },
+          "metadata_completeness": {
+            "age_present": 464,
+            "sex_present": 302,
+            "site_present": 464
+          }
+        },
+        "mednode": {
+          "n_images": 34,
+          "n_patients": 34,
+          "n_lesions": 34,
+          "n_malignant": 11,
+          "n_benign": 23,
+          "class_counts": {
+            "mel": 11,
+            "nev": 23
+          },
+          "metadata_completeness": {
+            "age_present": 0,
+            "sex_present": 0,
+            "site_present": 0
+          }
+        },
+        "isic_clinical": {
+          "n_images": 259,
+          "n_patients": 29,
+          "n_lesions": 251,
+          "n_malignant": 14,
+          "n_benign": 245,
+          "class_counts": {
+            "scc": 1,
+            "bcc": 10,
+            "mel": 3,
+            "nev": 8,
+            "unmapped": 237
+          },
+          "metadata_completeness": {
+            "age_present": 259,
+            "sex_present": 259,
+            "site_present": 245
+          }
+        }
+      }
+    }
+  },
+  "section_2_shortcut_probes": {
+    "source_probes": {
+      "clinical_12d_raw": {
+        "accuracy": 0.7595772787318362,
+        "balanced_accuracy": 0.8237640349709315
+      },
+      "clinical_7d_deconfounded": {
+        "accuracy": 0.7873183619550859,
+        "balanced_accuracy": 0.8530655039275729
+      },
+      "dinov2_384d": {
+        "accuracy": 0.9735799207397622,
+        "balanced_accuracy": 0.8976076917253387
+      },
+      "biomedclip_512d": {
+        "accuracy": 0.9484808454425363,
+        "balanced_accuracy": 0.8623755420155015
+      }
+    },
+    "metadata_only_classifier": {
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.8136371478762783,
+        "triage_roc_auc_no_ack": 0.7915882647664645,
+        "consensus_roc_auc": 0.8141704310182571,
+        "brier_score": 0.1707713675777695,
+        "ece": 0.11135485564064275,
+        "triage_sens": 0.9881422924901185,
+        "triage_sens_wilson_95": [
+          0.9657235478885043,
+          0.9959592589088578
+        ],
+        "triage_spec": 0.37103174603174605,
+        "triage_spec_wilson_95": [
+          0.32998109968567163,
+          0.41403349041859966
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.32341269841269843,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.514125248269685,
+        "balanced_acc": 0.554119720311471,
+        "per_class_f1": {
+          "ack": 0.5069124423963134,
+          "bcc": 0.7338935574229691,
+          "mel": 0.35,
+          "nev": 0.5942028985507246,
+          "scc": 0.33093525179856115,
+          "sek": 0.5688073394495413
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.3691275167785235,
+            "tp": 55,
+            "fn": 94,
+            "n": 149,
+            "wilson_95": [
+              0.2958418594058716,
+              0.44899174604132086
+            ]
+          },
+          "bcc": {
+            "recall": 0.7401129943502824,
+            "tp": 131,
+            "fn": 46,
+            "n": 177,
+            "wilson_95": [
+              0.6708889234846158,
+              0.7991360801603891
+            ]
+          },
+          "mel": {
+            "recall": 0.4827586206896552,
+            "tp": 14,
+            "fn": 15,
+            "n": 29,
+            "wilson_95": [
+              0.3138612011494852,
+              0.6556894670759819
+            ]
+          },
+          "nev": {
+            "recall": 0.5694444444444444,
+            "tp": 41,
+            "fn": 31,
+            "n": 72,
+            "wilson_95": [
+              0.4544332906472013,
+              0.677420740313394
+            ]
+          },
+          "scc": {
+            "recall": 0.48936170212765956,
+            "tp": 23,
+            "fn": 24,
+            "n": 47,
+            "wilson_95": [
+              0.35275580556720865,
+              0.6275752012447985
+            ]
+          },
+          "sek": {
+            "recall": 0.6739130434782609,
+            "tp": 31,
+            "fn": 15,
+            "n": 46,
+            "wilson_95": [
+              0.52967762254604,
+              0.7913403691538146
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9655172413793104,
+          "tp": 28,
+          "fn": 1,
+          "n": 29,
+          "wilson_95": [
+            0.8282451896501446,
+            0.993886768262247
+          ]
+        }
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.9006095747844186,
+        "triage_roc_auc_no_ack": 0.9713651945956846,
+        "consensus_roc_auc": 0.9047167707404103,
+        "brier_score": 0.12791659094896293,
+        "ece": 0.09744035727645631,
+        "triage_sens": 0.9868421052631579,
+        "triage_sens_wilson_95": [
+          0.9620357630423761,
+          0.9955152120305217
+        ],
+        "triage_spec": 0.6949152542372882,
+        "triage_spec_wilson_95": [
+          0.6334376299791122,
+          0.7501491212174645
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.690677966101695,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.4838491638556832,
+        "balanced_acc": 0.5275502058482525,
+        "per_class_f1": {
+          "ack": 0.5069124423963134,
+          "bcc": 0.7478260869565218,
+          "mel": 0.08695652173913043,
+          "nev": 0.6666666666666666,
+          "scc": 0.32592592592592595,
+          "sek": 0.5688073394495413
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.3691275167785235,
+            "tp": 55,
+            "fn": 94,
+            "n": 149,
+            "wilson_95": [
+              0.2958418594058716,
+              0.44899174604132086
+            ]
+          },
+          "bcc": {
+            "recall": 0.7724550898203593,
+            "tp": 129,
+            "fn": 38,
+            "n": 167,
+            "wilson_95": [
+              0.7031643114094136,
+              0.8294933288834995
+            ]
+          },
+          "mel": {
+            "recall": 0.06666666666666667,
+            "tp": 1,
+            "fn": 14,
+            "n": 15,
+            "wilson_95": [
+              0.011866929446118724,
+              0.29816469281856794
+            ]
+          },
+          "nev": {
+            "recall": 0.8048780487804879,
+            "tp": 33,
+            "fn": 8,
+            "n": 41,
+            "wilson_95": [
+              0.6598644768955672,
+              0.8976554915765443
+            ]
+          },
+          "scc": {
+            "recall": 0.4782608695652174,
+            "tp": 22,
+            "fn": 24,
+            "n": 46,
+            "wilson_95": [
+              0.34124714831108593,
+              0.6186256027264323
+            ]
+          },
+          "sek": {
+            "recall": 0.6739130434782609,
+            "tp": 31,
+            "fn": 15,
+            "n": 46,
+            "wilson_95": [
+              0.52967762254604,
+              0.7913403691538146
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9333333333333333,
+          "tp": 14,
+          "fn": 1,
+          "n": 15,
+          "wilson_95": [
+            0.7018353071814319,
+            0.9881330705538812
+          ]
+        }
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.5,
+        "triage_roc_auc_no_ack": 0.5,
+        "consensus_roc_auc": 0.5,
+        "brier_score": 0.274330991009635,
+        "ece": 0.23552677028683128,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7411678130341213,
+          1.0
+        ],
+        "triage_spec": 0.0,
+        "triage_spec_wilson_95": [
+          0.0,
+          0.1431161198281251
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.0,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.24444444444444444,
+        "balanced_acc": 0.5,
+        "per_class_f1": {
+          "mel": 0.4888888888888889,
+          "nev": 0.0
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 1.0,
+            "tp": 11,
+            "fn": 0,
+            "n": 11,
+            "wilson_95": [
+              0.7411678130341213,
+              1.0
+            ]
+          },
+          "nev": {
+            "recall": 0.0,
+            "tp": 0,
+            "fn": 23,
+            "n": 23,
+            "wilson_95": [
+              0.0,
+              0.1431161198281251
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 11,
+          "fn": 0,
+          "n": 11,
+          "wilson_95": [
+            0.7411678130341213,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "section_3_modality_and_source_breakdown": {
+    "img_only_dino": {
+      "seed_macro_f1_global_mean": 0.6700002656155242,
+      "seed_macro_f1_global_std": 0.009880258028641174,
+      "seed_macro_f1_pad_mean": 0.6494510376509788,
+      "seed_macro_f1_pad_std": 0.012781000346780595,
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.8912180814354727,
+        "triage_roc_auc_no_ack": 0.9896565161721316,
+        "consensus_roc_auc": 0.9374568668046928,
+        "brier_score": 0.16234294174013517,
+        "ece": 0.15997083720848299,
+        "triage_sens": 0.9960474308300395,
+        "triage_sens_wilson_95": [
+          0.9779546860097763,
+          0.9993019314239808
+        ],
+        "triage_spec": 0.5833333333333334,
+        "triage_spec_wilson_95": [
+          0.5398202076895816,
+          0.6255857494738123
+        ],
+        "consensus_sens": 0.9960474308300395,
+        "consensus_spec": 0.21626984126984128,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6831059279096304,
+        "balanced_acc": 0.6720144995984899,
+        "per_class_f1": {
+          "ack": 0.7727272727272727,
+          "bcc": 0.7422096317280453,
+          "mel": 0.6274509803921569,
+          "nev": 0.8551724137931035,
+          "scc": 0.3010752688172043,
+          "sek": 0.8
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7986577181208053,
+            "tp": 119,
+            "fn": 30,
+            "n": 149,
+            "wilson_95": [
+              0.727136523894195,
+              0.8551662739314428
+            ]
+          },
+          "bcc": {
+            "recall": 0.7401129943502824,
+            "tp": 131,
+            "fn": 46,
+            "n": 177,
+            "wilson_95": [
+              0.6708889234846158,
+              0.7991360801603891
+            ]
+          },
+          "mel": {
+            "recall": 0.5517241379310345,
+            "tp": 16,
+            "fn": 13,
+            "n": 29,
+            "wilson_95": [
+              0.37547995974588105,
+              0.7158680355777178
+            ]
+          },
+          "nev": {
+            "recall": 0.8611111111111112,
+            "tp": 62,
+            "fn": 10,
+            "n": 72,
+            "wilson_95": [
+              0.7628683604794805,
+              0.9227726005156155
+            ]
+          },
+          "scc": {
+            "recall": 0.2978723404255319,
+            "tp": 14,
+            "fn": 33,
+            "n": 47,
+            "wilson_95": [
+              0.18651268909080865,
+              0.43977644033732555
+            ]
+          },
+          "sek": {
+            "recall": 0.782608695652174,
+            "tp": 36,
+            "fn": 10,
+            "n": 46,
+            "wilson_95": [
+              0.644263434364248,
+              0.8773908021480156
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.8275862068965517,
+          "tp": 24,
+          "fn": 5,
+          "n": 29,
+          "wilson_95": [
+            0.6545160001358987,
+            0.9240213035802285
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6345167455265063,
+          0.7264707367715109
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8440558048756859,
+          0.9258351401010749
+        ]
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.7897896223609873,
+        "triage_roc_auc_no_ack": 0.9708610606977214,
+        "consensus_roc_auc": 0.8901650312221231,
+        "brier_score": 0.25006724201632147,
+        "ece": 0.23300409837272665,
+        "triage_sens": 0.9956140350877193,
+        "triage_sens_wilson_95": [
+          0.9755787985232646,
+          0.9992253472716676
+        ],
+        "triage_spec": 0.1694915254237288,
+        "triage_spec_wilson_95": [
+          0.12700874219317496,
+          0.2225615492561082
+        ],
+        "consensus_sens": 0.9956140350877193,
+        "consensus_spec": 0.1694915254237288,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6677605023955157,
+        "balanced_acc": 0.6504004886381876,
+        "per_class_f1": {
+          "ack": 0.7752442996742671,
+          "bcc": 0.7559523809523809,
+          "mel": 0.5454545454545454,
+          "nev": 0.8275862068965517,
+          "scc": 0.3023255813953488,
+          "sek": 0.8
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7986577181208053,
+            "tp": 119,
+            "fn": 30,
+            "n": 149,
+            "wilson_95": [
+              0.727136523894195,
+              0.8551662739314428
+            ]
+          },
+          "bcc": {
+            "recall": 0.7604790419161677,
+            "tp": 127,
+            "fn": 40,
+            "n": 167,
+            "wilson_95": [
+              0.6903566696600316,
+              0.8188874479826436
+            ]
+          },
+          "mel": {
+            "recall": 0.4,
+            "tp": 6,
+            "fn": 9,
+            "n": 15,
+            "wilson_95": [
+              0.19824525798026454,
+              0.6425312702346633
+            ]
+          },
+          "nev": {
+            "recall": 0.8780487804878049,
+            "tp": 36,
+            "fn": 5,
+            "n": 41,
+            "wilson_95": [
+              0.7445582124080165,
+              0.9467665484974016
+            ]
+          },
+          "scc": {
+            "recall": 0.2826086956521739,
+            "tp": 13,
+            "fn": 33,
+            "n": 46,
+            "wilson_95": [
+              0.17324220176021216,
+              0.4254853086149695
+            ]
+          },
+          "sek": {
+            "recall": 0.782608695652174,
+            "tp": 36,
+            "fn": 10,
+            "n": 46,
+            "wilson_95": [
+              0.644263434364248,
+              0.8773908021480156
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.7333333333333333,
+          "tp": 11,
+          "fn": 4,
+          "n": 15,
+          "wilson_95": [
+            0.4804961634927697,
+            0.891025270672399
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6052850158704025,
+          0.7202872910040014
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7415246288721903,
+          0.8365050361516115
+        ]
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.9288537549407115,
+        "triage_roc_auc_no_ack": 0.9288537549407115,
+        "consensus_roc_auc": 0.9288537549407114,
+        "brier_score": 0.12130059461871236,
+        "ece": 0.17077117413282397,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7411678130341213,
+          1.0
+        ],
+        "triage_spec": 0.4782608695652174,
+        "triage_spec_wilson_95": [
+          0.29237189265791597,
+          0.670372286465046
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.4782608695652174,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.8054968287526427,
+        "balanced_acc": 0.7766798418972332,
+        "per_class_f1": {
+          "mel": 0.7272727272727273,
+          "nev": 0.8837209302325582
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.7272727272727273,
+            "tp": 8,
+            "fn": 3,
+            "n": 11,
+            "wilson_95": [
+              0.43435525109377143,
+              0.9025392093762838
+            ]
+          },
+          "nev": {
+            "recall": 0.8260869565217391,
+            "tp": 19,
+            "fn": 4,
+            "n": 23,
+            "wilson_95": [
+              0.6286239740391674,
+              0.9302133391164032
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9090909090909091,
+          "tp": 10,
+          "fn": 1,
+          "n": 11,
+          "wilson_95": [
+            0.6226422482681641,
+            0.9837677805779349
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6607108417878262,
+          0.9374798678024483
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8249793956043957,
+          1.0
+        ]
+      },
+      "isic_clinical_only": {
+        "n_images": 259,
+        "n_patients": 29,
+        "n_malignant": 14,
+        "n_benign": 245,
+        "n_labeled_subtypes": 22,
+        "triage_roc_auc": 1.0,
+        "triage_roc_auc_no_ack": 1.0,
+        "consensus_roc_auc": 0.9985422740524782,
+        "brier_score": 0.010572148203370402,
+        "ece": 0.06827754875407716,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7846898842098433,
+          1.0
+        ],
+        "triage_spec": 0.9918367346938776,
+        "triage_spec_wilson_95": [
+          0.9707297233603044,
+          0.9977584709665256
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.23673469387755103,
+        "present_classes": [
+          "bcc",
+          "mel",
+          "nev",
+          "scc"
+        ],
+        "macro_f1_present": 0.5904761904761904,
+        "balanced_acc": 0.7354166666666666,
+        "per_class_f1": {
+          "bcc": 0.5714285714285714,
+          "mel": 0.5714285714285714,
+          "nev": 0.9333333333333333,
+          "scc": 0.2857142857142857
+        },
+        "per_class_recall_argmax": {
+          "bcc": {
+            "recall": 0.4,
+            "tp": 4,
+            "fn": 6,
+            "n": 10,
+            "wilson_95": [
+              0.16818063378760717,
+              0.687325763134297
+            ]
+          },
+          "mel": {
+            "recall": 0.6666666666666666,
+            "tp": 2,
+            "fn": 1,
+            "n": 3,
+            "wilson_95": [
+              0.20766011478025503,
+              0.9385078750038494
+            ]
+          },
+          "nev": {
+            "recall": 0.875,
+            "tp": 7,
+            "fn": 1,
+            "n": 8,
+            "wilson_95": [
+              0.5291125505820761,
+              0.9775824440946951
+            ]
+          },
+          "scc": {
+            "recall": 1.0,
+            "tp": 1,
+            "fn": 0,
+            "n": 1,
+            "wilson_95": [
+              0.20654998073085312,
+              1.0
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 3,
+          "fn": 0,
+          "n": 3,
+          "wilson_95": [
+            0.4385039693523135,
+            0.9999999999999999
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.26043896505970804,
+          0.7495535714285714
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9999999999999999,
+          1.0
+        ]
+      }
+    },
+    "img_only_biomed": {
+      "seed_macro_f1_global_mean": 0.607508363744574,
+      "seed_macro_f1_global_std": 0.010885373688392862,
+      "seed_macro_f1_pad_mean": 0.5795619945245335,
+      "seed_macro_f1_pad_std": 0.014100200019564146,
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.883924650228998,
+        "triage_roc_auc_no_ack": 0.9830429215609864,
+        "consensus_roc_auc": 0.9264853503983939,
+        "brier_score": 0.1673848320205547,
+        "ece": 0.16015260268489942,
+        "triage_sens": 0.9802371541501976,
+        "triage_sens_wilson_95": [
+          0.9545793377275046,
+          0.9915296584334633
+        ],
+        "triage_spec": 0.6071428571428571,
+        "triage_spec_wilson_95": [
+          0.5638484451104557,
+          0.6488163569567649
+        ],
+        "consensus_sens": 0.9841897233201581,
+        "consensus_spec": 0.44246031746031744,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6228621243442097,
+        "balanced_acc": 0.6169884028961236,
+        "per_class_f1": {
+          "ack": 0.7152317880794702,
+          "bcc": 0.7282321899736148,
+          "mel": 0.5882352941176471,
+          "nev": 0.7972027972027972,
+          "scc": 0.17142857142857143,
+          "sek": 0.7368421052631579
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7248322147651006,
+            "tp": 108,
+            "fn": 41,
+            "n": 149,
+            "wilson_95": [
+              0.6481544658876557,
+              0.7902083144979368
+            ]
+          },
+          "bcc": {
+            "recall": 0.7796610169491526,
+            "tp": 138,
+            "fn": 39,
+            "n": 177,
+            "wilson_95": [
+              0.7130207204381214,
+              0.8344201661601787
+            ]
+          },
+          "mel": {
+            "recall": 0.5172413793103449,
+            "tp": 15,
+            "fn": 14,
+            "n": 29,
+            "wilson_95": [
+              0.3443105329240182,
+              0.686138798850515
+            ]
+          },
+          "nev": {
+            "recall": 0.7916666666666666,
+            "tp": 57,
+            "fn": 15,
+            "n": 72,
+            "wilson_95": [
+              0.684307606070957,
+              0.8694793239635434
+            ]
+          },
+          "scc": {
+            "recall": 0.1276595744680851,
+            "tp": 6,
+            "fn": 41,
+            "n": 47,
+            "wilson_95": [
+              0.05984613205826626,
+              0.2517391063619811
+            ]
+          },
+          "sek": {
+            "recall": 0.7608695652173914,
+            "tp": 35,
+            "fn": 11,
+            "n": 46,
+            "wilson_95": [
+              0.6206489215567558,
+              0.8608780659930261
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.7931034482758621,
+          "tp": 23,
+          "fn": 6,
+          "n": 29,
+          "wilson_95": [
+            0.6160994900449552,
+            0.901539150122106
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.5670787427545355,
+          0.6693610080144727
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.838253881831321,
+          0.9195029922060817
+        ]
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.7776167112696997,
+        "triage_roc_auc_no_ack": 0.9683908045977011,
+        "consensus_roc_auc": 0.8774531668153435,
+        "brier_score": 0.251057304600502,
+        "ece": 0.23098223266223894,
+        "triage_sens": 0.9868421052631579,
+        "triage_sens_wilson_95": [
+          0.9620357630423761,
+          0.9955152120305217
+        ],
+        "triage_spec": 0.2838983050847458,
+        "triage_spec_wilson_95": [
+          0.2301917421941,
+          0.3445272945227391
+        ],
+        "consensus_sens": 0.9912280701754386,
+        "consensus_spec": 0.2796610169491525,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.5905247341602337,
+        "balanced_acc": 0.5811102806900403,
+        "per_class_f1": {
+          "ack": 0.7152317880794702,
+          "bcc": 0.724233983286908,
+          "mel": 0.45454545454545453,
+          "nev": 0.7529411764705882,
+          "scc": 0.15151515151515152,
+          "sek": 0.7446808510638298
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7248322147651006,
+            "tp": 108,
+            "fn": 41,
+            "n": 149,
+            "wilson_95": [
+              0.6481544658876557,
+              0.7902083144979368
+            ]
+          },
+          "bcc": {
+            "recall": 0.7784431137724551,
+            "tp": 130,
+            "fn": 37,
+            "n": 167,
+            "wilson_95": [
+              0.70959427650505,
+              0.834770125112982
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 5,
+            "fn": 10,
+            "n": 15,
+            "wilson_95": [
+              0.15176349193779712,
+              0.5828640550870823
+            ]
+          },
+          "nev": {
+            "recall": 0.7804878048780488,
+            "tp": 32,
+            "fn": 9,
+            "n": 41,
+            "wilson_95": [
+              0.6329502677163366,
+              0.8799681032780058
+            ]
+          },
+          "scc": {
+            "recall": 0.10869565217391304,
+            "tp": 5,
+            "fn": 41,
+            "n": 46,
+            "wilson_95": [
+              0.047331535777106915,
+              0.23037798289822037
+            ]
+          },
+          "sek": {
+            "recall": 0.7608695652173914,
+            "tp": 35,
+            "fn": 11,
+            "n": 46,
+            "wilson_95": [
+              0.6206489215567558,
+              0.8608780659930261
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.6666666666666666,
+          "tp": 10,
+          "fn": 5,
+          "n": 15,
+          "wilson_95": [
+            0.4171359449129176,
+            0.8482365080622029
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.5279827797220535,
+          0.64118004993061
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7285906189731826,
+          0.8219587191034579
+        ]
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.8260869565217391,
+        "triage_roc_auc_no_ack": 0.8260869565217391,
+        "consensus_roc_auc": 0.8458498023715415,
+        "brier_score": 0.17667801026738564,
+        "ece": 0.24963076478418184,
+        "triage_sens": 0.9090909090909091,
+        "triage_sens_wilson_95": [
+          0.6226422482681641,
+          0.9837677805779349
+        ],
+        "triage_spec": 0.30434782608695654,
+        "triage_spec_wilson_95": [
+          0.15604046185489862,
+          0.5086571502517591
+        ],
+        "consensus_sens": 0.9090909090909091,
+        "consensus_spec": 0.30434782608695654,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.7746341463414634,
+        "balanced_acc": 0.7786561264822134,
+        "per_class_f1": {
+          "mel": 0.72,
+          "nev": 0.8292682926829268
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.8181818181818182,
+            "tp": 9,
+            "fn": 2,
+            "n": 11,
+            "wilson_95": [
+              0.5230200548948629,
+              0.9486321897632144
+            ]
+          },
+          "nev": {
+            "recall": 0.7391304347826086,
+            "tp": 17,
+            "fn": 6,
+            "n": 23,
+            "wilson_95": [
+              0.5353003783492037,
+              0.8745136512982147
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 11,
+          "fn": 0,
+          "n": 11,
+          "wilson_95": [
+            0.7411678130341213,
+            1.0
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6328887566668578,
+          0.8957808000822707
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.6509724650349651,
+          0.970260989010989
+        ]
+      },
+      "isic_clinical_only": {
+        "n_images": 259,
+        "n_patients": 29,
+        "n_malignant": 14,
+        "n_benign": 245,
+        "n_labeled_subtypes": 22,
+        "triage_roc_auc": 0.9734693877551021,
+        "triage_roc_auc_no_ack": 0.9734693877551021,
+        "consensus_roc_auc": 0.9370262390670554,
+        "brier_score": 0.01626515890284116,
+        "ece": 0.04125038609196321,
+        "triage_sens": 0.9285714285714286,
+        "triage_sens_wilson_95": [
+          0.6853135809849588,
+          0.9872777483377643
+        ],
+        "triage_spec": 0.9469387755102041,
+        "triage_spec_wilson_95": [
+          0.9113466882279806,
+          0.9687317954134127
+        ],
+        "consensus_sens": 0.9285714285714286,
+        "consensus_spec": 0.6122448979591837,
+        "present_classes": [
+          "bcc",
+          "mel",
+          "nev",
+          "scc"
+        ],
+        "macro_f1_present": 0.707516339869281,
+        "balanced_acc": 0.7833333333333333,
+        "per_class_f1": {
+          "bcc": 0.8888888888888888,
+          "mel": 0.5,
+          "nev": 0.9411764705882353,
+          "scc": 0.5
+        },
+        "per_class_recall_argmax": {
+          "bcc": {
+            "recall": 0.8,
+            "tp": 8,
+            "fn": 2,
+            "n": 10,
+            "wilson_95": [
+              0.4901630938359447,
+              0.9433177153983432
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 1,
+            "fn": 2,
+            "n": 3,
+            "wilson_95": [
+              0.06149212499615059,
+              0.792339885219745
+            ]
+          },
+          "nev": {
+            "recall": 1.0,
+            "tp": 8,
+            "fn": 0,
+            "n": 8,
+            "wilson_95": [
+              0.6755933262356948,
+              1.0
+            ]
+          },
+          "scc": {
+            "recall": 1.0,
+            "tp": 1,
+            "fn": 0,
+            "n": 1,
+            "wilson_95": [
+              0.20654998073085312,
+              1.0
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.6666666666666666,
+          "tp": 2,
+          "fn": 1,
+          "n": 3,
+          "wilson_95": [
+            0.20766011478025503,
+            0.9385078750038494
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.32727272727272727,
+          0.9098258053221288
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9192307422969188,
+          1.0
+        ]
+      }
+    },
+    "img_only_consilium": {
+      "seed_macro_f1_global_mean": 0.6653179604247661,
+      "seed_macro_f1_global_std": 0.012587545474371527,
+      "seed_macro_f1_pad_mean": 0.649116293186611,
+      "seed_macro_f1_pad_std": 0.01237602361309706,
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.9044874207917687,
+        "triage_roc_auc_no_ack": 0.992016923676446,
+        "consensus_roc_auc": 0.9471422297509254,
+        "brier_score": 0.15670805741663676,
+        "ece": 0.160061758429875,
+        "triage_sens": 0.9960474308300395,
+        "triage_sens_wilson_95": [
+          0.9779546860097763,
+          0.9993019314239808
+        ],
+        "triage_spec": 0.5714285714285714,
+        "triage_spec_wilson_95": [
+          0.5278445333710956,
+          0.613932001340385
+        ],
+        "consensus_sens": 0.9960474308300395,
+        "consensus_spec": 0.29563492063492064,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6749386721163031,
+        "balanced_acc": 0.6620863049127258,
+        "per_class_f1": {
+          "ack": 0.7702265372168284,
+          "bcc": 0.7700534759358288,
+          "mel": 0.6122448979591837,
+          "nev": 0.8356164383561644,
+          "scc": 0.2571428571428571,
+          "sek": 0.8043478260869565
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7986577181208053,
+            "tp": 119,
+            "fn": 30,
+            "n": 149,
+            "wilson_95": [
+              0.727136523894195,
+              0.8551662739314428
+            ]
+          },
+          "bcc": {
+            "recall": 0.8135593220338984,
+            "tp": 144,
+            "fn": 33,
+            "n": 177,
+            "wilson_95": [
+              0.7497465116556538,
+              0.8640508460454704
+            ]
+          },
+          "mel": {
+            "recall": 0.5172413793103449,
+            "tp": 15,
+            "fn": 14,
+            "n": 29,
+            "wilson_95": [
+              0.3443105329240182,
+              0.686138798850515
+            ]
+          },
+          "nev": {
+            "recall": 0.8472222222222222,
+            "tp": 61,
+            "fn": 11,
+            "n": 72,
+            "wilson_95": [
+              0.7467773413313145,
+              0.9124928134716622
+            ]
+          },
+          "scc": {
+            "recall": 0.19148936170212766,
+            "tp": 9,
+            "fn": 38,
+            "n": 47,
+            "wilson_95": [
+              0.10415945653140181,
+              0.3254397410168031
+            ]
+          },
+          "sek": {
+            "recall": 0.8043478260869565,
+            "tp": 37,
+            "fn": 9,
+            "n": 46,
+            "wilson_95": [
+              0.6682877192379457,
+              0.8934937662367997
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.8620689655172413,
+          "tp": 25,
+          "fn": 4,
+          "n": 29,
+          "wilson_95": [
+            0.6944104654957489,
+            0.9450255017694443
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6220237976218814,
+          0.7196226153828247
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8623408345822193,
+          0.9350994968655044
+        ]
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.819078947368421,
+        "triage_roc_auc_no_ack": 0.9830611010284331,
+        "consensus_roc_auc": 0.9050884626821291,
+        "brier_score": 0.239336976426341,
+        "ece": 0.2319931985874628,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.9834307311559493,
+          0.9999999999999999
+        ],
+        "triage_spec": 0.1906779661016949,
+        "triage_spec_wilson_95": [
+          0.1456700268693123,
+          0.24559447666655526
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.1906779661016949,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6505179241656509,
+        "balanced_acc": 0.6317096271656572,
+        "per_class_f1": {
+          "ack": 0.7727272727272727,
+          "bcc": 0.7752808988764045,
+          "mel": 0.5,
+          "nev": 0.8045977011494253,
+          "scc": 0.24615384615384617,
+          "sek": 0.8043478260869565
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7986577181208053,
+            "tp": 119,
+            "fn": 30,
+            "n": 149,
+            "wilson_95": [
+              0.727136523894195,
+              0.8551662739314428
+            ]
+          },
+          "bcc": {
+            "recall": 0.8263473053892215,
+            "tp": 138,
+            "fn": 29,
+            "n": 167,
+            "wilson_95": [
+              0.7617340457221672,
+              0.8762844464968166
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 5,
+            "fn": 10,
+            "n": 15,
+            "wilson_95": [
+              0.15176349193779712,
+              0.5828640550870823
+            ]
+          },
+          "nev": {
+            "recall": 0.8536585365853658,
+            "tp": 35,
+            "fn": 6,
+            "n": 41,
+            "wilson_95": [
+              0.7155657484081702,
+              0.9311574150194789
+            ]
+          },
+          "scc": {
+            "recall": 0.17391304347826086,
+            "tp": 8,
+            "fn": 38,
+            "n": 46,
+            "wilson_95": [
+              0.0908580366557578,
+              0.3072332289070149
+            ]
+          },
+          "sek": {
+            "recall": 0.8043478260869565,
+            "tp": 37,
+            "fn": 9,
+            "n": 46,
+            "wilson_95": [
+              0.6682877192379457,
+              0.8934937662367997
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.7333333333333333,
+          "tp": 11,
+          "fn": 4,
+          "n": 15,
+          "wilson_95": [
+            0.4804961634927697,
+            0.891025270672399
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.5804714144128248,
+          0.7077854406575435
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7710873185388661,
+          0.8605908441677349
+        ]
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.8774703557312253,
+        "triage_roc_auc_no_ack": 0.8774703557312253,
+        "consensus_roc_auc": 0.8932806324110671,
+        "brier_score": 0.14205135397153182,
+        "ece": 0.22373393835390318,
+        "triage_sens": 0.9090909090909091,
+        "triage_sens_wilson_95": [
+          0.6226422482681641,
+          0.9837677805779349
+        ],
+        "triage_spec": 0.2608695652173913,
+        "triage_spec_wilson_95": [
+          0.1254863487017854,
+          0.46469962165079626
+        ],
+        "consensus_sens": 0.9090909090909091,
+        "consensus_spec": 0.2608695652173913,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.8035714285714286,
+        "balanced_acc": 0.8003952569169961,
+        "per_class_f1": {
+          "mel": 0.75,
+          "nev": 0.8571428571428571
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.8181818181818182,
+            "tp": 9,
+            "fn": 2,
+            "n": 11,
+            "wilson_95": [
+              0.5230200548948629,
+              0.9486321897632144
+            ]
+          },
+          "nev": {
+            "recall": 0.782608695652174,
+            "tp": 18,
+            "fn": 5,
+            "n": 23,
+            "wilson_95": [
+              0.5809656092393763,
+              0.9033600621621182
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 11,
+          "fn": 0,
+          "n": 11,
+          "wilson_95": [
+            0.7411678130341213,
+            1.0
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6630211401751699,
+          0.9252118693327132
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7154696969696969,
+          0.9911357048748353
+        ]
+      },
+      "isic_clinical_only": {
+        "n_images": 259,
+        "n_patients": 29,
+        "n_malignant": 14,
+        "n_benign": 245,
+        "n_labeled_subtypes": 22,
+        "triage_roc_auc": 0.9979591836734694,
+        "triage_roc_auc_no_ack": 0.9979591836734694,
+        "consensus_roc_auc": 0.9918367346938775,
+        "brier_score": 0.010601916476987383,
+        "ece": 0.05584059057318565,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7846898842098433,
+          1.0
+        ],
+        "triage_spec": 0.9673469387755103,
+        "triage_spec_wilson_95": [
+          0.9369016435342381,
+          0.9833630722368991
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.4,
+        "present_classes": [
+          "bcc",
+          "mel",
+          "nev",
+          "scc"
+        ],
+        "macro_f1_present": 0.6227941176470587,
+        "balanced_acc": 0.7333333333333334,
+        "per_class_f1": {
+          "bcc": 0.75,
+          "mel": 0.4,
+          "nev": 0.9411764705882353,
+          "scc": 0.4
+        },
+        "per_class_recall_argmax": {
+          "bcc": {
+            "recall": 0.6,
+            "tp": 6,
+            "fn": 4,
+            "n": 10,
+            "wilson_95": [
+              0.3126742368657031,
+              0.8318193662123929
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 1,
+            "fn": 2,
+            "n": 3,
+            "wilson_95": [
+              0.06149212499615059,
+              0.792339885219745
+            ]
+          },
+          "nev": {
+            "recall": 1.0,
+            "tp": 8,
+            "fn": 0,
+            "n": 8,
+            "wilson_95": [
+              0.6755933262356948,
+              1.0
+            ]
+          },
+          "scc": {
+            "recall": 1.0,
+            "tp": 1,
+            "fn": 0,
+            "n": 1,
+            "wilson_95": [
+              0.20654998073085312,
+              1.0
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 3,
+          "fn": 0,
+          "n": 3,
+          "wilson_95": [
+            0.4385039693523135,
+            0.9999999999999999
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.27133145363408523,
+          0.8500805353901997
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9926450087469932,
+          1.0
+        ]
+      }
+    },
+    "deconfounded_mm_consilium": {
+      "seed_macro_f1_global_mean": 0.7257676529665295,
+      "seed_macro_f1_global_std": 0.010949993008880471,
+      "seed_macro_f1_pad_mean": 0.7311544102245239,
+      "seed_macro_f1_pad_std": 0.016966854340491177,
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.9541533345881172,
+        "triage_roc_auc_no_ack": 0.9973835105494628,
+        "consensus_roc_auc": 0.9715399334964552,
+        "brier_score": 0.10128748161385415,
+        "ece": 0.12221135586854488,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.9850435227519542,
+          1.0
+        ],
+        "triage_spec": 0.6170634920634921,
+        "triage_spec_wilson_95": [
+          0.5738910118700451,
+          0.6584649755737702
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.20833333333333334,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7210452576886714,
+        "balanced_acc": 0.7060849941222328,
+        "per_class_f1": {
+          "ack": 0.831081081081081,
+          "bcc": 0.7762803234501348,
+          "mel": 0.6792452830188679,
+          "nev": 0.875,
+          "scc": 0.33707865168539325,
+          "sek": 0.8275862068965517
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.825503355704698,
+            "tp": 123,
+            "fn": 26,
+            "n": 149,
+            "wilson_95": [
+              0.7565987440557544,
+              0.8780458782935363
+            ]
+          },
+          "bcc": {
+            "recall": 0.8135593220338984,
+            "tp": 144,
+            "fn": 33,
+            "n": 177,
+            "wilson_95": [
+              0.7497465116556538,
+              0.8640508460454704
+            ]
+          },
+          "mel": {
+            "recall": 0.6206896551724138,
+            "tp": 18,
+            "fn": 11,
+            "n": 29,
+            "wilson_95": [
+              0.44002579387360286,
+              0.7731195285481282
+            ]
+          },
+          "nev": {
+            "recall": 0.875,
+            "tp": 63,
+            "fn": 9,
+            "n": 72,
+            "wilson_95": [
+              0.7791896933952466,
+              0.9328220737919682
+            ]
+          },
+          "scc": {
+            "recall": 0.3191489361702128,
+            "tp": 15,
+            "fn": 32,
+            "n": 47,
+            "wilson_95": [
+              0.20395398103203735,
+              0.4616731347720828
+            ]
+          },
+          "sek": {
+            "recall": 0.782608695652174,
+            "tp": 36,
+            "fn": 10,
+            "n": 46,
+            "wilson_95": [
+              0.644263434364248,
+              0.8773908021480156
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.896551724137931,
+          "tp": 26,
+          "fn": 3,
+          "n": 29,
+          "wilson_95": [
+            0.7361495941852778,
+            0.9641850366289815
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6709887095171531,
+          0.7655262176978119
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9320925420541573,
+          0.9718897938264114
+        ]
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.9165737436812369,
+        "triage_roc_auc_no_ack": 0.9969247832224238,
+        "consensus_roc_auc": 0.9513641094261076,
+        "brier_score": 0.1448120088128394,
+        "ece": 0.14810176219405796,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.9834307311559493,
+          0.9999999999999999
+        ],
+        "triage_spec": 0.3347457627118644,
+        "triage_spec_wilson_95": [
+          0.27761165868008075,
+          0.3971734870445609
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.3347457627118644,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7217491985930212,
+        "balanced_acc": 0.6998282974098444,
+        "per_class_f1": {
+          "ack": 0.831081081081081,
+          "bcc": 0.7840909090909091,
+          "mel": 0.6666666666666666,
+          "nev": 0.8837209302325582,
+          "scc": 0.3373493975903614,
+          "sek": 0.8275862068965517
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.825503355704698,
+            "tp": 123,
+            "fn": 26,
+            "n": 149,
+            "wilson_95": [
+              0.7565987440557544,
+              0.8780458782935363
+            ]
+          },
+          "bcc": {
+            "recall": 0.8263473053892215,
+            "tp": 138,
+            "fn": 29,
+            "n": 167,
+            "wilson_95": [
+              0.7617340457221672,
+              0.8762844464968166
+            ]
+          },
+          "mel": {
+            "recall": 0.5333333333333333,
+            "tp": 8,
+            "fn": 7,
+            "n": 15,
+            "wilson_95": [
+              0.30117018733785916,
+              0.7519043032571648
+            ]
+          },
+          "nev": {
+            "recall": 0.926829268292683,
+            "tp": 38,
+            "fn": 3,
+            "n": 41,
+            "wilson_95": [
+              0.8057258370974949,
+              0.974802118763461
+            ]
+          },
+          "scc": {
+            "recall": 0.30434782608695654,
+            "tp": 14,
+            "fn": 32,
+            "n": 46,
+            "wilson_95": [
+              0.19079859610144329,
+              0.4480561632362203
+            ]
+          },
+          "sek": {
+            "recall": 0.782608695652174,
+            "tp": 36,
+            "fn": 10,
+            "n": 46,
+            "wilson_95": [
+              0.644263434364248,
+              0.8773908021480156
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.8,
+          "tp": 12,
+          "fn": 3,
+          "n": 15,
+          "wilson_95": [
+            0.5481460512166723,
+            0.9295243641385447
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6510746066572015,
+          0.778980900817775
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8798801324229953,
+          0.9446717281065824
+        ]
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.8932806324110671,
+        "triage_roc_auc_no_ack": 0.8932806324110671,
+        "consensus_roc_auc": 0.9090909090909091,
+        "brier_score": 0.1464157424153001,
+        "ece": 0.18031540863654194,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7411678130341213,
+          1.0
+        ],
+        "triage_spec": 0.21739130434782608,
+        "triage_spec_wilson_95": [
+          0.09663993783788177,
+          0.4190343907606237
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.21739130434782608,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.7896341463414633,
+        "balanced_acc": 0.7786561264822134,
+        "per_class_f1": {
+          "mel": 0.75,
+          "nev": 0.8292682926829268
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.8181818181818182,
+            "tp": 9,
+            "fn": 2,
+            "n": 11,
+            "wilson_95": [
+              0.5230200548948629,
+              0.9486321897632144
+            ]
+          },
+          "nev": {
+            "recall": 0.7391304347826086,
+            "tp": 17,
+            "fn": 6,
+            "n": 23,
+            "wilson_95": [
+              0.5353003783492037,
+              0.8745136512982147
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 11,
+          "fn": 0,
+          "n": 11,
+          "wilson_95": [
+            0.7411678130341213,
+            1.0
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6478141934294195,
+          0.9183285917496441
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7398496240601504,
+          0.9962200126262625
+        ]
+      },
+      "isic_clinical_only": {
+        "n_images": 259,
+        "n_patients": 29,
+        "n_malignant": 14,
+        "n_benign": 245,
+        "n_labeled_subtypes": 22,
+        "triage_roc_auc": 0.9982507288629738,
+        "triage_roc_auc_no_ack": 0.9982507288629738,
+        "consensus_roc_auc": 0.9889212827988338,
+        "brier_score": 0.017388865831698436,
+        "ece": 0.09035923237045759,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7846898842098433,
+          1.0
+        ],
+        "triage_spec": 0.926530612244898,
+        "triage_spec_wilson_95": [
+          0.8868674526545621,
+          0.953024798857087
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.08571428571428572,
+        "present_classes": [
+          "bcc",
+          "mel",
+          "nev",
+          "scc"
+        ],
+        "macro_f1_present": 0.6061274509803921,
+        "balanced_acc": 0.7333333333333334,
+        "per_class_f1": {
+          "bcc": 0.75,
+          "mel": 0.4,
+          "nev": 0.9411764705882353,
+          "scc": 0.3333333333333333
+        },
+        "per_class_recall_argmax": {
+          "bcc": {
+            "recall": 0.6,
+            "tp": 6,
+            "fn": 4,
+            "n": 10,
+            "wilson_95": [
+              0.3126742368657031,
+              0.8318193662123929
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 1,
+            "fn": 2,
+            "n": 3,
+            "wilson_95": [
+              0.06149212499615059,
+              0.792339885219745
+            ]
+          },
+          "nev": {
+            "recall": 1.0,
+            "tp": 8,
+            "fn": 0,
+            "n": 8,
+            "wilson_95": [
+              0.6755933262356948,
+              1.0
+            ]
+          },
+          "scc": {
+            "recall": 1.0,
+            "tp": 1,
+            "fn": 0,
+            "n": 1,
+            "wilson_95": [
+              0.20654998073085312,
+              1.0
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 3,
+          "fn": 0,
+          "n": 3,
+          "wilson_95": [
+            0.4385039693523135,
+            0.9999999999999999
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.2664732142857143,
+          0.822833508403361
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9928794256102352,
+          1.0
+        ]
+      }
+    },
+    "raw_mm_consilium_exp015": {
+      "seed_macro_f1_global_mean": 0.7302297976985531,
+      "seed_macro_f1_global_std": 0.0037950809595399325,
+      "seed_macro_f1_pad_mean": 0.737992918192673,
+      "seed_macro_f1_pad_std": 0.005553311243498006,
+      "global_val": {
+        "n_images": 757,
+        "n_patients": 335,
+        "n_malignant": 253,
+        "n_benign": 504,
+        "n_labeled_subtypes": 520,
+        "triage_roc_auc": 0.9578000501913545,
+        "triage_roc_auc_no_ack": 0.9976507264933474,
+        "consensus_roc_auc": 0.9730221469351905,
+        "brier_score": 0.08195920619141078,
+        "ece": 0.09324807382362205,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.9850435227519542,
+          1.0
+        ],
+        "triage_spec": 0.7123015873015873,
+        "triage_spec_wilson_95": [
+          0.6712912768980767,
+          0.7501000901610461
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.3492063492063492,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7408558915761687,
+        "balanced_acc": 0.736440396200965,
+        "per_class_f1": {
+          "ack": 0.8271186440677966,
+          "bcc": 0.8054054054054054,
+          "mel": 0.7586206896551724,
+          "nev": 0.8873239436619719,
+          "scc": 0.30952380952380953,
+          "sek": 0.8571428571428571
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.8187919463087249,
+            "tp": 122,
+            "fn": 27,
+            "n": 149,
+            "wilson_95": [
+              0.7491898058172531,
+              0.8723693604011243
+            ]
+          },
+          "bcc": {
+            "recall": 0.8418079096045198,
+            "tp": 149,
+            "fn": 28,
+            "n": 177,
+            "wilson_95": [
+              0.7808679246285668,
+              0.8882264923249108
+            ]
+          },
+          "mel": {
+            "recall": 0.7586206896551724,
+            "tp": 22,
+            "fn": 7,
+            "n": 29,
+            "wilson_95": [
+              0.578924371705931,
+              0.8778156049120641
+            ]
+          },
+          "nev": {
+            "recall": 0.875,
+            "tp": 63,
+            "fn": 9,
+            "n": 72,
+            "wilson_95": [
+              0.7791896933952466,
+              0.9328220737919682
+            ]
+          },
+          "scc": {
+            "recall": 0.2765957446808511,
+            "tp": 13,
+            "fn": 34,
+            "n": 47,
+            "wilson_95": [
+              0.1693658078121162,
+              0.4175853352400323
+            ]
+          },
+          "sek": {
+            "recall": 0.8478260869565217,
+            "tp": 39,
+            "fn": 7,
+            "n": 46,
+            "wilson_95": [
+              0.7177589118805192,
+              0.9242770715191897
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9655172413793104,
+          "tp": 28,
+          "fn": 1,
+          "n": 29,
+          "wilson_95": [
+            0.8282451896501446,
+            0.993886768262247
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6928230880260645,
+          0.7825766106633407
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9356440182983117,
+          0.9747919290533761
+        ]
+      },
+      "pad_ufes_20_only": {
+        "n_images": 464,
+        "n_patients": 272,
+        "n_malignant": 228,
+        "n_benign": 236,
+        "n_labeled_subtypes": 464,
+        "triage_roc_auc": 0.919751709782932,
+        "triage_roc_auc_no_ack": 0.995714861867312,
+        "consensus_roc_auc": 0.9489481118049361,
+        "brier_score": 0.11556716436738741,
+        "ece": 0.1087221622402812,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.9834307311559493,
+          0.9999999999999999
+        ],
+        "triage_spec": 0.538135593220339,
+        "triage_spec_wilson_95": [
+          0.47442781425475367,
+          0.6006217675010984
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.538135593220339,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7522664164013041,
+        "balanced_acc": 0.7375892342180018,
+        "per_class_f1": {
+          "ack": 0.8271186440677966,
+          "bcc": 0.8112676056338028,
+          "mel": 0.8148148148148148,
+          "nev": 0.891566265060241,
+          "scc": 0.3116883116883117,
+          "sek": 0.8571428571428571
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.8187919463087249,
+            "tp": 122,
+            "fn": 27,
+            "n": 149,
+            "wilson_95": [
+              0.7491898058172531,
+              0.8723693604011243
+            ]
+          },
+          "bcc": {
+            "recall": 0.8622754491017964,
+            "tp": 144,
+            "fn": 23,
+            "n": 167,
+            "wilson_95": [
+              0.8018165597566346,
+              0.9064425004130631
+            ]
+          },
+          "mel": {
+            "recall": 0.7333333333333333,
+            "tp": 11,
+            "fn": 4,
+            "n": 15,
+            "wilson_95": [
+              0.4804961634927697,
+              0.891025270672399
+            ]
+          },
+          "nev": {
+            "recall": 0.9024390243902439,
+            "tp": 37,
+            "fn": 4,
+            "n": 41,
+            "wilson_95": [
+              0.774523512444426,
+              0.961402845938761
+            ]
+          },
+          "scc": {
+            "recall": 0.2608695652173913,
+            "tp": 12,
+            "fn": 34,
+            "n": 46,
+            "wilson_95": [
+              0.15600903179280992,
+              0.40259122961989
+            ]
+          },
+          "sek": {
+            "recall": 0.8478260869565217,
+            "tp": 39,
+            "fn": 7,
+            "n": 46,
+            "wilson_95": [
+              0.7177589118805192,
+              0.9242770715191897
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9333333333333333,
+          "tp": 14,
+          "fn": 1,
+          "n": 15,
+          "wilson_95": [
+            0.7018353071814319,
+            0.9881330705538812
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6917824258351348,
+          0.7988203653412466
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8837741457062139,
+          0.94921159907439
+        ]
+      },
+      "med_node_only": {
+        "n_images": 34,
+        "n_patients": 34,
+        "n_malignant": 11,
+        "n_benign": 23,
+        "n_labeled_subtypes": 34,
+        "triage_roc_auc": 0.9644268774703557,
+        "triage_roc_auc_no_ack": 0.9644268774703557,
+        "consensus_roc_auc": 0.9644268774703557,
+        "brier_score": 0.14410051593394418,
+        "ece": 0.23845644119907827,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7411678130341213,
+          1.0
+        ],
+        "triage_spec": 0.043478260869565216,
+        "triage_spec_wilson_95": [
+          0.007716688180137349,
+          0.20991107340206383
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.043478260869565216,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.8131868131868132,
+        "balanced_acc": 0.8458498023715415,
+        "per_class_f1": {
+          "mel": 0.7692307692307693,
+          "nev": 0.8571428571428571
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.9090909090909091,
+            "tp": 10,
+            "fn": 1,
+            "n": 11,
+            "wilson_95": [
+              0.6226422482681641,
+              0.9837677805779349
+            ]
+          },
+          "nev": {
+            "recall": 0.782608695652174,
+            "tp": 18,
+            "fn": 5,
+            "n": 23,
+            "wilson_95": [
+              0.5809656092393763,
+              0.9033600621621182
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 11,
+          "fn": 0,
+          "n": 11,
+          "wilson_95": [
+            0.7411678130341213,
+            1.0
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.661898531543455,
+          0.9377678571428572
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9011561264822133,
+          1.0
+        ]
+      },
+      "isic_clinical_only": {
+        "n_images": 259,
+        "n_patients": 29,
+        "n_malignant": 14,
+        "n_benign": 245,
+        "n_labeled_subtypes": 22,
+        "triage_roc_auc": 0.9985422740524781,
+        "triage_roc_auc_no_ack": 0.9985422740524781,
+        "consensus_roc_auc": 0.9956268221574345,
+        "brier_score": 0.01359280802577648,
+        "ece": 0.07343964218287855,
+        "triage_sens": 1.0,
+        "triage_sens_wilson_95": [
+          0.7846898842098433,
+          1.0
+        ],
+        "triage_spec": 0.9428571428571428,
+        "triage_spec_wilson_95": [
+          0.9063817476278919,
+          0.9656594895875525
+        ],
+        "consensus_sens": 1.0,
+        "consensus_spec": 0.19591836734693877,
+        "present_classes": [
+          "bcc",
+          "mel",
+          "nev",
+          "scc"
+        ],
+        "macro_f1_present": 0.5733893557422969,
+        "balanced_acc": 0.7083333333333333,
+        "per_class_f1": {
+          "bcc": 0.6666666666666666,
+          "mel": 0.4,
+          "nev": 0.9411764705882353,
+          "scc": 0.2857142857142857
+        },
+        "per_class_recall_argmax": {
+          "bcc": {
+            "recall": 0.5,
+            "tp": 5,
+            "fn": 5,
+            "n": 10,
+            "wilson_95": [
+              0.2365934773921115,
+              0.7634065226078885
+            ]
+          },
+          "mel": {
+            "recall": 0.3333333333333333,
+            "tp": 1,
+            "fn": 2,
+            "n": 3,
+            "wilson_95": [
+              0.06149212499615059,
+              0.792339885219745
+            ]
+          },
+          "nev": {
+            "recall": 1.0,
+            "tp": 8,
+            "fn": 0,
+            "n": 8,
+            "wilson_95": [
+              0.6755933262356948,
+              1.0
+            ]
+          },
+          "scc": {
+            "recall": 1.0,
+            "tp": 1,
+            "fn": 0,
+            "n": 1,
+            "wilson_95": [
+              0.20654998073085312,
+              1.0
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 3,
+          "fn": 0,
+          "n": 3,
+          "wilson_95": [
+            0.4385039693523135,
+            0.9999999999999999
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.24114974937343356,
+          0.773464083710407
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9940290566883049,
+          1.0
+        ]
+      }
+    }
+  },
+  "section_4_leave_one_source_out": {
+    "train_pad_plus_isic_eval_170_mednode": {
+      "n_images": 170,
+      "n_patients": 170,
+      "n_malignant": 70,
+      "n_benign": 100,
+      "n_labeled_subtypes": 170,
+      "triage_roc_auc": 0.7107142857142857,
+      "triage_roc_auc_no_ack": 0.7107142857142857,
+      "consensus_roc_auc": 0.7374285714285714,
+      "brier_score": 0.22393295890201761,
+      "ece": 0.1192734429064919,
+      "triage_sens": 0.9428571428571428,
+      "triage_sens_wilson_95": [
+        0.8620807130419638,
+        0.9775561807106298
+      ],
+      "triage_spec": 0.15,
+      "triage_spec_wilson_95": [
+        0.09305994365936965,
+        0.23283540369149003
+      ],
+      "consensus_sens": 0.9714285714285714,
+      "consensus_spec": 0.14,
+      "present_classes": [
+        "mel",
+        "nev"
+      ],
+      "macro_f1_present": 0.6387642826914939,
+      "balanced_acc": 0.5871428571428572,
+      "per_class_f1": {
+        "mel": 0.6187050359712231,
+        "nev": 0.6588235294117647
+      },
+      "per_class_recall_argmax": {
+        "mel": {
+          "recall": 0.6142857142857143,
+          "tp": 43,
+          "fn": 27,
+          "n": 70,
+          "wilson_95": [
+            0.49715759369430323,
+            0.7195228950160436
+          ]
+        },
+        "nev": {
+          "recall": 0.56,
+          "tp": 56,
+          "fn": 44,
+          "n": 100,
+          "wilson_95": [
+            0.46228124227344614,
+            0.6532795553235495
+          ]
+        }
+      },
+      "mel_recall_tau005": {
+        "recall": 0.9285714285714286,
+        "tp": 65,
+        "fn": 5,
+        "n": 70,
+        "wilson_95": [
+          0.843446100099042,
+          0.9691057325647584
+        ]
+      }
+    },
+    "train_pad_plus_isic_eval_pad_val": {
+      "n_images": 464,
+      "n_patients": 464,
+      "n_malignant": 228,
+      "n_benign": 236,
+      "n_labeled_subtypes": 464,
+      "triage_roc_auc": 0.8024643175735949,
+      "triage_roc_auc_no_ack": 0.9786751361161524,
+      "consensus_roc_auc": 0.8932129051442164,
+      "brier_score": 0.24809924048681273,
+      "ece": 0.23821615570642313,
+      "triage_sens": 0.9912280701754386,
+      "triage_sens_wilson_95": [
+        0.968586450985488,
+        0.9975911094484271
+      ],
+      "triage_spec": 0.2076271186440678,
+      "triage_spec_wilson_95": [
+        0.1607643403426296,
+        0.2638555328625055
+      ],
+      "consensus_sens": 0.9956140350877193,
+      "consensus_spec": 0.2033898305084746,
+      "present_classes": [
+        "ack",
+        "bcc",
+        "mel",
+        "nev",
+        "scc",
+        "sek"
+      ],
+      "macro_f1_present": 0.6196980069547134,
+      "balanced_acc": 0.6087769398702743,
+      "per_class_f1": {
+        "ack": 0.7508532423208191,
+        "bcc": 0.7452054794520548,
+        "mel": 0.45454545454545453,
+        "nev": 0.7692307692307693,
+        "scc": 0.2028985507246377,
+        "sek": 0.7954545454545454
+      },
+      "per_class_recall_argmax": {
+        "ack": {
+          "recall": 0.738255033557047,
+          "tp": 110,
+          "fn": 39,
+          "n": 149,
+          "wilson_95": [
+            0.6623202795898215,
+            0.8022134130575975
+          ]
+        },
+        "bcc": {
+          "recall": 0.8143712574850299,
+          "tp": 136,
+          "fn": 31,
+          "n": 167,
+          "wilson_95": [
+            0.7485733955452771,
+            0.8660315740234688
+          ]
+        },
+        "mel": {
+          "recall": 0.3333333333333333,
+          "tp": 5,
+          "fn": 10,
+          "n": 15,
+          "wilson_95": [
+            0.15176349193779712,
+            0.5828640550870823
+          ]
+        },
+        "nev": {
+          "recall": 0.8536585365853658,
+          "tp": 35,
+          "fn": 6,
+          "n": 41,
+          "wilson_95": [
+            0.7155657484081702,
+            0.9311574150194789
+          ]
+        },
+        "scc": {
+          "recall": 0.15217391304347827,
+          "tp": 7,
+          "fn": 39,
+          "n": 46,
+          "wilson_95": [
+            0.07572292848081018,
+            0.2822410881194807
+          ]
+        },
+        "sek": {
+          "recall": 0.7608695652173914,
+          "tp": 35,
+          "fn": 11,
+          "n": 46,
+          "wilson_95": [
+            0.6206489215567558,
+            0.8608780659930261
+          ]
+        }
+      },
+      "mel_recall_tau005": {
+        "recall": 0.8,
+        "tp": 12,
+        "fn": 3,
+        "n": 15,
+        "wilson_95": [
+          0.5481460512166723,
+          0.9295243641385447
+        ]
+      }
+    },
+    "train_pure_pad_eval_pad_val": {
+      "n_images": 464,
+      "n_patients": 464,
+      "n_malignant": 228,
+      "n_benign": 236,
+      "n_labeled_subtypes": 464,
+      "triage_roc_auc": 0.7810548617305977,
+      "triage_roc_auc_no_ack": 0.9779693486590039,
+      "consensus_roc_auc": 0.8934730895034196,
+      "brier_score": 0.25657150597028033,
+      "ece": 0.23573384713381532,
+      "triage_sens": 0.9956140350877193,
+      "triage_sens_wilson_95": [
+        0.9755787985232646,
+        0.9992253472716676
+      ],
+      "triage_spec": 0.2330508474576271,
+      "triage_spec_wilson_95": [
+        0.18365098145352832,
+        0.29100194625550807
+      ],
+      "consensus_sens": 0.9956140350877193,
+      "consensus_spec": 0.2245762711864407,
+      "present_classes": [
+        "ack",
+        "bcc",
+        "mel",
+        "nev",
+        "scc",
+        "sek"
+      ],
+      "macro_f1_present": 0.6484844768729704,
+      "balanced_acc": 0.631033302072623,
+      "per_class_f1": {
+        "ack": 0.7458745874587459,
+        "bcc": 0.7657142857142857,
+        "mel": 0.6086956521739131,
+        "nev": 0.7529411764705882,
+        "scc": 0.21333333333333335,
+        "sek": 0.8043478260869565
+      },
+      "per_class_recall_argmax": {
+        "ack": {
+          "recall": 0.7583892617449665,
+          "tp": 113,
+          "fn": 36,
+          "n": 149,
+          "wilson_95": [
+            0.683722345453815,
+            0.8200677155863436
+          ]
+        },
+        "bcc": {
+          "recall": 0.8023952095808383,
+          "tp": 134,
+          "fn": 33,
+          "n": 167,
+          "wilson_95": [
+            0.7355003133276922,
+            0.8556911335908158
+          ]
+        },
+        "mel": {
+          "recall": 0.4666666666666667,
+          "tp": 7,
+          "fn": 8,
+          "n": 15,
+          "wilson_95": [
+            0.24809569674283508,
+            0.6988298126621408
+          ]
+        },
+        "nev": {
+          "recall": 0.7804878048780488,
+          "tp": 32,
+          "fn": 9,
+          "n": 41,
+          "wilson_95": [
+            0.6329502677163366,
+            0.8799681032780058
+          ]
+        },
+        "scc": {
+          "recall": 0.17391304347826086,
+          "tp": 8,
+          "fn": 38,
+          "n": 46,
+          "wilson_95": [
+            0.0908580366557578,
+            0.3072332289070149
+          ]
+        },
+        "sek": {
+          "recall": 0.8043478260869565,
+          "tp": 37,
+          "fn": 9,
+          "n": 46,
+          "wilson_95": [
+            0.6682877192379457,
+            0.8934937662367997
+          ]
+        }
+      },
+      "mel_recall_tau005": {
+        "recall": 0.7333333333333333,
+        "tp": 11,
+        "fn": 4,
+        "n": 15,
+        "wilson_95": [
+          0.4804961634927697,
+          0.891025270672399
+        ]
+      }
+    },
+    "train_pure_pad_eval_170_mednode": {
+      "n_images": 170,
+      "n_patients": 170,
+      "n_malignant": 70,
+      "n_benign": 100,
+      "n_labeled_subtypes": 170,
+      "triage_roc_auc": 0.737,
+      "triage_roc_auc_no_ack": 0.737,
+      "consensus_roc_auc": 0.7535714285714287,
+      "brier_score": 0.20633549954816569,
+      "ece": 0.07025038976879683,
+      "triage_sens": 0.9428571428571428,
+      "triage_sens_wilson_95": [
+        0.8620807130419638,
+        0.9775561807106298
+      ],
+      "triage_spec": 0.23,
+      "triage_spec_wilson_95": [
+        0.15843278175501807,
+        0.32154362905850226
+      ],
+      "consensus_sens": 0.9714285714285714,
+      "consensus_spec": 0.23,
+      "present_classes": [
+        "mel",
+        "nev"
+      ],
+      "macro_f1_present": 0.6099720410065238,
+      "balanced_acc": 0.5392857142857143,
+      "per_class_f1": {
+        "mel": 0.5172413793103449,
+        "nev": 0.7027027027027027
+      },
+      "per_class_recall_argmax": {
+        "mel": {
+          "recall": 0.42857142857142855,
+          "tp": 30,
+          "fn": 40,
+          "n": 70,
+          "wilson_95": [
+            0.319353292360397,
+            0.5452214021956362
+          ]
+        },
+        "nev": {
+          "recall": 0.65,
+          "tp": 65,
+          "fn": 35,
+          "n": 100,
+          "wilson_95": [
+            0.5525446352830035,
+            0.7363573587094854
+          ]
+        }
+      },
+      "mel_recall_tau005": {
+        "recall": 0.8428571428571429,
+        "tp": 59,
+        "fn": 11,
+        "n": 70,
+        "wilson_95": [
+          0.7401177738277646,
+          0.9099236923032757
+        ]
+      }
+    }
+  },
+  "section_5_5fold_stratified_group_cv_3767": {
+    "image_only_consilium": {
+      "fold_macro_f1_mean": 0.6552130779964246,
+      "fold_macro_f1_std": 0.02737692810115738,
+      "oof_global_3767": {
+        "n_images": 3767,
+        "n_patients": 1674,
+        "n_malignant": 1223,
+        "n_benign": 2544,
+        "n_labeled_subtypes": 2547,
+        "triage_roc_auc": 0.8897849203165739,
+        "triage_roc_auc_no_ack": 0.9870438517174949,
+        "consensus_roc_auc": 0.9382757177679384,
+        "brier_score": 0.16347917355246389,
+        "ece": 0.16033531042255456,
+        "triage_sens": 0.9926410466067048,
+        "triage_sens_wilson_95": [
+          0.9860733728844238,
+          0.9961236393516464
+        ],
+        "triage_spec": 0.6033805031446541,
+        "triage_spec_wilson_95": [
+          0.5842288028562701,
+          0.6222204647790941
+        ],
+        "consensus_sens": 0.9926410466067048,
+        "consensus_spec": 0.38011006289308175,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6560911820604195,
+        "balanced_acc": 0.6476837107029566,
+        "per_class_f1": {
+          "ack": 0.7636363636363637,
+          "bcc": 0.7464167585446527,
+          "mel": 0.6614785992217899,
+          "nev": 0.7921348314606742,
+          "scc": 0.23121387283236994,
+          "sek": 0.7416666666666667
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7767123287671233,
+            "tp": 567,
+            "fn": 163,
+            "n": 730,
+            "wilson_95": [
+              0.7450983693545322,
+              0.8054292735616687
+            ]
+          },
+          "bcc": {
+            "recall": 0.7745995423340961,
+            "tp": 677,
+            "fn": 197,
+            "n": 874,
+            "wilson_95": [
+              0.7457306932289306,
+              0.8010650905852609
+            ]
+          },
+          "mel": {
+            "recall": 0.5985915492957746,
+            "tp": 85,
+            "fn": 57,
+            "n": 142,
+            "wilson_95": [
+              0.5163976915061375,
+              0.6755916318667461
+            ]
+          },
+          "nev": {
+            "recall": 0.7855153203342619,
+            "tp": 282,
+            "fn": 77,
+            "n": 359,
+            "wilson_95": [
+              0.7401503062476966,
+              0.8248347687512996
+            ]
+          },
+          "scc": {
+            "recall": 0.1932367149758454,
+            "tp": 40,
+            "fn": 167,
+            "n": 207,
+            "wilson_95": [
+              0.14523847059178052,
+              0.2524131577051925
+            ]
+          },
+          "sek": {
+            "recall": 0.7574468085106383,
+            "tp": 178,
+            "fn": 57,
+            "n": 235,
+            "wilson_95": [
+              0.6987895880349522,
+              0.8078226580561376
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9436619718309859,
+          "tp": 134,
+          "fn": 8,
+          "n": 142,
+          "wilson_95": [
+            0.8927727095798859,
+            0.9711792455980897
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6315303568942116,
+          0.6788835340981655
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8731685269001211,
+          0.9066546363517516
+        ]
+      },
+      "oof_pad_ufes_20": {
+        "n_images": 2298,
+        "n_patients": 1373,
+        "n_malignant": 1089,
+        "n_benign": 1209,
+        "n_labeled_subtypes": 2298,
+        "triage_roc_auc": 0.7966471998730063,
+        "triage_roc_auc_no_ack": 0.9736394117680889,
+        "consensus_roc_auc": 0.8944885352509986,
+        "brier_score": 0.2514865964100626,
+        "ece": 0.24573753054883554,
+        "triage_sens": 0.9963269054178145,
+        "triage_sens_wilson_95": [
+          0.990593833130472,
+          0.9985707037058058
+        ],
+        "triage_spec": 0.23242349048800662,
+        "triage_spec_wilson_95": [
+          0.209484962128919,
+          0.25705701363661826
+        ],
+        "consensus_sens": 0.9963269054178145,
+        "consensus_spec": 0.22994210090984285,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.6433915292380396,
+        "balanced_acc": 0.6336225844385668,
+        "per_class_f1": {
+          "ack": 0.7667342799188641,
+          "bcc": 0.7514318442153494,
+          "mel": 0.5957446808510638,
+          "nev": 0.7752577319587629,
+          "scc": 0.22012578616352202,
+          "sek": 0.7510548523206751
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.7767123287671233,
+            "tp": 567,
+            "fn": 163,
+            "n": 730,
+            "wilson_95": [
+              0.7450983693545322,
+              0.8054292735616687
+            ]
+          },
+          "bcc": {
+            "recall": 0.7763313609467456,
+            "tp": 656,
+            "fn": 189,
+            "n": 845,
+            "wilson_95": [
+              0.7470205559007862,
+              0.8031410835198841
+            ]
+          },
+          "mel": {
+            "recall": 0.5384615384615384,
+            "tp": 28,
+            "fn": 24,
+            "n": 52,
+            "wilson_95": [
+              0.40503637096936285,
+              0.666595015518252
+            ]
+          },
+          "nev": {
+            "recall": 0.7704918032786885,
+            "tp": 188,
+            "fn": 56,
+            "n": 244,
+            "wilson_95": [
+              0.7137784709612272,
+              0.8188201061565963
+            ]
+          },
+          "scc": {
+            "recall": 0.18229166666666666,
+            "tp": 35,
+            "fn": 157,
+            "n": 192,
+            "wilson_95": [
+              0.13409297608726575,
+              0.2429540982931416
+            ]
+          },
+          "sek": {
+            "recall": 0.7574468085106383,
+            "tp": 178,
+            "fn": 57,
+            "n": 235,
+            "wilson_95": [
+              0.6987895880349522,
+              0.8078226580561376
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9230769230769231,
+          "tp": 48,
+          "fn": 4,
+          "n": 52,
+          "wilson_95": [
+            0.8182646508582145,
+            0.9696806005055483
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.61019881206049,
+          0.6698492536462033
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.7758402664151278,
+          0.8195981952321248
+        ]
+      },
+      "oof_med_node": {
+        "n_images": 170,
+        "n_patients": 170,
+        "n_malignant": 70,
+        "n_benign": 100,
+        "n_labeled_subtypes": 170,
+        "triage_roc_auc": 0.8961428571428571,
+        "triage_roc_auc_no_ack": 0.8961428571428571,
+        "consensus_roc_auc": 0.9068571428571429,
+        "brier_score": 0.13201753485756615,
+        "ece": 0.08096313125946941,
+        "triage_sens": 0.9857142857142858,
+        "triage_sens_wilson_95": [
+          0.9234183306742699,
+          0.9974737463447038
+        ],
+        "triage_spec": 0.53,
+        "triage_spec_wilson_95": [
+          0.43288876201967813,
+          0.6248916367788195
+        ],
+        "consensus_sens": 0.9857142857142858,
+        "consensus_spec": 0.53,
+        "present_classes": [
+          "mel",
+          "nev"
+        ],
+        "macro_f1_present": 0.795814740729343,
+        "balanced_acc": 0.7671428571428571,
+        "per_class_f1": {
+          "mel": 0.746268656716418,
+          "nev": 0.845360824742268
+        },
+        "per_class_recall_argmax": {
+          "mel": {
+            "recall": 0.7142857142857143,
+            "tp": 50,
+            "fn": 20,
+            "n": 70,
+            "wilson_95": [
+              0.5994982791971433,
+              0.806777637134757
+            ]
+          },
+          "nev": {
+            "recall": 0.82,
+            "tp": 82,
+            "fn": 18,
+            "n": 100,
+            "wilson_95": [
+              0.7333266126648595,
+              0.8829976411857828
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 1.0,
+          "tp": 70,
+          "fn": 0,
+          "n": 70,
+          "wilson_95": [
+            0.947977138107767,
+            0.9999999999999999
+          ]
+        }
+      }
+    },
+    "deconfounded_mm_consilium": {
+      "fold_macro_f1_mean": 0.7157752381151763,
+      "fold_macro_f1_std": 0.016058907203786006,
+      "oof_global_3767": {
+        "n_images": 3767,
+        "n_patients": 1674,
+        "n_malignant": 1223,
+        "n_benign": 2544,
+        "n_labeled_subtypes": 2547,
+        "triage_roc_auc": 0.9453076387067578,
+        "triage_roc_auc_no_ack": 0.991678694193702,
+        "consensus_roc_auc": 0.9628650228585239,
+        "brier_score": 0.10465746077397822,
+        "ece": 0.11908232430769967,
+        "triage_sens": 0.9934587080948487,
+        "triage_sens_wilson_95": [
+          0.9871454605852072,
+          0.9966817541607982
+        ],
+        "triage_spec": 0.648191823899371,
+        "triage_spec_wilson_95": [
+          0.6294246537710237,
+          0.6665121291131295
+        ],
+        "consensus_sens": 0.9959116925592805,
+        "consensus_spec": 0.29559748427672955,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7161110251808873,
+        "balanced_acc": 0.7113732492081638,
+        "per_class_f1": {
+          "ack": 0.8170391061452514,
+          "bcc": 0.7911602209944751,
+          "mel": 0.7313432835820896,
+          "nev": 0.840782122905028,
+          "scc": 0.30809399477806787,
+          "sek": 0.8082474226804124
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.8013698630136986,
+            "tp": 585,
+            "fn": 145,
+            "n": 730,
+            "wilson_95": [
+              0.7708832997225443,
+              0.8287012618693577
+            ]
+          },
+          "bcc": {
+            "recall": 0.8192219679633868,
+            "tp": 716,
+            "fn": 158,
+            "n": 874,
+            "wilson_95": [
+              0.7923294252767038,
+              0.8433206734072939
+            ]
+          },
+          "mel": {
+            "recall": 0.6901408450704225,
+            "tp": 98,
+            "fn": 44,
+            "n": 142,
+            "wilson_95": [
+              0.6099144210491505,
+              0.7603507025985532
+            ]
+          },
+          "nev": {
+            "recall": 0.8384401114206128,
+            "tp": 301,
+            "fn": 58,
+            "n": 359,
+            "wilson_95": [
+              0.796818201295308,
+              0.8728958144352095
+            ]
+          },
+          "scc": {
+            "recall": 0.28502415458937197,
+            "tp": 59,
+            "fn": 148,
+            "n": 207,
+            "wilson_95": [
+              0.22788172517313568,
+              0.35000012457828644
+            ]
+          },
+          "sek": {
+            "recall": 0.8340425531914893,
+            "tp": 196,
+            "fn": 39,
+            "n": 235,
+            "wilson_95": [
+              0.781182105418732,
+              0.8761577510796241
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9577464788732394,
+          "tp": 136,
+          "fn": 6,
+          "n": 142,
+          "wilson_95": [
+            0.9108858166610335,
+            0.9804931847130683
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.695946576227185,
+          0.7385338620235411
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.9347503488834087,
+          0.9560925015916057
+        ]
+      },
+      "oof_pad_ufes_20": {
+        "n_images": 2298,
+        "n_patients": 1373,
+        "n_malignant": 1089,
+        "n_benign": 1209,
+        "n_labeled_subtypes": 2298,
+        "triage_roc_auc": 0.9071206842467839,
+        "triage_roc_auc_no_ack": 0.986450191802251,
+        "consensus_roc_auc": 0.9423716828408911,
+        "brier_score": 0.15215154998678568,
+        "ece": 0.16183621735612758,
+        "triage_sens": 0.9981634527089073,
+        "triage_sens_wilson_95": [
+          0.9933285133764065,
+          0.9994962067599129
+        ],
+        "triage_spec": 0.3631100082712986,
+        "triage_spec_wilson_95": [
+          0.33647582605159754,
+          0.3906113362024872
+        ],
+        "consensus_sens": 0.9990817263544536,
+        "consensus_spec": 0.36228287841191065,
+        "present_classes": [
+          "ack",
+          "bcc",
+          "mel",
+          "nev",
+          "scc",
+          "sek"
+        ],
+        "macro_f1_present": 0.7078628423616301,
+        "balanced_acc": 0.7038024173644274,
+        "per_class_f1": {
+          "ack": 0.8176100628930818,
+          "bcc": 0.7963386727688787,
+          "mel": 0.68,
+          "nev": 0.8459958932238193,
+          "scc": 0.2922636103151863,
+          "sek": 0.814968814968815
+        },
+        "per_class_recall_argmax": {
+          "ack": {
+            "recall": 0.8013698630136986,
+            "tp": 585,
+            "fn": 145,
+            "n": 730,
+            "wilson_95": [
+              0.7708832997225443,
+              0.8287012618693577
+            ]
+          },
+          "bcc": {
+            "recall": 0.8236686390532545,
+            "tp": 696,
+            "fn": 149,
+            "n": 845,
+            "wilson_95": [
+              0.7965246043274196,
+              0.8478831403473269
+            ]
+          },
+          "mel": {
+            "recall": 0.6538461538461539,
+            "tp": 34,
+            "fn": 18,
+            "n": 52,
+            "wilson_95": [
+              0.5180358213065482,
+              0.768489724643911
+            ]
+          },
+          "nev": {
+            "recall": 0.8442622950819673,
+            "tp": 206,
+            "fn": 38,
+            "n": 244,
+            "wilson_95": [
+              0.7934685479673821,
+              0.8843841865462115
+            ]
+          },
+          "scc": {
+            "recall": 0.265625,
+            "tp": 51,
+            "fn": 141,
+            "n": 192,
+            "wilson_95": [
+              0.20819475452060748,
+              0.33224980854690617
+            ]
+          },
+          "sek": {
+            "recall": 0.8340425531914893,
+            "tp": 196,
+            "fn": 39,
+            "n": 235,
+            "wilson_95": [
+              0.781182105418732,
+              0.8761577510796241
+            ]
+          }
+        },
+        "mel_recall_tau005": {
+          "recall": 0.9230769230769231,
+          "tp": 48,
+          "fn": 4,
+          "n": 52,
+          "wilson_95": [
+            0.8182646508582145,
+            0.9696806005055483
+          ]
+        },
+        "macro_f1_bootstrap_95_ci": [
+          0.6753422048033909,
+          0.7317599529809466
+        ],
+        "triage_auc_bootstrap_95_ci": [
+          0.8927177724114276,
+          0.9242067036822524
+        ]
+      }
+    }
+  },
+  "section_6_external_stanford_ddi_656": {
+    "raw_mm_consilium_exp015": {
+      "triage_roc_auc_all_656": 0.7203352022668355,
+      "triage_roc_auc_in_scope_301": 0.7730465949820788,
+      "triage_roc_auc_open_set_355": 0.6112111292962357,
+      "fst_roc_auc": {
+        "12": 0.7035040431266847,
+        "34": 0.8087878297459136,
+        "56": 0.6193658280922433
+      },
+      "fixed_tau_020": {
+        "sens": 1.0,
+        "spec": 0.008247422680412371
+      },
+      "fixed_tau_050": {
+        "sens": 0.8713450292397661,
+        "spec": 0.311340206185567
+      },
+      "saerens_em_unsupervised_tau_050": {
+        "estimated_pi_target": 0.999999463558197,
+        "sens": 1.0,
+        "spec": 0.0
+      },
+      "local_hospital_25pct_calibrated_cv": {
+        "mean_tau": 0.7124556750059128,
+        "heldout_75pct_sens_mean": 0.5438771802325582,
+        "heldout_75pct_spec_mean": 0.7629188992825356
+      },
+      "three_way_triage_zones": {
+        "green_fraction": 0.06554878048780488,
+        "grey_fraction": 0.4771341463414634,
+        "red_fraction": 0.4573170731707317,
+        "malignant_captured_in_red_or_grey": 0.9590643274853801,
+        "benign_spared_from_urgent_red": 0.6268041237113402
+      }
+    },
+    "deconfounded_mm_consilium": {
+      "triage_roc_auc_all_656": 0.7182974618677277,
+      "triage_roc_auc_in_scope_301": 0.8092473118279568,
+      "triage_roc_auc_open_set_355": 0.5315057283142389,
+      "fst_roc_auc": {
+        "12": 0.6920806058272365,
+        "34": 0.8054701407994822,
+        "56": 0.6212002096436059
+      },
+      "fixed_tau_020": {
+        "sens": 0.9532163742690059,
+        "spec": 0.09484536082474226
+      },
+      "fixed_tau_050": {
+        "sens": 0.847953216374269,
+        "spec": 0.41030927835051545
+      },
+      "saerens_em_unsupervised_tau_050": {
+        "estimated_pi_target": 0.9999986886978149,
+        "sens": 1.0,
+        "spec": 0.0
+      },
+      "local_hospital_25pct_calibrated_cv": {
+        "mean_tau": 0.8539045006036758,
+        "heldout_75pct_sens_mean": 0.4541999757751938,
+        "heldout_75pct_spec_mean": 0.8605012411830593
+      },
+      "three_way_triage_zones": {
+        "green_fraction": 0.21798780487804878,
+        "grey_fraction": 0.2820121951219512,
+        "red_fraction": 0.5,
+        "malignant_captured_in_red_or_grey": 0.8947368421052632,
+        "benign_spared_from_urgent_red": 0.5731958762886598
+      }
+    },
+    "img_only_consilium": {
+      "triage_roc_auc_all_656": 0.7240007234581299,
+      "triage_roc_auc_in_scope_301": 0.8152329749103943,
+      "triage_roc_auc_open_set_355": 0.5381342062193126,
+      "fst_roc_auc": {
+        "12": 0.7088948787061995,
+        "34": 0.810001618384852,
+        "56": 0.6108490566037736
+      },
+      "fixed_tau_020": {
+        "sens": 0.9473684210526315,
+        "spec": 0.12164948453608247
+      },
+      "fixed_tau_050": {
+        "sens": 0.8304093567251462,
+        "spec": 0.42061855670103093
+      },
+      "saerens_em_unsupervised_tau_050": {
+        "estimated_pi_target": 0.9999977946281433,
+        "sens": 1.0,
+        "spec": 0.0
+      },
+      "local_hospital_25pct_calibrated_cv": {
+        "mean_tau": 0.8434697091579437,
+        "heldout_75pct_sens_mean": 0.5281159156976745,
+        "heldout_75pct_spec_mean": 0.8205998546907638
+      },
+      "three_way_triage_zones": {
+        "green_fraction": 0.2347560975609756,
+        "grey_fraction": 0.2621951219512195,
+        "red_fraction": 0.5030487804878049,
+        "malignant_captured_in_red_or_grey": 0.9064327485380117,
+        "benign_spared_from_urgent_red": 0.5731958762886598
+      }
+    },
+    "img_only_dino": {
+      "triage_roc_auc_all_656": 0.696280219448966,
+      "triage_roc_auc_in_scope_301": 0.7591756272401433,
+      "triage_roc_auc_open_set_355": 0.5774959083469722,
+      "fst_roc_auc": {
+        "12": 0.6757797458606084,
+        "34": 0.7637158116200031,
+        "56": 0.61333857442348
+      },
+      "fixed_tau_020": {
+        "sens": 0.9649122807017544,
+        "spec": 0.11134020618556702
+      },
+      "fixed_tau_050": {
+        "sens": 0.8187134502923976,
+        "spec": 0.3938144329896907
+      },
+      "saerens_em_unsupervised_tau_050": {
+        "estimated_pi_target": 0.9999982118606567,
+        "sens": 1.0,
+        "spec": 0.0
+      },
+      "local_hospital_25pct_calibrated_cv": {
+        "mean_tau": 0.8262793868780136,
+        "heldout_75pct_sens_mean": 0.4833151647286822,
+        "heldout_75pct_spec_mean": 0.7814420428056791
+      },
+      "three_way_triage_zones": {
+        "green_fraction": 0.21798780487804878,
+        "grey_fraction": 0.2698170731707317,
+        "red_fraction": 0.5121951219512195,
+        "malignant_captured_in_red_or_grey": 0.8771929824561403,
+        "benign_spared_from_urgent_red": 0.5587628865979382
+      }
+    },
+    "img_only_biomed": {
+      "triage_roc_auc_all_656": 0.7099174051968409,
+      "triage_roc_auc_in_scope_301": 0.8043727598566308,
+      "triage_roc_auc_open_set_355": 0.4953355155482815,
+      "fst_roc_auc": {
+        "12": 0.7182646643563085,
+        "34": 0.8003722285159411,
+        "56": 0.5900157232704402
+      },
+      "fixed_tau_020": {
+        "sens": 0.8830409356725146,
+        "spec": 0.2721649484536082
+      },
+      "fixed_tau_050": {
+        "sens": 0.7953216374269005,
+        "spec": 0.4515463917525773
+      },
+      "saerens_em_unsupervised_tau_050": {
+        "estimated_pi_target": 0.8135694265365601,
+        "sens": 0.9239766081871345,
+        "spec": 0.18144329896907216
+      },
+      "local_hospital_25pct_calibrated_cv": {
+        "mean_tau": 0.8189069032669067,
+        "heldout_75pct_sens_mean": 0.6255299176356589,
+        "heldout_75pct_spec_mean": 0.685836890382345
+      },
+      "three_way_triage_zones": {
+        "green_fraction": 0.2942073170731707,
+        "grey_fraction": 0.17378048780487804,
+        "red_fraction": 0.5320121951219512,
+        "malignant_captured_in_red_or_grey": 0.8538011695906432,
+        "benign_spared_from_urgent_red": 0.5443298969072164
+      }
+    }
+  }
+}

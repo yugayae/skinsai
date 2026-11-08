@@ -1,0 +1,87 @@
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: skinai_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - nginx_logs:/var/log/nginx
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - skinai_net
+
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    container_name: skinai_api
+    restart: unless-stopped
+    expose:
+      - "8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DEBUG=false
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-skinai_user}:${POSTGRES_PASSWORD:-skinai_password}@db:5432/${POSTGRES_DB:-skinai_db}
+      - TELEMETRY_SALT=${TELEMETRY_SALT}
+      - API_SECRET_KEY=${API_SECRET_KEY}
+      - ARTIFACTS_DIR=artifacts
+    tmpfs:
+      - /tmp:size=2G,mode=1777
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - skinai_net
+
+  db:
+    image: postgres:16-alpine
+    container_name: skinai_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-skinai_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-skinai_password}
+      - POSTGRES_DB=${POSTGRES_DB:-skinai_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-skinai_user} -d ${POSTGRES_DB:-skinai_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - skinai_net
+
+  bot:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.bot
+    container_name: skinai_bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    networks:
+      - skinai_net
+
+networks:
+  skinai_net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  nginx_logs:

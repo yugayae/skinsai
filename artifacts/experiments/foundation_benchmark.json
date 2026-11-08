@@ -1,0 +1,47 @@
+{
+  "EfficientNet-B0 (Baseline)": {
+    "accuracy": 0.6474,
+    "balanced_accuracy": 0.5141,
+    "macro_f1": 0.5089,
+    "macro_roc_auc": 0.8552,
+    "macro_pr_auc": 0.5772,
+    "mel_pr_auc": 0.3196,
+    "mel_recall_naive": 0.25,
+    "mel_recall_tau_005": 0.75,
+    "mel_spec_tau_005": 0.8728,
+    "mel_recall_tau_020": 0.5,
+    "mel_spec_tau_020": 0.9763,
+    "mal_recall_tau_020": 0.9568,
+    "mal_spec_tau_020": 0.5489
+  },
+  "Meta DINOv2 Small": {
+    "accuracy": 0.7196531791907514,
+    "balanced_accuracy": 0.5521800061277458,
+    "macro_f1": 0.5502248475596948,
+    "macro_roc_auc": 0.8880756349864294,
+    "macro_pr_auc": 0.6057306788079521,
+    "mel_pr_auc": 0.23735394842868654,
+    "mel_recall_naive": 0.125,
+    "mel_recall_tau_005": 0.625,
+    "mel_spec_tau_005": 0.8461538461538461,
+    "mel_recall_tau_020": 0.375,
+    "mel_spec_tau_020": 0.9674556213017751,
+    "mal_recall_tau_020": 0.9814814814814815,
+    "mal_spec_tau_020": 0.4782608695652174
+  },
+  "Microsoft BiomedCLIP": {
+    "accuracy": 0.6647398843930635,
+    "balanced_accuracy": 0.5527999271992575,
+    "macro_f1": 0.548005275974026,
+    "macro_roc_auc": 0.8718219849707811,
+    "macro_pr_auc": 0.5925777785160217,
+    "mel_pr_auc": 0.2659990824028122,
+    "mel_recall_naive": 0.25,
+    "mel_recall_tau_005": 0.625,
+    "mel_spec_tau_005": 0.8047337278106509,
+    "mel_recall_tau_020": 0.5,
+    "mel_spec_tau_020": 0.9378698224852071,
+    "mal_recall_tau_020": 0.9691358024691358,
+    "mal_spec_tau_020": 0.391304347826087
+  }
+}

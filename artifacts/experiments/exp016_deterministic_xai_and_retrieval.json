@@ -1,0 +1,645 @@
+{
+  "experiment_id": "EXP-016",
+  "biopsy_atlas_retrieval": {
+    "dinov2_384d": {
+      "space": "DINOv2_384D",
+      "top1_exact_subtype_acc": 0.5231,
+      "top3_subtype_hit_rate": 0.7712,
+      "top5_subtype_hit_rate": 0.8519,
+      "malignancy_hit_rate_at_3": 0.9447,
+      "melanoma_hit_rate_at_5": 0.4828,
+      "sample_melanoma_retrievals": [
+        {
+          "query_image_id": "ISIC_0024258",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "mednode_naevus_2085285",
+              "similarity": 0.8907,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 2,
+              "image_id": "mednode_melanoma_236042-h",
+              "similarity": 0.888,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_4690561",
+              "similarity": 0.8829,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024268",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_2896563",
+              "similarity": 0.8991,
+              "biopsy_diagnosis": "bcc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_1693974",
+              "similarity": 0.8915,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_4235732",
+              "similarity": 0.8876,
+              "biopsy_diagnosis": "bcc",
+              "malignancy": "Malignant"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024290",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_0024223",
+              "similarity": 0.8588,
+              "biopsy_diagnosis": "scc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_0024226",
+              "similarity": 0.8262,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_0024224",
+              "similarity": 0.8243,
+              "biopsy_diagnosis": "bcc",
+              "malignancy": "Malignant"
+            }
+          ]
+        }
+      ]
+    },
+    "biomedclip_512d": {
+      "space": "BiomedCLIP_512D",
+      "top1_exact_subtype_acc": 0.5577,
+      "top3_subtype_hit_rate": 0.8038,
+      "top5_subtype_hit_rate": 0.8865,
+      "malignancy_hit_rate_at_3": 0.9289,
+      "melanoma_hit_rate_at_5": 0.7931,
+      "sample_melanoma_retrievals": [
+        {
+          "query_image_id": "ISIC_0024258",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_6046428",
+              "similarity": 0.9372,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_2494666",
+              "similarity": 0.9259,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_4690561",
+              "similarity": 0.9153,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024268",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_9053703",
+              "similarity": 0.9011,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_1693974",
+              "similarity": 0.893,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_2161430",
+              "similarity": 0.8909,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024290",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_0024224",
+              "similarity": 0.8562,
+              "biopsy_diagnosis": "bcc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_0024223",
+              "similarity": 0.8561,
+              "biopsy_diagnosis": "scc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_2140182",
+              "similarity": 0.8553,
+              "biopsy_diagnosis": "ack",
+              "malignancy": "Benign"
+            }
+          ]
+        }
+      ]
+    },
+    "joint_consilium_896d": {
+      "space": "Joint_Consilium_896D",
+      "top1_exact_subtype_acc": 0.5462,
+      "top3_subtype_hit_rate": 0.8173,
+      "top5_subtype_hit_rate": 0.8885,
+      "malignancy_hit_rate_at_3": 0.9407,
+      "melanoma_hit_rate_at_5": 0.7586,
+      "sample_melanoma_retrievals": [
+        {
+          "query_image_id": "ISIC_0024258",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_4690561",
+              "similarity": 0.8991,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "mednode_melanoma_236042-h",
+              "similarity": 0.8898,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "mednode_melanoma_226555",
+              "similarity": 0.8826,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024268",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_1693974",
+              "similarity": 0.8922,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_0799525",
+              "similarity": 0.8821,
+              "biopsy_diagnosis": "nev",
+              "malignancy": "Benign"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_3211483",
+              "similarity": 0.8734,
+              "biopsy_diagnosis": "sek",
+              "malignancy": "Benign"
+            }
+          ]
+        },
+        {
+          "query_image_id": "ISIC_0024290",
+          "true_diagnosis": "mel",
+          "top_3_biopsy_twins": [
+            {
+              "rank": 1,
+              "image_id": "ISIC_0024223",
+              "similarity": 0.8575,
+              "biopsy_diagnosis": "scc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 2,
+              "image_id": "ISIC_0024224",
+              "similarity": 0.8403,
+              "biopsy_diagnosis": "bcc",
+              "malignancy": "Malignant"
+            },
+            {
+              "rank": 3,
+              "image_id": "ISIC_0024226",
+              "similarity": 0.8151,
+              "biopsy_diagnosis": "mel",
+              "malignancy": "Malignant"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "abcde_morphometry_statistics": {
+    "asymmetry_shape": {
+      "melanoma_mean": 0.4087,
+      "melanoma_std": 0.2064,
+      "benign_nevus_mean": 0.4778,
+      "benign_nevus_std": 0.2405,
+      "malignant_all_mean": 0.5555,
+      "benign_all_mean": 0.57,
+      "cohens_d_mel_vs_nev": -0.3086
+    },
+    "asymmetry_color": {
+      "melanoma_mean": 0.2202,
+      "melanoma_std": 0.1533,
+      "benign_nevus_mean": 0.1939,
+      "benign_nevus_std": 0.1278,
+      "malignant_all_mean": 0.2684,
+      "benign_all_mean": 0.2348,
+      "cohens_d_mel_vs_nev": 0.1863
+    },
+    "border_irregularity": {
+      "melanoma_mean": 54.6654,
+      "melanoma_std": 88.2509,
+      "benign_nevus_mean": 34.021,
+      "benign_nevus_std": 40.8348,
+      "malignant_all_mean": 78.4626,
+      "benign_all_mean": 83.6037,
+      "cohens_d_mel_vs_nev": 0.3002
+    },
+    "border_radial_std": {
+      "melanoma_mean": 0.3267,
+      "melanoma_std": 0.1122,
+      "benign_nevus_mean": 0.3305,
+      "benign_nevus_std": 0.1219,
+      "malignant_all_mean": 0.3693,
+      "benign_all_mean": 0.3674,
+      "cohens_d_mel_vs_nev": -0.0321
+    },
+    "color_std_l": {
+      "melanoma_mean": 8.5509,
+      "melanoma_std": 2.2766,
+      "benign_nevus_mean": 8.0478,
+      "benign_nevus_std": 3.0062,
+      "malignant_all_mean": 8.6304,
+      "benign_all_mean": 7.9977,
+      "cohens_d_mel_vs_nev": 0.1887
+    },
+    "color_std_a": {
+      "melanoma_mean": 5.1761,
+      "melanoma_std": 2.5746,
+      "benign_nevus_mean": 4.0534,
+      "benign_nevus_std": 1.9391,
+      "malignant_all_mean": 5.9398,
+      "benign_all_mean": 4.0317,
+      "cohens_d_mel_vs_nev": 0.4926
+    },
+    "color_entropy": {
+      "melanoma_mean": 3.0013,
+      "melanoma_std": 0.7934,
+      "benign_nevus_mean": 2.7072,
+      "benign_nevus_std": 0.7016,
+      "malignant_all_mean": 3.1332,
+      "benign_all_mean": 2.7252,
+      "cohens_d_mel_vs_nev": 0.3927
+    },
+    "distinct_color_clusters": {
+      "melanoma_mean": 3.2069,
+      "melanoma_std": 0.9606,
+      "benign_nevus_mean": 3.0833,
+      "benign_nevus_std": 1.024,
+      "malignant_all_mean": 3.3439,
+      "benign_all_mean": 3.0337,
+      "cohens_d_mel_vs_nev": 0.1245
+    }
+  },
+  "dinov2_pixel_attention_verification": {
+    "evaluated_lesions": 58,
+    "mean_attention_enrichment_ratio": 1.7468,
+    "median_attention_enrichment_ratio": 1.5762,
+    "lesion_focused_rate_gt_1x": 0.9138,
+    "mean_attention_mass_in_lesion": 0.3577,
+    "saved_visual_cards": [
+      "artifacts\\explainability_samples\\card_mel_ISIC_0024258.png",
+      "artifacts\\explainability_samples\\card_mel_ISIC_0024268.png",
+      "artifacts\\explainability_samples\\card_mel_ISIC_0024290.png",
+      "artifacts\\explainability_samples\\card_nev_ISIC_0788010.png",
+      "artifacts\\explainability_samples\\card_nev_ISIC_9377549.png",
+      "artifacts\\explainability_samples\\card_nev_ISIC_9498324.png"
+    ]
+  },
+  "hybrid_classification_benchmark": {
+    "1_Neural_Consilium_Baseline_EXP015": {
+      "accuracy": {
+        "mean": 0.7796153846153846,
+        "std": 0.0026085884550481704,
+        "min": 0.775,
+        "max": 0.7826923076923077
+      },
+      "balanced_accuracy": {
+        "mean": 0.7320062106577128,
+        "std": 0.009232895830626451,
+        "min": 0.7164317834860459,
+        "max": 0.7450521649649783
+      },
+      "macro_f1": {
+        "mean": 0.7360465371704588,
+        "std": 0.009295938705851044,
+        "min": 0.7198390070478875,
+        "max": 0.7481345162452291
+      },
+      "macro_roc_auc": {
+        "mean": 0.9431975153583074,
+        "std": 0.0026930594101775016,
+        "min": 0.938947485031207,
+        "max": 0.9468525881370358
+      },
+      "macro_pr_auc": {
+        "mean": 0.7874912469253152,
+        "std": 0.006386606815970169,
+        "min": 0.778759512479799,
+        "max": 0.7949683043169937
+      },
+      "mel_recall_naive": {
+        "mean": 0.7448275862068966,
+        "std": 0.01689303270884948,
+        "min": 0.7241379310344828,
+        "max": 0.7586206896551724
+      },
+      "mel_recall_tau_005": {
+        "mean": 0.9241379310344827,
+        "std": 0.025804533701889256,
+        "min": 0.896551724137931,
+        "max": 0.9655172413793104
+      },
+      "mel_spec_tau_005": {
+        "mean": 0.8855397148676172,
+        "std": 0.0067425439337054326,
+        "min": 0.8757637474541752,
+        "max": 0.8961303462321792
+      },
+      "triage_roc_auc": {
+        "mean": 0.9175852318988615,
+        "std": 0.0037000001848630044,
+        "min": 0.9133987653772706,
+        "max": 0.923021124779796
+      },
+      "triage_recall_tau_020": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "triage_spec_tau_020": {
+        "mean": 0.5205992509363295,
+        "std": 0.04790494967885985,
+        "min": 0.4606741573033708,
+        "max": 0.5730337078651685
+      },
+      "consensus_safety_recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "consensus_safety_spec": {
+        "mean": 0.5176029962546816,
+        "std": 0.045526805689955784,
+        "min": 0.4606741573033708,
+        "max": 0.5730337078651685
+      },
+      "consensus_agreement_rate": {
+        "mean": 0.8965384615384615,
+        "std": 0.02214128917634498,
+        "min": 0.8673076923076923,
+        "max": 0.9211538461538461
+      },
+      "mel_hits_mean": 26.8,
+      "mel_support": 29,
+      "mel_wilson_95_ci": [
+        0.7803546050162572,
+        0.9808786893470681
+      ]
+    },
+    "2_Neural_Consilium_Plus_Biopsy_kNN_Atlas": {
+      "accuracy": {
+        "mean": 0.7815384615384615,
+        "std": 0.0033529991873389674,
+        "min": 0.775,
+        "max": 0.7846153846153846
+      },
+      "balanced_accuracy": {
+        "mean": 0.7297476395790955,
+        "std": 0.00798955956377797,
+        "min": 0.7143384191487105,
+        "max": 0.7365402557329229
+      },
+      "macro_f1": {
+        "mean": 0.7357200469819118,
+        "std": 0.007681538313531652,
+        "min": 0.7212747049292639,
+        "max": 0.7416782951629631
+      },
+      "macro_roc_auc": {
+        "mean": 0.9428989275535462,
+        "std": 0.002607816323096773,
+        "min": 0.9387186550598839,
+        "max": 0.9462627335727478
+      },
+      "macro_pr_auc": {
+        "mean": 0.7887483812970719,
+        "std": 0.0056913001460193536,
+        "min": 0.7806568729213449,
+        "max": 0.7947228910932541
+      },
+      "mel_recall_naive": {
+        "mean": 0.7379310344827588,
+        "std": 0.02758620689655169,
+        "min": 0.6896551724137931,
+        "max": 0.7586206896551724
+      },
+      "mel_recall_tau_005": {
+        "mean": 0.9241379310344827,
+        "std": 0.025804533701889256,
+        "min": 0.896551724137931,
+        "max": 0.9655172413793104
+      },
+      "mel_spec_tau_005": {
+        "mean": 0.8814663951120163,
+        "std": 0.00415398738378231,
+        "min": 0.8757637474541752,
+        "max": 0.8879837067209776
+      },
+      "triage_roc_auc": {
+        "mean": 0.9175852318988615,
+        "std": 0.0037000001848630044,
+        "min": 0.9133987653772706,
+        "max": 0.923021124779796
+      },
+      "triage_recall_tau_020": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "triage_spec_tau_020": {
+        "mean": 0.5205992509363295,
+        "std": 0.04790494967885985,
+        "min": 0.4606741573033708,
+        "max": 0.5730337078651685
+      },
+      "consensus_safety_recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "consensus_safety_spec": {
+        "mean": 0.5183520599250936,
+        "std": 0.047998559831013594,
+        "min": 0.45692883895131087,
+        "max": 0.5730337078651685
+      },
+      "consensus_agreement_rate": {
+        "mean": 0.8965384615384615,
+        "std": 0.0229290131704444,
+        "min": 0.8673076923076923,
+        "max": 0.9211538461538461
+      },
+      "mel_hits_mean": 26.8,
+      "mel_support": 29,
+      "mel_wilson_95_ci": [
+        0.7803546050162572,
+        0.9808786893470681
+      ]
+    },
+    "3_Full_Hybrid_Consilium_ABCDE_Plus_kNN_Atlas": {
+      "accuracy": {
+        "mean": 0.7788461538461539,
+        "std": 0.002432521277052591,
+        "min": 0.775,
+        "max": 0.7826923076923077
+      },
+      "balanced_accuracy": {
+        "mean": 0.7267237227530193,
+        "std": 0.00834309671813567,
+        "min": 0.7111941117570381,
+        "max": 0.7357394754748873
+      },
+      "macro_f1": {
+        "mean": 0.732370836710228,
+        "std": 0.009056930427347072,
+        "min": 0.714704953112263,
+        "max": 0.7395522804098539
+      },
+      "macro_roc_auc": {
+        "mean": 0.9430276667472676,
+        "std": 0.0026126523563826227,
+        "min": 0.9394425010708155,
+        "max": 0.9461582307670667
+      },
+      "macro_pr_auc": {
+        "mean": 0.7847495648131975,
+        "std": 0.006761832093572229,
+        "min": 0.7760163676855111,
+        "max": 0.7927228545566706
+      },
+      "mel_recall_naive": {
+        "mean": 0.7379310344827585,
+        "std": 0.03516565181788127,
+        "min": 0.6896551724137931,
+        "max": 0.7931034482758621
+      },
+      "mel_recall_tau_005": {
+        "mean": 0.9172413793103449,
+        "std": 0.027586206896551727,
+        "min": 0.896551724137931,
+        "max": 0.9655172413793104
+      },
+      "mel_spec_tau_005": {
+        "mean": 0.8778004073319755,
+        "std": 0.006440484032929507,
+        "min": 0.8716904276985743,
+        "max": 0.890020366598778
+      },
+      "triage_roc_auc": {
+        "mean": 0.9217095231750825,
+        "std": 0.0025232195404937614,
+        "min": 0.9181803378188331,
+        "max": 0.9259670471199538
+      },
+      "triage_recall_tau_020": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "triage_spec_tau_020": {
+        "mean": 0.5153558052434457,
+        "std": 0.04161181846391357,
+        "min": 0.46441947565543074,
+        "max": 0.5617977528089888
+      },
+      "consensus_safety_recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "consensus_safety_spec": {
+        "mean": 0.5116104868913858,
+        "std": 0.03974981022148795,
+        "min": 0.46441947565543074,
+        "max": 0.5617977528089888
+      },
+      "consensus_agreement_rate": {
+        "mean": 0.8992307692307693,
+        "std": 0.019558741746294038,
+        "min": 0.8711538461538462,
+        "max": 0.9230769230769231
+      },
+      "mel_hits_mean": 26.6,
+      "mel_support": 29,
+      "mel_wilson_95_ci": [
+        0.7803546050162572,
+        0.9808786893470681
+      ]
+    }
+  }
+}

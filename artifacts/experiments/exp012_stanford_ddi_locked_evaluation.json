@@ -1,0 +1,94 @@
+{
+  "benchmark": "EXP-012: Pre-Registered Locked External Evaluation on Stanford DDI",
+  "standard": "CLAIM 2024 / STARD-AI / IEC 62304",
+  "date": "2026-10-24",
+  "model_path": "C:\\HomeWork\\Medical\\Dermatology\\artifacts\\models\\smartphone_clinical\\development_champion_v2\\best_model.pt",
+  "model_sha256": "4bc71ff1dbad7520f5c76469185bfe409672565683afe3a256134ce8bd74d58f",
+  "n_total": 656,
+  "n_malignant": 171,
+  "n_benign": 485,
+  "primary_triage_auc": 0.7095195032254173,
+  "triage_recall_tau_020": 1.0,
+  "triage_recall_wilson_ci": [
+    0.9780289894017253,
+    1.0
+  ],
+  "triage_spec_tau_020": 0.008247422680412371,
+  "consensus_safety_recall": 1.0,
+  "consensus_safety_wilson_ci": [
+    0.9780289894017253,
+    1.0
+  ],
+  "consensus_spec": 0.008247422680412371,
+  "melanoma_recall_tau_005": 1.0,
+  "melanoma_recall_wilson_ci": [
+    0.8453615125971192,
+    1.0
+  ],
+  "melanoma_spec_tau_005": 0.0015748031496062992,
+  "youden_index": {
+    "optimal_threshold": 0.6674113869667053,
+    "sensitivity": 0.6549707602339181,
+    "sensitivity_wilson_ci": [
+      0.5810202274488651,
+      0.7221115645879269
+    ],
+    "specificity": 0.7010309278350515,
+    "specificity_wilson_ci": [
+      0.6588373669261576,
+      0.7400649821113425
+    ]
+  },
+  "operating_points": {
+    "spec_60": {
+      "threshold": 0.6336941123008728,
+      "sensitivity": 0.7017543859649122,
+      "malignant_hits": 120
+    },
+    "spec_70": {
+      "threshold": 0.66912442445755,
+      "sensitivity": 0.6432748538011696,
+      "malignant_hits": 110
+    },
+    "spec_80": {
+      "threshold": 0.7098540663719177,
+      "sensitivity": 0.52046783625731,
+      "malignant_hits": 89
+    }
+  },
+  "fitzpatrick_stratification": {
+    "12": {
+      "total_images": 208,
+      "malignant_images": 49,
+      "benign_images": 159,
+      "triage_auc": 0.6479270953664484,
+      "consensus_recall": 1.0,
+      "consensus_spec": 0.012578616352201259,
+      "malignant_detected": 49,
+      "wilson_ci_low": 0.927302454875349,
+      "wilson_ci_high": 1.0
+    },
+    "34": {
+      "total_images": 241,
+      "malignant_images": 74,
+      "benign_images": 167,
+      "triage_auc": 0.7819226412040783,
+      "consensus_recall": 1.0,
+      "consensus_spec": 0.005988023952095809,
+      "malignant_detected": 74,
+      "wilson_ci_low": 0.9506504113541276,
+      "wilson_ci_high": 1.0
+    },
+    "56": {
+      "total_images": 207,
+      "malignant_images": 48,
+      "benign_images": 159,
+      "triage_auc": 0.6835691823899371,
+      "consensus_recall": 1.0,
+      "consensus_spec": 0.006289308176100629,
+      "malignant_detected": 48,
+      "wilson_ci_low": 0.925900149294427,
+      "wilson_ci_high": 1.0
+    }
+  }
+}

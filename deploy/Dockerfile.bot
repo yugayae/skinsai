@@ -1,0 +1,34 @@
+# SkinAI Telegram Bot Container
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# Install OS utilities and multilingual fonts (Korean + Cyrillic/Latin)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    fonts-nanum \
+    fonts-dejavu-core \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install bot dependencies
+COPY pyproject.toml .
+RUN pip install --no-cache-dir \
+    "aiogram>=3.6.0" \
+    "httpx>=0.27.0" \
+    "pydantic>=2.7.0" \
+    "pillow>=10.3.0" \
+    "reportlab>=4.1.0" \
+    "python-dotenv>=1.0.1"
+
+# Copy source code
+COPY bot/ ./bot/
+
+# Non-root user for security
+RUN useradd -m -u 1000 skinai && chown -R skinai:skinai /app
+USER skinai
+
+CMD ["python", "-m", "bot.main"]

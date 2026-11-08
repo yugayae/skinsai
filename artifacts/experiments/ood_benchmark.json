@@ -1,0 +1,86 @@
+{
+  "experiment_id": "EXP-009",
+  "name": "OOD Quality Gate & Selective Prediction Benchmark",
+  "ind_samples": 346,
+  "non_skin_samples": 100,
+  "healthy_skin_samples": 100,
+  "results": {
+    "1. MSP (Max Softmax Prob)": {
+      "non_skin_auc": 0.37789017341040465,
+      "non_skin_fpr95": 0.94,
+      "non_skin_thresh_95tpr": 0.36958596110343933,
+      "healthy_auc": 0.641878612716763,
+      "healthy_fpr95": 0.83,
+      "healthy_thresh_95tpr": 0.40226316452026367,
+      "all_ood_auc": 0.5098843930635838,
+      "all_ood_fpr95": 0.885,
+      "all_ood_thresh_95tpr": 0.40226316452026367
+    },
+    "2. Negative Entropy (-H)": {
+      "non_skin_auc": 0.4195664739884393,
+      "non_skin_fpr95": 0.87,
+      "non_skin_thresh_95tpr": -1.2554655075073242,
+      "healthy_auc": 0.750057803468208,
+      "healthy_fpr95": 0.7,
+      "healthy_thresh_95tpr": -1.2387510538101196,
+      "all_ood_auc": 0.5848121387283238,
+      "all_ood_fpr95": 0.785,
+      "all_ood_thresh_95tpr": -1.2387510538101196
+    },
+    "3. Free Energy Score": {
+      "non_skin_auc": 0.49075144508670515,
+      "non_skin_fpr95": 0.87,
+      "non_skin_thresh_95tpr": 2.810028314590454,
+      "healthy_auc": 0.7539306358381503,
+      "healthy_fpr95": 0.79,
+      "healthy_thresh_95tpr": 2.810028314590454,
+      "all_ood_auc": 0.6223410404624279,
+      "all_ood_fpr95": 0.83,
+      "all_ood_thresh_95tpr": 2.810028314590454
+    },
+    "4. DINOv2 Skin Prototype Cosine": {
+      "non_skin_auc": 1.0,
+      "non_skin_fpr95": 0.0,
+      "non_skin_thresh_95tpr": 0.45254069566726685,
+      "healthy_auc": 0.9464161849710983,
+      "healthy_fpr95": 0.27,
+      "healthy_thresh_95tpr": 0.5940674543380737,
+      "all_ood_auc": 0.9732080924855491,
+      "all_ood_fpr95": 0.135,
+      "all_ood_thresh_95tpr": 0.5940674543380737
+    },
+    "5. DINOv2 Class Centroid Cosine": {
+      "non_skin_auc": 1.0,
+      "non_skin_fpr95": 0.0,
+      "non_skin_thresh_95tpr": 0.4643818736076355,
+      "healthy_auc": 0.9676878612716763,
+      "healthy_fpr95": 0.16,
+      "healthy_thresh_95tpr": 0.6489648222923279,
+      "all_ood_auc": 0.9838439306358381,
+      "all_ood_fpr95": 0.08,
+      "all_ood_thresh_95tpr": 0.6489648222923279
+    },
+    "6. Focal Contrast (Lesion vs Healthy)": {
+      "non_skin_auc": 0.4482658959537572,
+      "non_skin_fpr95": 0.69,
+      "non_skin_thresh_95tpr": 6.307854652404785,
+      "healthy_auc": 0.9165606936416185,
+      "healthy_fpr95": 0.33,
+      "healthy_thresh_95tpr": 8.790610790252686,
+      "all_ood_auc": 0.6824132947976879,
+      "all_ood_fpr95": 0.51,
+      "all_ood_thresh_95tpr": 8.790610790252686
+    },
+    "7. SkinAI Dual Gate (DINOv2 Skin Cosine + Contrast)": {
+      "non_skin_auc": 1.0,
+      "non_skin_fpr95": 0.0,
+      "non_skin_thresh_95tpr": 5.318981742858886,
+      "healthy_auc": 0.9697398843930636,
+      "healthy_fpr95": 0.16,
+      "healthy_thresh_95tpr": 6.958161449432373,
+      "all_ood_auc": 0.9848699421965318,
+      "all_ood_fpr95": 0.08,
+      "all_ood_thresh_95tpr": 6.958161449432373
+    }
+  }
+}

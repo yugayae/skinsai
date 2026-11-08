@@ -1,0 +1,81 @@
+# =============================================================
+# SkinAI — Git ignore rules
+# =============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+pip-wheel-metadata/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+ENV/
+env/
+
+# ---------- Secrets & local configuration ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------- Datasets (downloaded locally, never committed) ----------
+# Raw images and metadata are fetched by scripts/download_*.py and
+# scripts/fetch_*.py according to docs/DATA_GOVERNANCE.md.
+data/raw/
+data/cache/
+data/metadata/
+data/ood_benchmark/
+data/*.zip
+
+# ---------- Model weights, embeddings & feature caches ----------
+# Model bundles are distributed separately (see docs/DEPLOYMENT.md).
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+*.npy
+*.npz
+artifacts/cache/
+artifacts/embeddings/
+
+# ---------- Local working files ----------
+scratch/
+tmp/
+temp/
+*.log
+/*.pdf
+
+# ---------- Testing & linting ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- Local databases ----------
+postgres_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------- Node / Mini App ----------
+node_modules/
+dist/
+miniapp/node_modules/
+miniapp/dist/
+
+# ---------- IDE / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

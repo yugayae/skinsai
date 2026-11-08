@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "description": "Unified Development Pool v2: PAD-UFES-20 + ISIC Close-up + MED-NODE",
+  "total_images": 3767,
+  "total_patients": 1674,
+  "train_images": 3010,
+  "train_patients": 1339,
+  "val_images": 757,
+  "val_patients": 335,
+  "patient_overlap": 0,
+  "lesion_overlap": 0,
+  "melanoma_total": 142,
+  "melanoma_train": 113,
+  "melanoma_val": 29,
+  "sources": {
+    "pad_ufes_20": 2298,
+    "isic_clinical": 1299,
+    "mednode": 170
+  }
+}

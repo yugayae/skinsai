@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "accuracy": {
+      "mean": 0.6812631578947368,
+      "std": 0.006329809001420178,
+      "min": 0.6736842105263158,
+      "max": 0.6884210526315789
+    },
+    "balanced_accuracy": {
+      "mean": 0.6121687812992159,
+      "std": 0.008519032322109474,
+      "min": 0.6002725133159915,
+      "max": 0.6241252440527802
+    },
+    "macro_f1": {
+      "mean": 0.5944933677585745,
+      "std": 0.0074954171003440975,
+      "min": 0.5834634441172165,
+      "max": 0.6069671227571755
+    },
+    "macro_roc_auc": {
+      "mean": 0.9060574565226999,
+      "std": 0.0017626997900921893,
+      "min": 0.903686476535477,
+      "max": 0.908792121830068
+    },
+    "macro_pr_auc": {
+      "mean": 0.6181121569673057,
+      "std": 0.005110368862409556,
+      "min": 0.6125331412092171,
+      "max": 0.626878451290426
+    },
+    "mel_recall_tau_005": {
+      "mean": 0.7142857142857143,
+      "std": 0.0,
+      "min": 0.7142857142857143,
+      "max": 0.7142857142857143
+    },
+    "mel_spec_tau_005": {
+      "mean": 0.9136659436008676,
+      "std": 0.0016232786927435465,
+      "min": 0.911062906724512,
+      "max": 0.9154013015184381
+    },
+    "triage_roc_auc": {
+      "mean": 0.8694929078014185,
+      "std": 0.006041450137391515,
+      "min": 0.862836879432624,
+      "max": 0.8784574468085107
+    },
+    "triage_recall_tau_020": {
+      "mean": 0.9812765957446807,
+      "std": 0.002084672121517601,
+      "min": 0.9787234042553191,
+      "max": 0.9829787234042553
+    },
+    "triage_spec_tau_020": {
+      "mean": 0.665,
+      "std": 0.004249182927993972,
+      "min": 0.6583333333333333,
+      "max": 0.6708333333333333
+    },
+    "consensus_safety_recall": {
+      "mean": 0.9957446808510639,
+      "std": 1.1102230246251565e-16,
+      "min": 0.9957446808510638,
+      "max": 0.9957446808510638
+    },
+    "consensus_safety_spec": {
+      "mean": 0.6566666666666667,
+      "std": 0.004999999999999982,
+      "min": 0.65,
+      "max": 0.6625
+    },
+    "consensus_agreement_rate": {
+      "mean": 0.9629473684210526,
+      "std": 0.0039046814717876815,
+      "min": 0.9557894736842105,
+      "max": 0.9663157894736842
+    }
+  },
+  "seeds": [
+    {
+      "accuracy": 0.6884210526315789,
+      "balanced_accuracy": 0.6241252440527802,
+      "macro_f1": 0.6069671227571755,
+      "macro_roc_auc": 0.908792121830068,
+      "macro_pr_auc": 0.626878451290426,
+      "mel_support": 14,
+      "mel_hits": 10,
+      "mel_recall_tau_005": 0.7142857142857143,
+      "mel_recall_ci_low": 0.4535096621267969,
+      "mel_recall_ci_high": 0.8827860025345649,
+      "mel_spec_tau_005": 0.913232104121475,
+      "triage_roc_auc": 0.8660283687943262,
+      "triage_recall_tau_020": 0.9829787234042553,
+      "triage_spec_tau_020": 0.6583333333333333,
+      "consensus_safety_recall": 0.9957446808510638,
+      "consensus_safety_spec": 0.65,
+      "consensus_agreement_rate": 0.9663157894736842,
+      "seed": 0
+    },
+    {
+      "accuracy": 0.6842105263157895,
+      "balanced_accuracy": 0.6075035538803654,
+      "macro_f1": 0.5928172024946218,
+      "macro_roc_auc": 0.9071715242628947,
+      "macro_pr_auc": 0.6160701880523987,
+      "mel_support": 14,
+      "mel_hits": 10,
+      "mel_recall_tau_005": 0.7142857142857143,
+      "mel_recall_ci_low": 0.4535096621267969,
+      "mel_recall_ci_high": 0.8827860025345649,
+      "mel_spec_tau_005": 0.9154013015184381,
+      "triage_roc_auc": 0.8784574468085107,
+      "triage_recall_tau_020": 0.9787234042553191,
+      "triage_spec_tau_020": 0.6666666666666666,
+      "consensus_safety_recall": 0.9957446808510638,
+      "consensus_safety_spec": 0.6541666666666667,
+      "consensus_agreement_rate": 0.9621052631578947,
+      "seed": 8
+    },
+    {
+      "accuracy": 0.6736842105263158,
+      "balanced_accuracy": 0.619268372529242,
+      "macro_f1": 0.5952483182148309,
+      "macro_roc_auc": 0.9055450621368663,
+      "macro_pr_auc": 0.6125331412092171,
+      "mel_support": 14,
+      "mel_hits": 10,
+      "mel_recall_tau_005": 0.7142857142857143,
+      "mel_recall_ci_low": 0.4535096621267969,
+      "mel_recall_ci_high": 0.8827860025345649,
+      "mel_spec_tau_005": 0.9154013015184381,
+      "triage_roc_auc": 0.862836879432624,
+      "triage_recall_tau_020": 0.9829787234042553,
+      "triage_spec_tau_020": 0.6666666666666666,
+      "consensus_safety_recall": 0.9957446808510638,
+      "consensus_safety_spec": 0.6625,
+      "consensus_agreement_rate": 0.9663157894736842,
+      "seed": 27
+    },
+    {
+      "accuracy": 0.6863157894736842,
+      "balanced_accuracy": 0.609674222717701,
+      "macro_f1": 0.5939707512090281,
+      "macro_roc_auc": 0.903686476535477,
+      "macro_pr_auc": 0.6145578488748368,
+      "mel_support": 14,
+      "mel_hits": 10,
+      "mel_recall_tau_005": 0.7142857142857143,
+      "mel_recall_ci_low": 0.4535096621267969,
+      "mel_recall_ci_high": 0.8827860025345649,
+      "mel_spec_tau_005": 0.913232104121475,
+      "triage_roc_auc": 0.874822695035461,
+      "triage_recall_tau_020": 0.9787234042553191,
+      "triage_spec_tau_020": 0.6708333333333333,
+      "consensus_safety_recall": 0.9957446808510638,
+      "consensus_safety_spec": 0.6625,
+      "consensus_agreement_rate": 0.9642105263157895,
+      "seed": 42
+    },
+    {
+      "accuracy": 0.6736842105263158,
+      "balanced_accuracy": 0.6002725133159915,
+      "macro_f1": 0.5834634441172165,
+      "macro_roc_auc": 0.9050920978481937,
+      "macro_pr_auc": 0.62052115540965,
+      "mel_support": 14,
+      "mel_hits": 10,
+      "mel_recall_tau_005": 0.7142857142857143,
+      "mel_recall_ci_low": 0.4535096621267969,
+      "mel_recall_ci_high": 0.8827860025345649,
+      "mel_spec_tau_005": 0.911062906724512,
+      "triage_roc_auc": 0.8653191489361701,
+      "triage_recall_tau_020": 0.9829787234042553,
+      "triage_spec_tau_020": 0.6625,
+      "consensus_safety_recall": 0.9957446808510638,
+      "consensus_safety_spec": 0.6541666666666667,
+      "consensus_agreement_rate": 0.9557894736842105,
+      "seed": 2026
+    }
+  ]
+}

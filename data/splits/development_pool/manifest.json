@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "description": "SkinAI Development Pool (PAD-UFES-20 + ISIC Close-up Permissive)",
+  "split_ratio": {
+    "train": 0.8,
+    "val": 0.2
+  },
+  "seed": 42,
+  "total_images": 3597,
+  "total_patients": 1504,
+  "train_images": 2894,
+  "val_images": 703,
+  "train_patients": 1203,
+  "val_patients": 301
+}

@@ -1,0 +1,64 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    container_name: skinai_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DEBUG=false
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-skinai_user}:${POSTGRES_PASSWORD:-skinai_secure_pass}@db:5432/${POSTGRES_DB:-skinai_db}
+      - TELEMETRY_SALT=${TELEMETRY_SALT:-skinai_default_telemetry_salt_secret}
+      - API_SECRET_KEY=${API_SECRET_KEY:-skinai_secret_key_development_only}
+      - ARTIFACTS_DIR=artifacts
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - skinai_net
+
+  db:
+    image: postgres:16-alpine
+    container_name: skinai_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-skinai_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-skinai_secure_pass}
+      - POSTGRES_DB=${POSTGRES_DB:-skinai_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      # Bind only to localhost for security (never expose PostgreSQL to 0.0.0.0)
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-skinai_user} -d ${POSTGRES_DB:-skinai_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - skinai_net
+
+  bot:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.bot
+    container_name: skinai_bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    networks:
+      - skinai_net
+
+networks:
+  skinai_net:
+    driver: bridge
+
+volumes:
+  postgres_data:

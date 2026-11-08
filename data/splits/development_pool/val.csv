@@ -1,0 +1,704 @@
+image_id,patient_id,lesion_id,source_dataset,class_id,subtype_target,triage_target,raw_diagnosis,age_approx,sex,anatom_site_1,file_path,license,split
+ISIC_0024223,ISIC_anon_ISIC_0024223,lesion_ISIC_0024223,isic_clinical,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,female,,data/raw/isic_clinical/ISIC_0024223.jpg,CC-0,val
+ISIC_0024224,ISIC_anon_ISIC_0024224,lesion_ISIC_0024224,isic_clinical,bcc,bcc,1,Basal cell carcinoma,50.0,male,,data/raw/isic_clinical/ISIC_0024224.jpg,CC-0,val
+ISIC_0024232,ISIC_anon_ISIC_0024232,lesion_ISIC_0024232,isic_clinical,bcc,bcc,1,Basal cell carcinoma,55.0,female,,data/raw/isic_clinical/ISIC_0024232.jpg,CC-0,val
+ISIC_0024233,ISIC_anon_ISIC_0024233,lesion_ISIC_0024233,isic_clinical,bcc,bcc,1,Basal cell carcinoma,60.0,male,,data/raw/isic_clinical/ISIC_0024233.jpg,CC-0,val
+ISIC_0024234,ISIC_anon_ISIC_0024234,lesion_ISIC_0024234,isic_clinical,bcc,bcc,1,Basal cell carcinoma,55.0,male,,data/raw/isic_clinical/ISIC_0024234.jpg,CC-0,val
+ISIC_0024268,ISIC_anon_ISIC_0024268,lesion_ISIC_0024268,isic_clinical,mel,mel,1,Melanoma Invasive,45.0,female,,data/raw/isic_clinical/ISIC_0024268.jpg,CC-0,val
+ISIC_0024278,ISIC_anon_ISIC_0024278,lesion_ISIC_0024278,isic_clinical,bcc,bcc,1,Basal cell carcinoma,65.0,male,,data/raw/isic_clinical/ISIC_0024278.jpg,CC-0,val
+ISIC_0024286,ISIC_anon_ISIC_0024286,lesion_ISIC_0024286,isic_clinical,bcc,bcc,1,Basal cell carcinoma,85.0,male,,data/raw/isic_clinical/ISIC_0024286.jpg,CC-0,val
+ISIC_0024292,ISIC_anon_ISIC_0024292,lesion_ISIC_0024292,isic_clinical,mel,mel,1,Melanoma Invasive,75.0,male,,data/raw/isic_clinical/ISIC_0024292.jpg,CC-0,val
+ISIC_0024296,ISIC_anon_ISIC_0024296,lesion_ISIC_0024296,isic_clinical,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,female,,data/raw/isic_clinical/ISIC_0024296.jpg,CC-0,val
+ISIC_0024297,ISIC_anon_ISIC_0024297,lesion_ISIC_0024297,isic_clinical,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,male,,data/raw/isic_clinical/ISIC_0024297.jpg,CC-0,val
+ISIC_0024299,ISIC_anon_ISIC_0024299,lesion_ISIC_0024299,isic_clinical,bcc,bcc,1,Basal cell carcinoma,80.0,female,,data/raw/isic_clinical/ISIC_0024299.jpg,CC-0,val
+ISIC_8092280,IP_0892965,IL_6156202,isic_clinical,nev,nev,0,Nevus,60.0,male,Trunk,data/raw/isic_clinical/ISIC_8092280.jpg,CC-BY,val
+ISIC_0248915,IP_2763321,IL_4668218,isic_clinical,unmapped,unmapped,0,Scar,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_0248915.jpg,CC-BY,val
+ISIC_3747716,IP_1238256,IL_2668505,isic_clinical,unmapped,unmapped,0,Benign,55.0,female,Trunk,data/raw/isic_clinical/ISIC_3747716.jpg,CC-BY,val
+ISIC_6141677,IP_2763321,IL_4668218,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_6141677.jpg,CC-BY,val
+ISIC_5574004,IP_1238256,IL_2668505,isic_clinical,nev,nev,0,Nevus,55.0,female,Trunk,data/raw/isic_clinical/ISIC_5574004.jpg,CC-BY,val
+ISIC_4747370,IP_2763321,IL_4668218,isic_clinical,unmapped,unmapped,0,Scar,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_4747370.jpg,CC-BY,val
+ISIC_9600126,IP_0892965,IL_6156202,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_9600126.jpg,CC-BY,val
+ISIC_8353193,IP_2763321,IL_4668218,isic_clinical,mel,mel,1,"Melanoma, NOS",65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8353193.jpg,CC-BY,val
+ISIC_7727119,IP_0892965,IL_6156202,isic_clinical,nev,nev,0,Nevus,60.0,male,Trunk,data/raw/isic_clinical/ISIC_7727119.jpg,CC-BY,val
+ISIC_9708499,IP_0892965,IL_6156202,isic_clinical,nev,nev,0,Nevus,60.0,male,Trunk,data/raw/isic_clinical/ISIC_9708499.jpg,CC-BY,val
+ISIC_6779786,IP_1238256,IL_2668505,isic_clinical,unmapped,unmapped,0,Benign,55.0,female,Trunk,data/raw/isic_clinical/ISIC_6779786.jpg,CC-BY,val
+ISIC_5054247,IP_2763321,IL_4668218,isic_clinical,mel,mel,1,"Melanoma, NOS",65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5054247.jpg,CC-BY,val
+ISIC_5921373,IP_1238256,IL_2668505,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_5921373.jpg,CC-BY,val
+ISIC_4691636,IP_0892965,IL_6156202,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_4691636.jpg,CC-BY,val
+ISIC_7244280,IP_2763321,IL_4668218,isic_clinical,mel,mel,1,"Melanoma, NOS",65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_7244280.jpg,CC-BY,val
+ISIC_4127417,IP_9281843,IL_2026080,pad_ufes_20,nev,nev,0,Nevus,5.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4127417.jpg,CC-BY,val
+ISIC_9128384,IP_9281843,IL_8278335,pad_ufes_20,nev,nev,0,Nevus,5.0,,Trunk,data/raw/pad_ufes_20/ISIC_9128384.jpg,CC-BY,val
+ISIC_9570817,IP_7936779,IL_2815046,pad_ufes_20,sek,sek,0,Seborrheic keratosis,60.0,,Head and neck,data/raw/pad_ufes_20/ISIC_9570817.jpg,CC-BY,val
+ISIC_8762354,IP_9799868,IL_3697691,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8762354.jpg,CC-BY,val
+ISIC_5509287,IP_8697444,IL_5939903,pad_ufes_20,nev,nev,0,Nevus,10.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_5509287.jpg,CC-BY,val
+ISIC_7517831,IP_5428784,IL_1525775,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7517831.jpg,CC-BY,val
+ISIC_7581734,IP_5428784,IL_1525775,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7581734.jpg,CC-BY,val
+ISIC_0790688,IP_0908439,IL_4325239,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0790688.jpg,CC-BY,val
+ISIC_2682718,IP_0447066,IL_3550955,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Head and neck,data/raw/pad_ufes_20/ISIC_2682718.jpg,CC-BY,val
+ISIC_3308632,IP_6672246,IL_7729589,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Head and neck,data/raw/pad_ufes_20/ISIC_3308632.jpg,CC-BY,val
+ISIC_3409348,IP_6916976,IL_6173651,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3409348.jpg,CC-BY,val
+ISIC_0126578,IP_2789752,IL_4607283,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0126578.jpg,CC-BY,val
+ISIC_1302569,IP_8002083,IL_3665414,pad_ufes_20,sek,sek,0,Seborrheic keratosis,80.0,,Head and neck,data/raw/pad_ufes_20/ISIC_1302569.jpg,CC-BY,val
+ISIC_5200006,IP_4834209,IL_8727771,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Head and neck,data/raw/pad_ufes_20/ISIC_5200006.jpg,CC-BY,val
+ISIC_0310562,IP_9399373,IL_8099475,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Lower extremity,data/raw/pad_ufes_20/ISIC_0310562.jpg,CC-BY,val
+ISIC_1985622,IP_9399373,IL_1620626,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1985622.jpg,CC-BY,val
+ISIC_5395570,IP_9642610,IL_9984631,pad_ufes_20,nev,nev,0,Nevus,30.0,,Trunk,data/raw/pad_ufes_20/ISIC_5395570.jpg,CC-BY,val
+ISIC_8389102,IP_8798596,IL_0129871,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8389102.jpg,CC-BY,val
+ISIC_8093517,IP_0321037,IL_6072197,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Trunk,data/raw/pad_ufes_20/ISIC_8093517.jpg,CC-BY,val
+ISIC_8254655,IP_9926037,IL_6604415,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8254655.jpg,CC-BY,val
+ISIC_2821653,IP_8082977,IL_6231786,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2821653.jpg,CC-BY,val
+ISIC_4936064,IP_7603659,IL_9816630,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4936064.jpg,CC-BY,val
+ISIC_4995982,IP_6209619,IL_6375162,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4995982.jpg,CC-BY,val
+ISIC_8904916,IP_3887273,IL_6917406,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8904916.jpg,CC-BY,val
+ISIC_8295462,IP_5541481,IL_0633822,pad_ufes_20,sek,sek,0,Seborrheic keratosis,60.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8295462.jpg,CC-BY,val
+ISIC_6306884,IP_1941134,IL_8636434,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6306884.jpg,CC-BY,val
+ISIC_3737064,IP_6688416,IL_2034786,pad_ufes_20,sek,sek,0,Seborrheic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3737064.jpg,CC-BY,val
+ISIC_5101664,IP_6688416,IL_2034786,pad_ufes_20,sek,sek,0,Seborrheic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_5101664.jpg,CC-BY,val
+ISIC_0866409,IP_6688416,IL_2034786,pad_ufes_20,sek,sek,0,Seborrheic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0866409.jpg,CC-BY,val
+ISIC_8160298,IP_2522193,IL_4950660,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8160298.jpg,CC-BY,val
+ISIC_7738929,IP_9661259,IL_9315251,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7738929.jpg,CC-BY,val
+ISIC_9096887,IP_4680109,IL_1314572,pad_ufes_20,sek,sek,0,Seborrheic keratosis,80.0,,Head and neck,data/raw/pad_ufes_20/ISIC_9096887.jpg,CC-BY,val
+ISIC_7258578,IP_3413079,IL_2249108,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7258578.jpg,CC-BY,val
+ISIC_1423008,IP_4283570,IL_1398217,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1423008.jpg,CC-BY,val
+ISIC_3577430,IP_7508149,IL_3260017,pad_ufes_20,sek,sek,0,Seborrheic keratosis,40.0,,Trunk,data/raw/pad_ufes_20/ISIC_3577430.jpg,CC-BY,val
+ISIC_7095619,IP_2829558,IL_5528449,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7095619.jpg,CC-BY,val
+ISIC_8960524,IP_2829558,IL_4612765,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8960524.jpg,CC-BY,val
+ISIC_1325127,IP_6161914,IL_2377654,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,,Head and neck,data/raw/pad_ufes_20/ISIC_1325127.jpg,CC-BY,val
+ISIC_0273480,IP_0507880,IL_8896722,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0273480.jpg,CC-BY,val
+ISIC_1479354,IP_9178936,IL_2864178,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1479354.jpg,CC-BY,val
+ISIC_9351307,IP_3795820,IL_4773022,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_9351307.jpg,CC-BY,val
+ISIC_6784993,IP_3621236,IL_4166516,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,,Lower extremity,data/raw/pad_ufes_20/ISIC_6784993.jpg,CC-BY,val
+ISIC_9821308,IP_4893435,IL_6839359,pad_ufes_20,nev,nev,0,Nevus,45.0,,Head and neck,data/raw/pad_ufes_20/ISIC_9821308.jpg,CC-BY,val
+ISIC_7916400,IP_9309734,IL_9950505,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7916400.jpg,CC-BY,val
+ISIC_4738176,IP_2235596,IL_0940767,pad_ufes_20,nev,nev,0,Nevus,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_4738176.jpg,CC-BY,val
+ISIC_3521354,IP_2235596,IL_1834030,pad_ufes_20,nev,nev,0,Nevus,55.0,,Trunk,data/raw/pad_ufes_20/ISIC_3521354.jpg,CC-BY,val
+ISIC_4327972,IP_0741206,IL_0946409,pad_ufes_20,nev,nev,0,Nevus,45.0,,Trunk,data/raw/pad_ufes_20/ISIC_4327972.jpg,CC-BY,val
+ISIC_9014019,IP_0143476,IL_8955724,pad_ufes_20,nev,nev,0,Nevus,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_9014019.jpg,CC-BY,val
+ISIC_0394476,IP_0143476,IL_6443888,pad_ufes_20,sek,sek,0,Seborrheic keratosis,60.0,,Trunk,data/raw/pad_ufes_20/ISIC_0394476.jpg,CC-BY,val
+ISIC_8420849,IP_1120805,IL_2559980,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8420849.jpg,CC-BY,val
+ISIC_2058160,IP_1148447,IL_7646748,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2058160.jpg,CC-BY,val
+ISIC_8991912,IP_7366846,IL_6983466,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8991912.jpg,CC-BY,val
+ISIC_6597471,IP_6996584,IL_0727828,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Trunk,data/raw/pad_ufes_20/ISIC_6597471.jpg,CC-BY,val
+ISIC_5587116,IP_6996584,IL_0727828,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Trunk,data/raw/pad_ufes_20/ISIC_5587116.jpg,CC-BY,val
+ISIC_7742519,IP_6996584,IL_9111256,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7742519.jpg,CC-BY,val
+ISIC_1950885,IP_7846658,IL_6887069,pad_ufes_20,nev,nev,0,Nevus,35.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1950885.jpg,CC-BY,val
+ISIC_0861775,IP_6000790,IL_5044499,pad_ufes_20,sek,sek,0,Seborrheic keratosis,85.0,,Trunk,data/raw/pad_ufes_20/ISIC_0861775.jpg,CC-BY,val
+ISIC_6119729,IP_7619935,IL_2675982,pad_ufes_20,nev,nev,0,Nevus,50.0,,Trunk,data/raw/pad_ufes_20/ISIC_6119729.jpg,CC-BY,val
+ISIC_3593023,IP_7619935,IL_9140994,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3593023.jpg,CC-BY,val
+ISIC_6143322,IP_6252964,IL_4661068,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6143322.jpg,CC-BY,val
+ISIC_8835390,IP_8008195,IL_1637104,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8835390.jpg,CC-BY,val
+ISIC_7557520,IP_7031887,IL_0183957,pad_ufes_20,nev,nev,0,Nevus,30.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7557520.jpg,CC-BY,val
+ISIC_9722948,IP_4865228,IL_1375297,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_9722948.jpg,CC-BY,val
+ISIC_6248127,IP_4865228,IL_1375297,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6248127.jpg,CC-BY,val
+ISIC_4004307,IP_9379677,IL_1355640,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,,Head and neck,data/raw/pad_ufes_20/ISIC_4004307.jpg,CC-BY,val
+ISIC_6535825,IP_9497004,IL_6057498,pad_ufes_20,sek,sek,0,Seborrheic keratosis,30.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6535825.jpg,CC-BY,val
+ISIC_7078069,IP_1212726,IL_7383966,pad_ufes_20,sek,sek,0,Seborrheic keratosis,70.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7078069.jpg,CC-BY,val
+ISIC_8365738,IP_4572906,IL_9947782,pad_ufes_20,sek,sek,0,Seborrheic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8365738.jpg,CC-BY,val
+ISIC_6503244,IP_4572906,IL_7255220,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6503244.jpg,CC-BY,val
+ISIC_7686093,IP_0990805,IL_5705476,pad_ufes_20,nev,nev,0,Nevus,35.0,,Trunk,data/raw/pad_ufes_20/ISIC_7686093.jpg,CC-BY,val
+ISIC_6841626,IP_8020516,IL_8550950,pad_ufes_20,nev,nev,0,Nevus,35.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6841626.jpg,CC-BY,val
+ISIC_6508867,IP_1409774,IL_5946322,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6508867.jpg,CC-BY,val
+ISIC_6663874,IP_5550592,IL_7444811,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6663874.jpg,CC-BY,val
+ISIC_4204542,IP_7536748,IL_6116854,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,,Head and neck,data/raw/pad_ufes_20/ISIC_4204542.jpg,CC-BY,val
+ISIC_3207565,IP_2324813,IL_7323160,pad_ufes_20,nev,nev,0,Nevus,15.0,,Trunk,data/raw/pad_ufes_20/ISIC_3207565.jpg,CC-BY,val
+ISIC_2170368,IP_2324813,IL_3583890,pad_ufes_20,nev,nev,0,Nevus,15.0,,Head and neck,data/raw/pad_ufes_20/ISIC_2170368.jpg,CC-BY,val
+ISIC_2920569,IP_0571455,IL_5861586,pad_ufes_20,nev,nev,0,Nevus,30.0,,Head and neck,data/raw/pad_ufes_20/ISIC_2920569.jpg,CC-BY,val
+ISIC_8985807,IP_3615506,IL_1488480,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8985807.jpg,CC-BY,val
+ISIC_4247762,IP_3615506,IL_8518102,pad_ufes_20,sek,sek,0,Seborrheic keratosis,80.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4247762.jpg,CC-BY,val
+ISIC_1275172,IP_1299850,IL_4746475,pad_ufes_20,sek,sek,0,Seborrheic keratosis,70.0,,Trunk,data/raw/pad_ufes_20/ISIC_1275172.jpg,CC-BY,val
+ISIC_1227830,IP_2306884,IL_3525499,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1227830.jpg,CC-BY,val
+ISIC_4546929,IP_0894614,IL_3685089,pad_ufes_20,nev,nev,0,Nevus,30.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4546929.jpg,CC-BY,val
+ISIC_6295439,IP_9900274,IL_6426021,pad_ufes_20,nev,nev,0,Nevus,40.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6295439.jpg,CC-BY,val
+ISIC_1418101,IP_3566226,IL_9962303,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Trunk,data/raw/pad_ufes_20/ISIC_1418101.jpg,CC-BY,val
+ISIC_7313724,IP_4471553,IL_9185122,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Head and neck,data/raw/pad_ufes_20/ISIC_7313724.jpg,CC-BY,val
+ISIC_8310084,IP_6985911,IL_7951783,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8310084.jpg,CC-BY,val
+ISIC_5240418,IP_4436658,IL_6299806,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_5240418.jpg,CC-BY,val
+ISIC_7149917,IP_4436658,IL_6299806,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7149917.jpg,CC-BY,val
+ISIC_2228597,IP_3127792,IL_7314238,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2228597.jpg,CC-BY,val
+ISIC_4751816,IP_3127792,IL_7314238,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4751816.jpg,CC-BY,val
+ISIC_6658355,IP_9792574,IL_4392327,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6658355.jpg,CC-BY,val
+ISIC_5289607,IP_7726547,IL_2239616,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_5289607.jpg,CC-BY,val
+ISIC_6201899,IP_4980380,IL_2736464,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6201899.jpg,CC-BY,val
+ISIC_0983182,IP_4980380,IL_5084533,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0983182.jpg,CC-BY,val
+ISIC_8247581,IP_4980380,IL_6755610,pad_ufes_20,sek,sek,0,Seborrheic keratosis,85.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8247581.jpg,CC-BY,val
+ISIC_1278338,IP_4980380,IL_0102240,pad_ufes_20,sek,sek,0,Seborrheic keratosis,85.0,,Trunk,data/raw/pad_ufes_20/ISIC_1278338.jpg,CC-BY,val
+ISIC_9357859,IP_4980380,IL_0102240,pad_ufes_20,sek,sek,0,Seborrheic keratosis,85.0,,Trunk,data/raw/pad_ufes_20/ISIC_9357859.jpg,CC-BY,val
+ISIC_3153946,IP_3766780,IL_7053261,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3153946.jpg,CC-BY,val
+ISIC_6739678,IP_5191692,IL_5845997,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6739678.jpg,CC-BY,val
+ISIC_6852022,IP_9792292,IL_2743316,pad_ufes_20,nev,nev,0,Nevus,25.0,,Trunk,data/raw/pad_ufes_20/ISIC_6852022.jpg,CC-BY,val
+ISIC_4566168,IP_9281236,IL_3780818,pad_ufes_20,nev,nev,0,Nevus,60.0,,Lower extremity,data/raw/pad_ufes_20/ISIC_4566168.jpg,CC-BY,val
+ISIC_2885322,IP_0202152,IL_2335398,pad_ufes_20,nev,nev,0,Nevus,55.0,,Trunk,data/raw/pad_ufes_20/ISIC_2885322.jpg,CC-BY,val
+ISIC_0376123,IP_9139735,IL_0554480,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Lower extremity,data/raw/pad_ufes_20/ISIC_0376123.jpg,CC-BY,val
+ISIC_8320323,IP_9139735,IL_2047482,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Lower extremity,data/raw/pad_ufes_20/ISIC_8320323.jpg,CC-BY,val
+ISIC_2632415,IP_9035614,IL_1307815,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2632415.jpg,CC-BY,val
+ISIC_3855148,IP_9035614,IL_6219836,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3855148.jpg,CC-BY,val
+ISIC_4375461,IP_3309414,IL_1657325,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Trunk,data/raw/pad_ufes_20/ISIC_4375461.jpg,CC-BY,val
+ISIC_0478451,IP_2636910,IL_5507200,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0478451.jpg,CC-BY,val
+ISIC_8676944,IP_1693896,IL_0244368,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8676944.jpg,CC-BY,val
+ISIC_2937300,IP_5617538,IL_8257910,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_2937300.jpg,CC-BY,val
+ISIC_6103538,IP_5617538,IL_2982576,pad_ufes_20,nev,nev,0,Nevus,55.0,,Trunk,data/raw/pad_ufes_20/ISIC_6103538.jpg,CC-BY,val
+ISIC_3473070,IP_8037747,IL_6324128,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,,Head and neck,data/raw/pad_ufes_20/ISIC_3473070.jpg,CC-BY,val
+ISIC_8792139,IP_9363736,IL_0948141,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,,Head and neck,data/raw/pad_ufes_20/ISIC_8792139.jpg,CC-BY,val
+ISIC_7880422,IP_8361198,IL_5353531,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Trunk,data/raw/pad_ufes_20/ISIC_7880422.jpg,CC-BY,val
+ISIC_2276459,IP_8361198,IL_5353531,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Trunk,data/raw/pad_ufes_20/ISIC_2276459.jpg,CC-BY,val
+ISIC_7423285,IP_7253728,IL_0900069,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7423285.jpg,CC-BY,val
+ISIC_1233522,IP_9657857,IL_6614575,pad_ufes_20,nev,nev,0,Nevus,20.0,,Trunk,data/raw/pad_ufes_20/ISIC_1233522.jpg,CC-BY,val
+ISIC_7567990,IP_9657857,IL_3910420,pad_ufes_20,nev,nev,0,Nevus,20.0,,Trunk,data/raw/pad_ufes_20/ISIC_7567990.jpg,CC-BY,val
+ISIC_6632761,IP_6476755,IL_6506495,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_6632761.jpg,CC-BY,val
+ISIC_3171739,IP_6476755,IL_2666640,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_3171739.jpg,CC-BY,val
+ISIC_6781847,IP_7635790,IL_0704326,pad_ufes_20,nev,nev,0,Nevus,35.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6781847.jpg,CC-BY,val
+ISIC_0569375,IP_3531316,IL_0003615,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_0569375.jpg,CC-BY,val
+ISIC_4874155,IP_3531316,IL_9342824,pad_ufes_20,nev,nev,0,Nevus,40.0,,Head and neck,data/raw/pad_ufes_20/ISIC_4874155.jpg,CC-BY,val
+ISIC_6107065,IP_3531316,IL_9342824,pad_ufes_20,nev,nev,0,Nevus,40.0,,Head and neck,data/raw/pad_ufes_20/ISIC_6107065.jpg,CC-BY,val
+ISIC_2272760,IP_3355310,IL_2429294,pad_ufes_20,nev,nev,0,Nevus,30.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2272760.jpg,CC-BY,val
+ISIC_8301608,IP_1349385,IL_3794519,pad_ufes_20,sek,sek,0,Seborrheic keratosis,50.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8301608.jpg,CC-BY,val
+ISIC_7611991,IP_5101385,IL_2183355,pad_ufes_20,sek,sek,0,Seborrheic keratosis,45.0,,Trunk,data/raw/pad_ufes_20/ISIC_7611991.jpg,CC-BY,val
+ISIC_1242679,IP_6152384,IL_3623583,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_1242679.jpg,CC-BY,val
+ISIC_8436220,IP_1973762,IL_7099064,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Trunk,data/raw/pad_ufes_20/ISIC_8436220.jpg,CC-BY,val
+ISIC_4553303,IP_7709028,IL_6318209,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4553303.jpg,CC-BY,val
+ISIC_2660814,IP_7709028,IL_6318209,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2660814.jpg,CC-BY,val
+ISIC_5582134,IP_7162937,IL_3412323,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,,Head and neck,data/raw/pad_ufes_20/ISIC_5582134.jpg,CC-BY,val
+ISIC_0653027,IP_2583181,IL_5223912,pad_ufes_20,nev,nev,0,Nevus,50.0,,Head and neck,data/raw/pad_ufes_20/ISIC_0653027.jpg,CC-BY,val
+ISIC_7848118,IP_4701542,IL_3658724,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,male,Trunk,data/raw/pad_ufes_20/ISIC_7848118.jpg,CC-BY,val
+ISIC_1526528,IP_8895520,IL_4196397,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1526528.jpg,CC-BY,val
+ISIC_5901080,IP_8895520,IL_4196397,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5901080.jpg,CC-BY,val
+ISIC_5637392,IP_4689093,IL_6071644,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5637392.jpg,CC-BY,val
+ISIC_2341746,IP_4689093,IL_6071644,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2341746.jpg,CC-BY,val
+ISIC_1415910,IP_4689093,IL_6071644,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1415910.jpg,CC-BY,val
+ISIC_4732929,IP_4689093,IL_6071644,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4732929.jpg,CC-BY,val
+ISIC_1991290,IP_4689093,IL_6071644,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1991290.jpg,CC-BY,val
+ISIC_8108246,IP_4689093,IL_2996559,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_8108246.jpg,CC-BY,val
+ISIC_6612798,IP_2628018,IL_0551586,pad_ufes_20,sek,sek,0,Seborrheic keratosis,75.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_6612798.jpg,CC-BY,val
+ISIC_9717538,IP_2628018,IL_7397516,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9717538.jpg,CC-BY,val
+ISIC_1329913,IP_2628018,IL_2201985,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1329913.jpg,CC-BY,val
+ISIC_2552479,IP_2628018,IL_2201985,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_2552479.jpg,CC-BY,val
+ISIC_4830438,IP_5957948,IL_0933272,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_4830438.jpg,CC-BY,val
+ISIC_8419808,IP_5957948,IL_0933272,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_8419808.jpg,CC-BY,val
+ISIC_3165609,IP_5957948,IL_0933272,pad_ufes_20,sek,sek,0,Seborrheic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3165609.jpg,CC-BY,val
+ISIC_8599628,IP_6099289,IL_0932052,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8599628.jpg,CC-BY,val
+ISIC_7368785,IP_6099289,IL_0932052,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_7368785.jpg,CC-BY,val
+ISIC_5445075,IP_8773274,IL_1329354,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_5445075.jpg,CC-BY,val
+ISIC_4223407,IP_6371191,IL_8893727,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4223407.jpg,CC-BY,val
+ISIC_5112495,IP_6371191,IL_8893727,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5112495.jpg,CC-BY,val
+ISIC_9752546,IP_5985079,IL_3227400,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9752546.jpg,CC-BY,val
+ISIC_4039248,IP_5985079,IL_3227400,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4039248.jpg,CC-BY,val
+ISIC_8795943,IP_4334187,IL_3800567,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8795943.jpg,CC-BY,val
+ISIC_0111385,IP_4334187,IL_6372655,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_0111385.jpg,CC-BY,val
+ISIC_8367407,IP_4334187,IL_6372655,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_8367407.jpg,CC-BY,val
+ISIC_8238915,IP_1324632,IL_7293670,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8238915.jpg,CC-BY,val
+ISIC_7415648,IP_1324632,IL_7293670,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_7415648.jpg,CC-BY,val
+ISIC_3687187,IP_9215780,IL_7505813,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3687187.jpg,CC-BY,val
+ISIC_2180768,IP_2066800,IL_0799092,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2180768.jpg,CC-BY,val
+ISIC_9945956,IP_0870490,IL_0276020,pad_ufes_20,nev,nev,0,Nevus,50.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_9945956.jpg,CC-BY,val
+ISIC_3057572,IP_4606224,IL_8311284,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_3057572.jpg,CC-BY,val
+ISIC_4883430,IP_3069994,IL_4009696,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4883430.jpg,CC-BY,val
+ISIC_7243818,IP_6835620,IL_8250782,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_7243818.jpg,CC-BY,val
+ISIC_4277412,IP_3069994,IL_4009696,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4277412.jpg,CC-BY,val
+ISIC_9174084,IP_6835620,IL_8250782,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9174084.jpg,CC-BY,val
+ISIC_8655175,IP_4059914,IL_9095245,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8655175.jpg,CC-BY,val
+ISIC_7105297,IP_5257591,IL_4247003,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7105297.jpg,CC-BY,val
+ISIC_6647242,IP_4059914,IL_8407513,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6647242.jpg,CC-BY,val
+ISIC_4813946,IP_9169507,IL_5931430,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Trunk,data/raw/pad_ufes_20/ISIC_4813946.jpg,CC-BY,val
+ISIC_1578999,IP_1372634,IL_1607410,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1578999.jpg,CC-BY,val
+ISIC_5192404,IP_1372634,IL_1607410,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5192404.jpg,CC-BY,val
+ISIC_6346322,IP_2037790,IL_8937636,pad_ufes_20,mel,mel,1,"Melanoma, NOS",45.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6346322.jpg,CC-BY,val
+ISIC_5608083,IP_1172568,IL_4841596,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5608083.jpg,CC-BY,val
+ISIC_1913464,IP_1172568,IL_8806157,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1913464.jpg,CC-BY,val
+ISIC_4801198,IP_1172568,IL_8806157,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4801198.jpg,CC-BY,val
+ISIC_0218192,IP_5320897,IL_0293372,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_0218192.jpg,CC-BY,val
+ISIC_2448817,IP_2867247,IL_7353159,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_2448817.jpg,CC-BY,val
+ISIC_0257880,IP_2867247,IL_7353159,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_0257880.jpg,CC-BY,val
+ISIC_3920866,IP_9444719,IL_7032498,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Trunk,data/raw/pad_ufes_20/ISIC_3920866.jpg,CC-BY,val
+ISIC_3415291,IP_8187922,IL_6954022,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_3415291.jpg,CC-BY,val
+ISIC_0343376,IP_5662296,IL_2694331,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_0343376.jpg,CC-BY,val
+ISIC_8433715,IP_0075418,IL_5416560,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,30.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8433715.jpg,CC-BY,val
+ISIC_7814169,IP_5662296,IL_2694331,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7814169.jpg,CC-BY,val
+ISIC_8637752,IP_0075418,IL_5416560,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,30.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8637752.jpg,CC-BY,val
+ISIC_7838720,IP_2179224,IL_3885989,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7838720.jpg,CC-BY,val
+ISIC_6641791,IP_9930524,IL_6021680,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_6641791.jpg,CC-BY,val
+ISIC_6902758,IP_8588944,IL_4139708,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6902758.jpg,CC-BY,val
+ISIC_7796636,IP_8588944,IL_4139708,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7796636.jpg,CC-BY,val
+ISIC_9394209,IP_6389744,IL_1175501,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9394209.jpg,CC-BY,val
+ISIC_3698396,IP_6807282,IL_1522189,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3698396.jpg,CC-BY,val
+ISIC_5455644,IP_6389744,IL_1175501,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5455644.jpg,CC-BY,val
+ISIC_2901776,IP_2822527,IL_6059180,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_2901776.jpg,CC-BY,val
+ISIC_7162063,IP_3028042,IL_0502704,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7162063.jpg,CC-BY,val
+ISIC_5666581,IP_5370254,IL_1224381,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5666581.jpg,CC-BY,val
+ISIC_1833450,IP_5370254,IL_0015646,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1833450.jpg,CC-BY,val
+ISIC_5214577,IP_4073407,IL_7414435,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5214577.jpg,CC-BY,val
+ISIC_2122686,IP_3248126,IL_1506810,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2122686.jpg,CC-BY,val
+ISIC_3104935,IP_3248126,IL_1506810,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_3104935.jpg,CC-BY,val
+ISIC_9145204,IP_2072965,IL_5278009,pad_ufes_20,nev,nev,0,Nevus,40.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_9145204.jpg,CC-BY,val
+ISIC_1159511,IP_2042613,IL_4663932,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1159511.jpg,CC-BY,val
+ISIC_2874442,IP_3248126,IL_7682890,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2874442.jpg,CC-BY,val
+ISIC_5774452,IP_3248126,IL_5773357,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5774452.jpg,CC-BY,val
+ISIC_2983758,IP_3248126,IL_5773357,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2983758.jpg,CC-BY,val
+ISIC_7665423,IP_5063286,IL_5720261,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,female,Trunk,data/raw/pad_ufes_20/ISIC_7665423.jpg,CC-BY,val
+ISIC_4059397,IP_5706809,IL_7509375,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4059397.jpg,CC-BY,val
+ISIC_0291827,IP_5063286,IL_9932182,pad_ufes_20,nev,nev,0,Nevus,50.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_0291827.jpg,CC-BY,val
+ISIC_4002048,IP_5706809,IL_9310856,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Trunk,data/raw/pad_ufes_20/ISIC_4002048.jpg,CC-BY,val
+ISIC_1621743,IP_5706809,IL_9310856,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1621743.jpg,CC-BY,val
+ISIC_2994089,IP_2162152,IL_9554014,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_2994089.jpg,CC-BY,val
+ISIC_4994309,IP_2162152,IL_5323529,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4994309.jpg,CC-BY,val
+ISIC_3949263,IP_4999572,IL_4408221,pad_ufes_20,sek,sek,0,Seborrheic keratosis,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3949263.jpg,CC-BY,val
+ISIC_9766228,IP_6344701,IL_5669839,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9766228.jpg,CC-BY,val
+ISIC_9345980,IP_5531331,IL_7313530,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9345980.jpg,CC-BY,val
+ISIC_1014634,IP_5531331,IL_8174334,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_1014634.jpg,CC-BY,val
+ISIC_9417678,IP_5531331,IL_1484834,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,85.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_9417678.jpg,CC-BY,val
+ISIC_8522472,IP_9965721,IL_8715813,pad_ufes_20,mel,mel,1,"Melanoma, NOS",60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_8522472.jpg,CC-BY,val
+ISIC_5016170,IP_9081802,IL_2285570,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_5016170.jpg,CC-BY,val
+ISIC_5615881,IP_9081802,IL_1007315,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5615881.jpg,CC-BY,val
+ISIC_9947302,IP_9081802,IL_1007315,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9947302.jpg,CC-BY,val
+ISIC_8717267,IP_2221754,IL_4840055,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8717267.jpg,CC-BY,val
+ISIC_6289534,IP_2221754,IL_4840055,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_6289534.jpg,CC-BY,val
+ISIC_0453983,IP_6865829,IL_0104480,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,30.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0453983.jpg,CC-BY,val
+ISIC_3317559,IP_8417881,IL_2884710,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3317559.jpg,CC-BY,val
+ISIC_6290038,IP_3546056,IL_2167482,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,40.0,male,Trunk,data/raw/pad_ufes_20/ISIC_6290038.jpg,CC-BY,val
+ISIC_4428259,IP_3546056,IL_1761957,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_4428259.jpg,CC-BY,val
+ISIC_4946035,IP_2881561,IL_7413613,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_4946035.jpg,CC-BY,val
+ISIC_3651220,IP_2881561,IL_7413613,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3651220.jpg,CC-BY,val
+ISIC_0460142,IP_5416793,IL_7758093,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,male,Trunk,data/raw/pad_ufes_20/ISIC_0460142.jpg,CC-BY,val
+ISIC_3256003,IP_2881561,IL_7413613,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3256003.jpg,CC-BY,val
+ISIC_9107703,IP_5416793,IL_7366072,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_9107703.jpg,CC-BY,val
+ISIC_1373911,IP_5292781,IL_7461807,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1373911.jpg,CC-BY,val
+ISIC_7433219,IP_1443738,IL_2028277,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,40.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7433219.jpg,CC-BY,val
+ISIC_4869742,IP_7386433,IL_7047290,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4869742.jpg,CC-BY,val
+ISIC_7516393,IP_7386433,IL_7047290,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7516393.jpg,CC-BY,val
+ISIC_4880923,IP_7386433,IL_7047290,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4880923.jpg,CC-BY,val
+ISIC_5556022,IP_7386433,IL_1538867,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5556022.jpg,CC-BY,val
+ISIC_4715566,IP_7386433,IL_1538867,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4715566.jpg,CC-BY,val
+ISIC_7895683,IP_8943374,IL_7879306,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7895683.jpg,CC-BY,val
+ISIC_8650116,IP_6858158,IL_9112766,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_8650116.jpg,CC-BY,val
+ISIC_9907864,IP_6858158,IL_9112766,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_9907864.jpg,CC-BY,val
+ISIC_0430846,IP_3964824,IL_1479719,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0430846.jpg,CC-BY,val
+ISIC_7298098,IP_6858158,IL_1802127,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_7298098.jpg,CC-BY,val
+ISIC_3311552,IP_2974972,IL_7333967,pad_ufes_20,mel,mel,1,"Melanoma, NOS",30.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_3311552.jpg,CC-BY,val
+ISIC_9756235,IP_2974972,IL_7509649,pad_ufes_20,nev,nev,0,Nevus,30.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_9756235.jpg,CC-BY,val
+ISIC_4146918,IP_0833581,IL_3938929,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4146918.jpg,CC-BY,val
+ISIC_7485044,IP_0833581,IL_3938929,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7485044.jpg,CC-BY,val
+ISIC_2952328,IP_1907664,IL_1035403,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_2952328.jpg,CC-BY,val
+ISIC_8199245,IP_1907664,IL_1035403,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_8199245.jpg,CC-BY,val
+ISIC_7215702,IP_1907664,IL_1174937,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7215702.jpg,CC-BY,val
+ISIC_1046504,IP_1922388,IL_2201471,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,40.0,female,Trunk,data/raw/pad_ufes_20/ISIC_1046504.jpg,CC-BY,val
+ISIC_9930926,IP_1473812,IL_2159389,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Trunk,data/raw/pad_ufes_20/ISIC_9930926.jpg,CC-BY,val
+ISIC_8987682,IP_2617475,IL_5933250,pad_ufes_20,nev,nev,0,Nevus,25.0,male,Lower extremity,data/raw/pad_ufes_20/ISIC_8987682.jpg,CC-BY,val
+ISIC_8765008,IP_2617475,IL_4657322,pad_ufes_20,nev,nev,0,Nevus,25.0,male,Lower extremity,data/raw/pad_ufes_20/ISIC_8765008.jpg,CC-BY,val
+ISIC_2746819,IP_7539483,IL_8360896,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_2746819.jpg,CC-BY,val
+ISIC_5619249,IP_7539483,IL_7116682,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5619249.jpg,CC-BY,val
+ISIC_1514107,IP_7539483,IL_8918531,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1514107.jpg,CC-BY,val
+ISIC_0214387,IP_7539483,IL_8892057,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_0214387.jpg,CC-BY,val
+ISIC_6161696,IP_4476921,IL_0596497,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6161696.jpg,CC-BY,val
+ISIC_6584483,IP_1656408,IL_5864049,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6584483.jpg,CC-BY,val
+ISIC_2922856,IP_4476921,IL_0974125,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_2922856.jpg,CC-BY,val
+ISIC_5969079,IP_4476921,IL_0974125,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_5969079.jpg,CC-BY,val
+ISIC_9241762,IP_2332954,IL_1650110,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_9241762.jpg,CC-BY,val
+ISIC_3830192,IP_2656886,IL_4481586,pad_ufes_20,nev,nev,0,Nevus,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_3830192.jpg,CC-BY,val
+ISIC_7270591,IP_0661441,IL_4317260,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7270591.jpg,CC-BY,val
+ISIC_5821556,IP_0661441,IL_6073894,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5821556.jpg,CC-BY,val
+ISIC_4913373,IP_1295572,IL_2070261,pad_ufes_20,nev,nev,0,Nevus,20.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_4913373.jpg,CC-BY,val
+ISIC_6434742,IP_9975427,IL_5291017,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",60.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_6434742.jpg,CC-BY,val
+ISIC_6180147,IP_1921724,IL_6912521,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6180147.jpg,CC-BY,val
+ISIC_8876237,IP_1921724,IL_6912521,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_8876237.jpg,CC-BY,val
+ISIC_9382898,IP_1921724,IL_1327012,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_9382898.jpg,CC-BY,val
+ISIC_6110988,IP_1921724,IL_1327012,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6110988.jpg,CC-BY,val
+ISIC_8556402,IP_8079286,IL_0742978,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8556402.jpg,CC-BY,val
+ISIC_3979746,IP_0647275,IL_8063276,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3979746.jpg,CC-BY,val
+ISIC_9863798,IP_8032843,IL_0249099,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_9863798.jpg,CC-BY,val
+ISIC_8697046,IP_8628459,IL_6566343,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8697046.jpg,CC-BY,val
+ISIC_5148135,IP_8496589,IL_3167294,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_5148135.jpg,CC-BY,val
+ISIC_3686996,IP_4531702,IL_1615084,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3686996.jpg,CC-BY,val
+ISIC_7978664,IP_5308112,IL_3910367,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_7978664.jpg,CC-BY,val
+ISIC_8871281,IP_5308112,IL_0363594,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_8871281.jpg,CC-BY,val
+ISIC_1042545,IP_2861418,IL_9344230,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1042545.jpg,CC-BY,val
+ISIC_7979989,IP_9327347,IL_9926161,pad_ufes_20,nev,nev,0,Nevus,25.0,female,Trunk,data/raw/pad_ufes_20/ISIC_7979989.jpg,CC-BY,val
+ISIC_5997884,IP_9327347,IL_9926161,pad_ufes_20,nev,nev,0,Nevus,25.0,female,Trunk,data/raw/pad_ufes_20/ISIC_5997884.jpg,CC-BY,val
+ISIC_6041916,IP_9327347,IL_7831425,pad_ufes_20,nev,nev,0,Nevus,25.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6041916.jpg,CC-BY,val
+ISIC_1762657,IP_0386585,IL_8681151,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1762657.jpg,CC-BY,val
+ISIC_6701300,IP_2611305,IL_7310550,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_6701300.jpg,CC-BY,val
+ISIC_0462920,IP_4363027,IL_3226278,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0462920.jpg,CC-BY,val
+ISIC_4740737,IP_9213540,IL_1526154,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4740737.jpg,CC-BY,val
+ISIC_0551660,IP_9213540,IL_2767214,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_0551660.jpg,CC-BY,val
+ISIC_6552452,IP_7280256,IL_9788982,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6552452.jpg,CC-BY,val
+ISIC_3131799,IP_7280256,IL_9788982,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_3131799.jpg,CC-BY,val
+ISIC_9214372,IP_5269724,IL_2208974,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9214372.jpg,CC-BY,val
+ISIC_6522776,IP_5269724,IL_2208974,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6522776.jpg,CC-BY,val
+ISIC_1708718,IP_5269724,IL_2641889,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1708718.jpg,CC-BY,val
+ISIC_6086778,IP_5269724,IL_0476614,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6086778.jpg,CC-BY,val
+ISIC_2611709,IP_5269724,IL_0159086,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_2611709.jpg,CC-BY,val
+ISIC_7856707,IP_5456182,IL_6490479,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_7856707.jpg,CC-BY,val
+ISIC_8274317,IP_5456182,IL_5935135,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8274317.jpg,CC-BY,val
+ISIC_1883626,IP_4217770,IL_5042751,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1883626.jpg,CC-BY,val
+ISIC_9828913,IP_5456182,IL_5087473,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9828913.jpg,CC-BY,val
+ISIC_0344845,IP_4217770,IL_0881165,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0344845.jpg,CC-BY,val
+ISIC_2601402,IP_7927972,IL_0045854,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2601402.jpg,CC-BY,val
+ISIC_9206699,IP_1517882,IL_0055167,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_9206699.jpg,CC-BY,val
+ISIC_1368280,IP_8493922,IL_3371535,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1368280.jpg,CC-BY,val
+ISIC_4878505,IP_8493922,IL_3371535,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4878505.jpg,CC-BY,val
+ISIC_0853806,IP_9138276,IL_2644150,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_0853806.jpg,CC-BY,val
+ISIC_5391878,IP_9138276,IL_2644150,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_5391878.jpg,CC-BY,val
+ISIC_4216035,IP_4244350,IL_5402320,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4216035.jpg,CC-BY,val
+ISIC_5777101,IP_4244350,IL_5402320,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5777101.jpg,CC-BY,val
+ISIC_8449078,IP_0800973,IL_6624069,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_8449078.jpg,CC-BY,val
+ISIC_9394162,IP_3897648,IL_1723213,pad_ufes_20,mel,mel,1,"Melanoma, NOS",55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9394162.jpg,CC-BY,val
+ISIC_5210015,IP_3577392,IL_2731927,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5210015.jpg,CC-BY,val
+ISIC_1299641,IP_3577392,IL_2731927,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1299641.jpg,CC-BY,val
+ISIC_2656213,IP_1554210,IL_2437290,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_2656213.jpg,CC-BY,val
+ISIC_2576717,IP_3577392,IL_2731927,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Trunk,data/raw/pad_ufes_20/ISIC_2576717.jpg,CC-BY,val
+ISIC_7300259,IP_3577392,IL_1416530,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_7300259.jpg,CC-BY,val
+ISIC_4668858,IP_9417854,IL_5360929,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,30.0,male,Trunk,data/raw/pad_ufes_20/ISIC_4668858.jpg,CC-BY,val
+ISIC_8672582,IP_1997728,IL_6487602,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_8672582.jpg,CC-BY,val
+ISIC_4678388,IP_1997728,IL_2644331,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_4678388.jpg,CC-BY,val
+ISIC_3090673,IP_3728062,IL_1210915,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3090673.jpg,CC-BY,val
+ISIC_8694460,IP_0971218,IL_6127715,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8694460.jpg,CC-BY,val
+ISIC_4929351,IP_6034364,IL_9831203,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_4929351.jpg,CC-BY,val
+ISIC_5771532,IP_6034364,IL_9831203,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5771532.jpg,CC-BY,val
+ISIC_6924514,IP_4173149,IL_0816422,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6924514.jpg,CC-BY,val
+ISIC_6646914,IP_6692756,IL_3506966,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6646914.jpg,CC-BY,val
+ISIC_0929600,IP_4173149,IL_0816422,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0929600.jpg,CC-BY,val
+ISIC_0719997,IP_4173149,IL_0816422,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0719997.jpg,CC-BY,val
+ISIC_2494959,IP_6791638,IL_8312149,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_2494959.jpg,CC-BY,val
+ISIC_6242853,IP_6791638,IL_8312149,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6242853.jpg,CC-BY,val
+ISIC_8466479,IP_6791638,IL_1569626,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_8466479.jpg,CC-BY,val
+ISIC_6392157,IP_6791638,IL_1569626,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6392157.jpg,CC-BY,val
+ISIC_3755068,IP_0259372,IL_7086662,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Trunk,data/raw/pad_ufes_20/ISIC_3755068.jpg,CC-BY,val
+ISIC_3939635,IP_0259372,IL_7086662,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Trunk,data/raw/pad_ufes_20/ISIC_3939635.jpg,CC-BY,val
+ISIC_2651510,IP_0259372,IL_1990110,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2651510.jpg,CC-BY,val
+ISIC_1232357,IP_0451672,IL_5327237,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1232357.jpg,CC-BY,val
+ISIC_5063356,IP_6536600,IL_5157827,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5063356.jpg,CC-BY,val
+ISIC_4862138,IP_0271240,IL_0731829,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4862138.jpg,CC-BY,val
+ISIC_4431020,IP_0271240,IL_2375877,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4431020.jpg,CC-BY,val
+ISIC_7039070,IP_3800321,IL_8816682,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",60.0,female,Trunk,data/raw/pad_ufes_20/ISIC_7039070.jpg,CC-BY,val
+ISIC_5428759,IP_1753197,IL_1028738,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5428759.jpg,CC-BY,val
+ISIC_4220070,IP_1387116,IL_2888888,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_4220070.jpg,CC-BY,val
+ISIC_1855991,IP_3970921,IL_4377907,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,female,Trunk,data/raw/pad_ufes_20/ISIC_1855991.jpg,CC-BY,val
+ISIC_6883254,IP_6655470,IL_6716346,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6883254.jpg,CC-BY,val
+ISIC_8818388,IP_5600576,IL_8916977,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8818388.jpg,CC-BY,val
+ISIC_5376590,IP_8960365,IL_4075780,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5376590.jpg,CC-BY,val
+ISIC_4004560,IP_0162222,IL_1552194,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4004560.jpg,CC-BY,val
+ISIC_3639940,IP_2030421,IL_9278928,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3639940.jpg,CC-BY,val
+ISIC_4983067,IP_2030421,IL_1566171,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4983067.jpg,CC-BY,val
+ISIC_2847302,IP_2030421,IL_5755536,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_2847302.jpg,CC-BY,val
+ISIC_1369882,IP_2030421,IL_4784834,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1369882.jpg,CC-BY,val
+ISIC_5130104,IP_2030421,IL_3444368,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5130104.jpg,CC-BY,val
+ISIC_1163473,IP_2030421,IL_9560716,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_1163473.jpg,CC-BY,val
+ISIC_3470429,IP_2030421,IL_6280579,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3470429.jpg,CC-BY,val
+ISIC_8016304,IP_5387661,IL_2893016,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8016304.jpg,CC-BY,val
+ISIC_1412709,IP_2030421,IL_6280579,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_1412709.jpg,CC-BY,val
+ISIC_4549590,IP_2030421,IL_5837836,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4549590.jpg,CC-BY,val
+ISIC_7663713,IP_2030421,IL_5837836,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_7663713.jpg,CC-BY,val
+ISIC_1250535,IP_0828557,IL_1819895,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1250535.jpg,CC-BY,val
+ISIC_7404723,IP_5161458,IL_0221646,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_7404723.jpg,CC-BY,val
+ISIC_6563985,IP_4741750,IL_4657887,pad_ufes_20,nev,nev,0,Nevus,30.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_6563985.jpg,CC-BY,val
+ISIC_6124272,IP_4741750,IL_4657887,pad_ufes_20,nev,nev,0,Nevus,30.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_6124272.jpg,CC-BY,val
+ISIC_7815431,IP_1858825,IL_2968954,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7815431.jpg,CC-BY,val
+ISIC_7518218,IP_1858825,IL_5920455,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7518218.jpg,CC-BY,val
+ISIC_0473273,IP_4146026,IL_7186826,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0473273.jpg,CC-BY,val
+ISIC_6662533,IP_5101940,IL_7487768,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_6662533.jpg,CC-BY,val
+ISIC_0507017,IP_4146026,IL_7186826,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0507017.jpg,CC-BY,val
+ISIC_7377968,IP_5101940,IL_7487768,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7377968.jpg,CC-BY,val
+ISIC_9210846,IP_5101940,IL_4225374,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,45.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9210846.jpg,CC-BY,val
+ISIC_7679690,IP_5101940,IL_9408733,pad_ufes_20,sek,sek,0,Seborrheic keratosis,65.0,male,Trunk,data/raw/pad_ufes_20/ISIC_7679690.jpg,CC-BY,val
+ISIC_1358510,IP_1813645,IL_2986291,pad_ufes_20,nev,nev,0,Nevus,35.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1358510.jpg,CC-BY,val
+ISIC_6079165,IP_1813645,IL_8568166,pad_ufes_20,nev,nev,0,Nevus,35.0,male,Trunk,data/raw/pad_ufes_20/ISIC_6079165.jpg,CC-BY,val
+ISIC_5098408,IP_1813645,IL_6366667,pad_ufes_20,nev,nev,0,Nevus,35.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5098408.jpg,CC-BY,val
+ISIC_9439909,IP_1813645,IL_3012619,pad_ufes_20,nev,nev,0,Nevus,35.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9439909.jpg,CC-BY,val
+ISIC_9596822,IP_0088317,IL_4662240,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,35.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_9596822.jpg,CC-BY,val
+ISIC_0171927,IP_0211589,IL_5225042,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_0171927.jpg,CC-BY,val
+ISIC_4639416,IP_0381240,IL_9741783,pad_ufes_20,mel,mel,1,"Melanoma, NOS",40.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4639416.jpg,CC-BY,val
+ISIC_8776812,IP_0381240,IL_9741783,pad_ufes_20,mel,mel,1,"Melanoma, NOS",40.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8776812.jpg,CC-BY,val
+ISIC_4690561,IP_1181072,IL_1966372,pad_ufes_20,mel,mel,1,"Melanoma, NOS",55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_4690561.jpg,CC-BY,val
+ISIC_6759383,IP_1704641,IL_5265644,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6759383.jpg,CC-BY,val
+ISIC_8244756,IP_1704641,IL_5265644,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_8244756.jpg,CC-BY,val
+ISIC_5546876,IP_1704641,IL_8820620,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_5546876.jpg,CC-BY,val
+ISIC_7856476,IP_6077827,IL_1921063,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7856476.jpg,CC-BY,val
+ISIC_2275561,IP_6077827,IL_1921063,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_2275561.jpg,CC-BY,val
+ISIC_1500319,IP_8506651,IL_4338921,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_1500319.jpg,CC-BY,val
+ISIC_1180054,IP_8506651,IL_4338921,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_1180054.jpg,CC-BY,val
+ISIC_0654488,IP_0673744,IL_1248723,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_0654488.jpg,CC-BY,val
+ISIC_3271889,IP_0673744,IL_1248723,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_3271889.jpg,CC-BY,val
+ISIC_7012242,IP_7228064,IL_5932114,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_7012242.jpg,CC-BY,val
+ISIC_6589107,IP_6577410,IL_4456116,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6589107.jpg,CC-BY,val
+ISIC_9222128,IP_4422019,IL_9116702,pad_ufes_20,nev,nev,0,Nevus,35.0,male,Trunk,data/raw/pad_ufes_20/ISIC_9222128.jpg,CC-BY,val
+ISIC_1936858,IP_5078080,IL_7649826,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,25.0,female,Trunk,data/raw/pad_ufes_20/ISIC_1936858.jpg,CC-BY,val
+ISIC_3718798,IP_5078080,IL_7649826,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,25.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3718798.jpg,CC-BY,val
+ISIC_6613764,IP_5267647,IL_9245378,pad_ufes_20,nev,nev,0,Nevus,40.0,,Trunk,data/raw/pad_ufes_20/ISIC_6613764.jpg,CC-BY,val
+ISIC_3244503,IP_5267647,IL_9245378,pad_ufes_20,nev,nev,0,Nevus,40.0,,Trunk,data/raw/pad_ufes_20/ISIC_3244503.jpg,CC-BY,val
+ISIC_9694238,IP_8396641,IL_8995937,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,female,Lower extremity,data/raw/pad_ufes_20/ISIC_9694238.jpg,CC-BY,val
+ISIC_8102066,IP_4385164,IL_7236219,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8102066.jpg,CC-BY,val
+ISIC_1160464,IP_4385164,IL_6618009,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1160464.jpg,CC-BY,val
+ISIC_6324359,IP_4385164,IL_7184114,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_6324359.jpg,CC-BY,val
+ISIC_1346914,IP_4385164,IL_8144838,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1346914.jpg,CC-BY,val
+ISIC_4566999,IP_0279418,IL_1878410,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_4566999.jpg,CC-BY,val
+ISIC_8548381,IP_4385164,IL_1117428,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8548381.jpg,CC-BY,val
+ISIC_8774658,IP_0279418,IL_9713872,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_8774658.jpg,CC-BY,val
+ISIC_7996742,IP_0279418,IL_0149296,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7996742.jpg,CC-BY,val
+ISIC_7565375,IP_0279418,IL_0513502,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7565375.jpg,CC-BY,val
+ISIC_7072384,IP_0279418,IL_0513502,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,65.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7072384.jpg,CC-BY,val
+ISIC_5008284,IP_5773119,IL_6650415,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Head and neck,data/raw/pad_ufes_20/ISIC_5008284.jpg,CC-BY,val
+ISIC_2196141,IP_9373462,IL_9575764,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,45.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2196141.jpg,CC-BY,val
+ISIC_6935201,IP_6631082,IL_0858268,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_6935201.jpg,CC-BY,val
+ISIC_7999957,IP_6631082,IL_2650687,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",85.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_7999957.jpg,CC-BY,val
+ISIC_5180756,IP_0693030,IL_0436737,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,75.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_5180756.jpg,CC-BY,val
+ISIC_9017175,IP_0693030,IL_9776052,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_9017175.jpg,CC-BY,val
+ISIC_1454799,IP_0693030,IL_1304658,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1454799.jpg,CC-BY,val
+ISIC_2159286,IP_2771099,IL_9003131,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,,Head and neck,data/raw/pad_ufes_20/ISIC_2159286.jpg,CC-BY,val
+ISIC_5324133,IP_0693030,IL_7761854,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5324133.jpg,CC-BY,val
+ISIC_4007306,IP_0693030,IL_3673639,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,75.0,male,Trunk,data/raw/pad_ufes_20/ISIC_4007306.jpg,CC-BY,val
+ISIC_5041933,IP_5320792,IL_6309917,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,35.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_5041933.jpg,CC-BY,val
+ISIC_2973751,IP_7358646,IL_2297810,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_2973751.jpg,CC-BY,val
+ISIC_7945135,IP_7358646,IL_6851550,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,40.0,,Upper extremity,data/raw/pad_ufes_20/ISIC_7945135.jpg,CC-BY,val
+ISIC_2016773,IP_2363213,IL_0147969,pad_ufes_20,scc,scc,1,"Squamous cell carcinoma, NOS",65.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_2016773.jpg,CC-BY,val
+ISIC_8976497,IP_2363213,IL_8194037,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,65.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_8976497.jpg,CC-BY,val
+ISIC_3755751,IP_9916766,IL_9689458,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,80.0,male,Trunk,data/raw/pad_ufes_20/ISIC_3755751.jpg,CC-BY,val
+ISIC_8723009,IP_9916766,IL_7301599,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Trunk,data/raw/pad_ufes_20/ISIC_8723009.jpg,CC-BY,val
+ISIC_2258431,IP_9916766,IL_7301599,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Trunk,data/raw/pad_ufes_20/ISIC_2258431.jpg,CC-BY,val
+ISIC_1377751,IP_9916766,IL_0321480,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1377751.jpg,CC-BY,val
+ISIC_2757168,IP_0551148,IL_1004060,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_2757168.jpg,CC-BY,val
+ISIC_2316510,IP_0551148,IL_1004060,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_2316510.jpg,CC-BY,val
+ISIC_9836789,IP_3587496,IL_9105812,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9836789.jpg,CC-BY,val
+ISIC_1023489,IP_3587496,IL_6199132,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,80.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_1023489.jpg,CC-BY,val
+ISIC_6533653,IP_2531450,IL_1341540,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,40.0,male,Lower extremity,data/raw/pad_ufes_20/ISIC_6533653.jpg,CC-BY,val
+ISIC_3742003,IP_6433579,IL_1585068,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_3742003.jpg,CC-BY,val
+ISIC_6454809,IP_3178192,IL_9688676,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_6454809.jpg,CC-BY,val
+ISIC_3706273,IP_3178192,IL_4234718,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Trunk,data/raw/pad_ufes_20/ISIC_3706273.jpg,CC-BY,val
+ISIC_5337606,IP_3178192,IL_0334074,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_5337606.jpg,CC-BY,val
+ISIC_4602167,IP_7058619,IL_0249465,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,70.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_4602167.jpg,CC-BY,val
+ISIC_9490861,IP_7058619,IL_4674373,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_9490861.jpg,CC-BY,val
+ISIC_1680132,IP_7982381,IL_5070737,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_1680132.jpg,CC-BY,val
+ISIC_0481281,IP_8312209,IL_4589821,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Trunk,data/raw/pad_ufes_20/ISIC_0481281.jpg,CC-BY,val
+ISIC_6581866,IP_8312209,IL_7732258,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_6581866.jpg,CC-BY,val
+ISIC_8769268,IP_1598304,IL_2575531,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,60.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_8769268.jpg,CC-BY,val
+ISIC_5481617,IP_9146497,IL_9508133,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,male,Trunk,data/raw/pad_ufes_20/ISIC_5481617.jpg,CC-BY,val
+ISIC_5996646,IP_9146497,IL_7970945,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,50.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_5996646.jpg,CC-BY,val
+ISIC_7453781,IP_9146497,IL_7773502,pad_ufes_20,ack,ack,-1,Solar or actinic keratosis,50.0,male,Trunk,data/raw/pad_ufes_20/ISIC_7453781.jpg,CC-BY,val
+ISIC_0918866,IP_1903322,IL_2622886,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Head and neck,data/raw/pad_ufes_20/ISIC_0918866.jpg,CC-BY,val
+ISIC_8041319,IP_1903322,IL_0813557,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,55.0,female,Upper extremity,data/raw/pad_ufes_20/ISIC_8041319.jpg,CC-BY,val
+ISIC_1313221,IP_6007679,IL_1816107,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,female,Trunk,data/raw/pad_ufes_20/ISIC_1313221.jpg,CC-BY,val
+ISIC_8285856,IP_8511946,IL_3698553,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_8285856.jpg,CC-BY,val
+ISIC_6929976,IP_8511946,IL_3698553,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Upper extremity,data/raw/pad_ufes_20/ISIC_6929976.jpg,CC-BY,val
+ISIC_7976708,IP_8511946,IL_1900986,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_7976708.jpg,CC-BY,val
+ISIC_3899053,IP_8511946,IL_7961971,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_3899053.jpg,CC-BY,val
+ISIC_8946874,IP_8511946,IL_7961971,pad_ufes_20,bcc,bcc,1,Basal cell carcinoma,70.0,male,Head and neck,data/raw/pad_ufes_20/ISIC_8946874.jpg,CC-BY,val
+ISIC_1134683,IP_8511946,IL_6265547,pad_ufes_20,mel,mel,1,"Melanoma, NOS",70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_1134683.jpg,CC-BY,val
+ISIC_6501899,IP_8511946,IL_6265547,pad_ufes_20,mel,mel,1,"Melanoma, NOS",70.0,male,Trunk,data/raw/pad_ufes_20/ISIC_6501899.jpg,CC-BY,val
+ISIC_6010288,IP_7347120,IL_8147274,pad_ufes_20,sek,sek,0,Seborrheic keratosis,80.0,female,Trunk,data/raw/pad_ufes_20/ISIC_6010288.jpg,CC-BY,val
+ISIC_0744674,IP_4704108,IL_3464554,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_0744674.jpg,CC-BY,val
+ISIC_7553348,IP_9399019,IL_8560164,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_7553348.jpg,CC-BY,val
+ISIC_9561423,IP_7410598,IL_9916208,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Lower extremity,data/raw/isic_clinical/ISIC_9561423.jpg,CC-BY,val
+ISIC_4895408,IP_4704108,IL_3314342,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Upper extremity,data/raw/isic_clinical/ISIC_4895408.jpg,CC-BY,val
+ISIC_4234563,IP_9399019,IL_1123301,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_4234563.jpg,CC-BY,val
+ISIC_3626540,IP_5945369,IL_4771695,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_3626540.jpg,CC-BY,val
+ISIC_9074124,IP_9772523,IL_3007862,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_9074124.jpg,CC-BY,val
+ISIC_3251755,IP_7410598,IL_7743450,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Lower extremity,data/raw/isic_clinical/ISIC_3251755.jpg,CC-BY,val
+ISIC_0089649,IP_9399019,IL_6811298,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_0089649.jpg,CC-BY,val
+ISIC_1480092,IP_1689191,IL_1272053,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1480092.jpg,CC-BY,val
+ISIC_7985478,IP_3237217,IL_5808038,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Upper extremity,data/raw/isic_clinical/ISIC_7985478.jpg,CC-BY,val
+ISIC_5485905,IP_3237217,IL_2080203,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Upper extremity,data/raw/isic_clinical/ISIC_5485905.jpg,CC-BY,val
+ISIC_1956952,IP_7410598,IL_5373038,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_1956952.jpg,CC-BY,val
+ISIC_6297542,IP_1842674,IL_2312854,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Head and neck,data/raw/isic_clinical/ISIC_6297542.jpg,CC-BY,val
+ISIC_7825042,IP_4704108,IL_0321756,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_7825042.jpg,CC-BY,val
+ISIC_8742692,IP_4292758,IL_1202201,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8742692.jpg,CC-BY,val
+ISIC_2724715,IP_4704108,IL_0735847,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_2724715.jpg,CC-BY,val
+ISIC_1055921,IP_4292758,IL_6750081,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_1055921.jpg,CC-BY,val
+ISIC_5128109,IP_4326782,IL_5456577,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_5128109.jpg,CC-BY,val
+ISIC_0458049,IP_9399019,IL_8752381,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_0458049.jpg,CC-BY,val
+ISIC_5095940,IP_5945369,IL_1198555,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_5095940.jpg,CC-BY,val
+ISIC_4389472,IP_1842674,IL_6550963,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_4389472.jpg,CC-BY,val
+ISIC_7088035,IP_6127097,IL_6416005,isic_clinical,unmapped,unmapped,0,Benign,80.0,female,Lower extremity,data/raw/isic_clinical/ISIC_7088035.jpg,CC-BY,val
+ISIC_8919053,IP_1842674,IL_8506163,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Trunk,data/raw/isic_clinical/ISIC_8919053.jpg,CC-BY,val
+ISIC_6301620,IP_9772523,IL_5911312,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_6301620.jpg,CC-BY,val
+ISIC_4042108,IP_4292758,IL_2854910,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_4042108.jpg,CC-BY,val
+ISIC_3242455,IP_4704108,IL_6154548,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_3242455.jpg,CC-BY,val
+ISIC_9248204,IP_1689191,IL_9730835,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Trunk,data/raw/isic_clinical/ISIC_9248204.jpg,CC-BY,val
+ISIC_0573661,IP_1842674,IL_4761218,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_0573661.jpg,CC-BY,val
+ISIC_3500501,IP_9772523,IL_2658245,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_3500501.jpg,CC-BY,val
+ISIC_1806278,IP_7410598,IL_2370326,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_1806278.jpg,CC-BY,val
+ISIC_3990863,IP_4326782,IL_6771153,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_3990863.jpg,CC-BY,val
+ISIC_0730898,IP_4326782,IL_2241078,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Upper extremity,data/raw/isic_clinical/ISIC_0730898.jpg,CC-BY,val
+ISIC_7037190,IP_9399019,IL_6041962,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_7037190.jpg,CC-BY,val
+ISIC_5258102,IP_4704108,IL_0867846,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Upper extremity,data/raw/isic_clinical/ISIC_5258102.jpg,CC-BY,val
+ISIC_4766081,IP_5945369,IL_9443508,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Head and neck,data/raw/isic_clinical/ISIC_4766081.jpg,CC-BY,val
+ISIC_2908403,IP_7410598,IL_0428837,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_2908403.jpg,CC-BY,val
+ISIC_0938881,IP_1689191,IL_7056483,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Trunk,data/raw/isic_clinical/ISIC_0938881.jpg,CC-BY,val
+ISIC_8508994,IP_4292758,IL_1404235,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8508994.jpg,CC-BY,val
+ISIC_0913984,IP_4704108,IL_9851657,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_0913984.jpg,CC-BY,val
+ISIC_1227045,IP_9399019,IL_1927895,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1227045.jpg,CC-BY,val
+ISIC_6087265,IP_9772523,IL_2829843,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_6087265.jpg,CC-BY,val
+ISIC_2890592,IP_4326782,IL_1349612,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_2890592.jpg,CC-BY,val
+ISIC_6038182,IP_9399019,IL_6773816,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_6038182.jpg,CC-BY,val
+ISIC_6912731,IP_9772523,IL_8126595,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_6912731.jpg,CC-BY,val
+ISIC_2665731,IP_3237217,IL_9688009,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Lower extremity,data/raw/isic_clinical/ISIC_2665731.jpg,CC-BY,val
+ISIC_8284692,IP_9772523,IL_9272621,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_8284692.jpg,CC-BY,val
+ISIC_4269941,IP_7410598,IL_1947096,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_4269941.jpg,CC-BY,val
+ISIC_9986267,IP_1842674,IL_8765815,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Trunk,data/raw/isic_clinical/ISIC_9986267.jpg,CC-BY,val
+ISIC_0817875,IP_9399019,IL_9948355,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_0817875.jpg,CC-BY,val
+ISIC_1301901,IP_1689191,IL_1585823,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1301901.jpg,CC-BY,val
+ISIC_9658843,IP_1842674,IL_1672173,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Trunk,data/raw/isic_clinical/ISIC_9658843.jpg,CC-BY,val
+ISIC_1049143,IP_4292758,IL_8826233,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1049143.jpg,CC-BY,val
+ISIC_3308471,IP_4292758,IL_3906572,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_3308471.jpg,CC-BY,val
+ISIC_9449327,IP_1842674,IL_4960821,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Lower extremity,data/raw/isic_clinical/ISIC_9449327.jpg,CC-BY,val
+ISIC_1078761,IP_4326782,IL_9678697,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Upper extremity,data/raw/isic_clinical/ISIC_1078761.jpg,CC-BY,val
+ISIC_8378162,IP_3237217,IL_9682621,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Lower extremity,data/raw/isic_clinical/ISIC_8378162.jpg,CC-BY,val
+ISIC_9887493,IP_9772523,IL_1345153,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Lower extremity,data/raw/isic_clinical/ISIC_9887493.jpg,CC-BY,val
+ISIC_7749536,IP_4704108,IL_5228214,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_7749536.jpg,CC-BY,val
+ISIC_0401122,IP_1842674,IL_0874744,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_0401122.jpg,CC-BY,val
+ISIC_8745104,IP_1689191,IL_5366345,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8745104.jpg,CC-BY,val
+ISIC_8842625,IP_9772523,IL_8080281,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Trunk,data/raw/isic_clinical/ISIC_8842625.jpg,CC-BY,val
+ISIC_3735047,IP_4292758,IL_3822077,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Trunk,data/raw/isic_clinical/ISIC_3735047.jpg,CC-BY,val
+ISIC_8288467,IP_9399019,IL_8623138,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_8288467.jpg,CC-BY,val
+ISIC_6345600,IP_4704108,IL_0986517,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_6345600.jpg,CC-BY,val
+ISIC_9703000,IP_4326782,IL_5492875,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_9703000.jpg,CC-BY,val
+ISIC_0794031,IP_7410598,IL_3498078,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_0794031.jpg,CC-BY,val
+ISIC_6025214,IP_5945369,IL_8017427,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Head and neck,data/raw/isic_clinical/ISIC_6025214.jpg,CC-BY,val
+ISIC_4042063,IP_4292758,IL_1722373,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Trunk,data/raw/isic_clinical/ISIC_4042063.jpg,CC-BY,val
+ISIC_5244430,IP_7410598,IL_4588618,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_5244430.jpg,CC-BY,val
+ISIC_3138552,IP_4704108,IL_2791405,isic_clinical,unmapped,unmapped,0,Benign,60.0,female,Trunk,data/raw/isic_clinical/ISIC_3138552.jpg,CC-BY,val
+ISIC_2407501,IP_4292758,IL_7048291,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Upper extremity,data/raw/isic_clinical/ISIC_2407501.jpg,CC-BY,val
+ISIC_1564665,IP_3237217,IL_5216491,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Upper extremity,data/raw/isic_clinical/ISIC_1564665.jpg,CC-BY,val
+ISIC_5308379,IP_3237217,IL_3605192,isic_clinical,unmapped,unmapped,0,Benign,70.0,male,Head and neck,data/raw/isic_clinical/ISIC_5308379.jpg,CC-BY,val
+ISIC_6870452,IP_8650185,IL_2968633,isic_clinical,unmapped,unmapped,0,Benign,50.0,male,Trunk,data/raw/isic_clinical/ISIC_6870452.jpg,CC-BY,val
+ISIC_3118696,IP_9399019,IL_3438761,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_3118696.jpg,CC-BY,val
+ISIC_5923756,IP_6127097,IL_1931107,isic_clinical,unmapped,unmapped,0,Benign,80.0,female,Head and neck,data/raw/isic_clinical/ISIC_5923756.jpg,CC-BY,val
+ISIC_5618258,IP_8650185,IL_2851856,isic_clinical,unmapped,unmapped,0,Benign,50.0,male,Trunk,data/raw/isic_clinical/ISIC_5618258.jpg,CC-BY,val
+ISIC_8686408,IP_1842674,IL_8197682,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Trunk,data/raw/isic_clinical/ISIC_8686408.jpg,CC-BY,val
+ISIC_5354446,IP_4326782,IL_5847645,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_5354446.jpg,CC-BY,val
+ISIC_7069888,IP_1689191,IL_4374970,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Trunk,data/raw/isic_clinical/ISIC_7069888.jpg,CC-BY,val
+ISIC_5866548,IP_6127097,IL_2021595,isic_clinical,unmapped,unmapped,0,Benign,80.0,female,Trunk,data/raw/isic_clinical/ISIC_5866548.jpg,CC-BY,val
+ISIC_9779374,IP_4326782,IL_9322326,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Upper extremity,data/raw/isic_clinical/ISIC_9779374.jpg,CC-BY,val
+ISIC_0669801,IP_5945369,IL_4125008,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_0669801.jpg,CC-BY,val
+ISIC_6354361,IP_4292758,IL_7700812,isic_clinical,unmapped,unmapped,0,Benign,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_6354361.jpg,CC-BY,val
+ISIC_2220407,IP_4326782,IL_9713881,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_2220407.jpg,CC-BY,val
+ISIC_2843046,IP_5945369,IL_6316390,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_2843046.jpg,CC-BY,val
+ISIC_2192003,IP_1689191,IL_3324214,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_2192003.jpg,CC-BY,val
+ISIC_8886489,IP_7410598,IL_6206664,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_8886489.jpg,CC-BY,val
+ISIC_4824148,IP_4326782,IL_3038023,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_4824148.jpg,CC-BY,val
+ISIC_1291341,IP_9399019,IL_4902576,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_1291341.jpg,CC-BY,val
+ISIC_6775918,IP_9772523,IL_5545503,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Lower extremity,data/raw/isic_clinical/ISIC_6775918.jpg,CC-BY,val
+ISIC_0871926,IP_9399019,IL_1707662,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_0871926.jpg,CC-BY,val
+ISIC_0386899,IP_9772523,IL_5749665,isic_clinical,unmapped,unmapped,0,Benign,55.0,male,Upper extremity,data/raw/isic_clinical/ISIC_0386899.jpg,CC-BY,val
+ISIC_1417244,IP_9399019,IL_8750393,isic_clinical,unmapped,unmapped,0,Benign,50.0,female,Trunk,data/raw/isic_clinical/ISIC_1417244.jpg,CC-BY,val
+ISIC_4232222,IP_1842674,IL_6717594,isic_clinical,unmapped,unmapped,0,Benign,60.0,male,Lower extremity,data/raw/isic_clinical/ISIC_4232222.jpg,CC-BY,val
+ISIC_7254842,IP_5945369,IL_0241427,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Upper extremity,data/raw/isic_clinical/ISIC_7254842.jpg,CC-BY,val
+ISIC_0110573,IP_5945369,IL_4728691,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_0110573.jpg,CC-BY,val
+ISIC_9657948,IP_4326782,IL_3594731,isic_clinical,unmapped,unmapped,0,Benign,65.0,male,Trunk,data/raw/isic_clinical/ISIC_9657948.jpg,CC-BY,val
+ISIC_1473687,IP_1689191,IL_4314064,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Trunk,data/raw/isic_clinical/ISIC_1473687.jpg,CC-BY,val
+ISIC_3546672,IP_5945369,IL_3498752,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Trunk,data/raw/isic_clinical/ISIC_3546672.jpg,CC-BY,val
+ISIC_3150957,IP_5945369,IL_9209998,isic_clinical,unmapped,unmapped,0,Benign,40.0,male,Head and neck,data/raw/isic_clinical/ISIC_3150957.jpg,CC-BY,val
+ISIC_4837079,IP_1689191,IL_2685452,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,,data/raw/isic_clinical/ISIC_4837079.jpg,CC-BY,val
+ISIC_0388951,IP_1689191,IL_9256816,isic_clinical,unmapped,unmapped,0,Benign,40.0,female,Lower extremity,data/raw/isic_clinical/ISIC_0388951.jpg,CC-BY,val
+ISIC_1200941,IP_7410598,IL_4078972,isic_clinical,unmapped,unmapped,0,Benign,75.0,female,Trunk,data/raw/isic_clinical/ISIC_1200941.jpg,CC-BY,val
+ISIC_5059940,IP_8650185,IL_7890873,isic_clinical,unmapped,unmapped,0,Benign,50.0,male,Trunk,data/raw/isic_clinical/ISIC_5059940.jpg,CC-BY,val
+ISIC_5697971,IP_8650185,IL_9329369,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,male,Trunk,data/raw/isic_clinical/ISIC_5697971.jpg,CC-BY,val
+ISIC_4030803,IP_8650185,IL_2190333,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,male,Head and neck,data/raw/isic_clinical/ISIC_4030803.jpg,CC-BY,val
+ISIC_7333660,IP_9772523,IL_8859427,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Lower extremity,data/raw/isic_clinical/ISIC_7333660.jpg,CC-BY,val
+ISIC_2041049,IP_9772523,IL_5892369,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Lower extremity,data/raw/isic_clinical/ISIC_2041049.jpg,CC-BY,val
+ISIC_7097146,IP_9772523,IL_6897266,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Trunk,data/raw/isic_clinical/ISIC_7097146.jpg,CC-BY,val
+ISIC_3405857,IP_9772523,IL_1569353,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Trunk,data/raw/isic_clinical/ISIC_3405857.jpg,CC-BY,val
+ISIC_7842787,IP_9772523,IL_1739314,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Upper extremity,data/raw/isic_clinical/ISIC_7842787.jpg,CC-BY,val
+ISIC_1723255,IP_9772523,IL_2656839,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Upper extremity,data/raw/isic_clinical/ISIC_1723255.jpg,CC-BY,val
+ISIC_9264432,IP_9772523,IL_8231454,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Lower extremity,data/raw/isic_clinical/ISIC_9264432.jpg,CC-BY,val
+ISIC_9955936,IP_9772523,IL_8295655,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Upper extremity,data/raw/isic_clinical/ISIC_9955936.jpg,CC-BY,val
+ISIC_8739229,IP_9772523,IL_1213542,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Trunk,data/raw/isic_clinical/ISIC_8739229.jpg,CC-BY,val
+ISIC_3937120,IP_9772523,IL_2009454,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Trunk,data/raw/isic_clinical/ISIC_3937120.jpg,CC-BY,val
+ISIC_8512727,IP_9772523,IL_8133380,isic_clinical,unmapped,unmapped,0,Benign - Other,55.0,male,Head and neck,data/raw/isic_clinical/ISIC_8512727.jpg,CC-BY,val
+ISIC_2301096,IP_6127097,IL_0141007,isic_clinical,unmapped,unmapped,0,Benign - Other,80.0,female,Lower extremity,data/raw/isic_clinical/ISIC_2301096.jpg,CC-BY,val
+ISIC_1233783,IP_6127097,IL_0847123,isic_clinical,unmapped,unmapped,0,Benign - Other,80.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1233783.jpg,CC-BY,val
+ISIC_0546662,IP_6127097,IL_5500816,isic_clinical,unmapped,unmapped,0,Benign - Other,80.0,female,Upper extremity,data/raw/isic_clinical/ISIC_0546662.jpg,CC-BY,val
+ISIC_1499169,IP_6127097,IL_4670936,isic_clinical,unmapped,unmapped,0,Benign - Other,80.0,female,Trunk,data/raw/isic_clinical/ISIC_1499169.jpg,CC-BY,val
+ISIC_9557160,IP_6127097,IL_1776198,isic_clinical,unmapped,unmapped,0,Benign - Other,80.0,female,Head and neck,data/raw/isic_clinical/ISIC_9557160.jpg,CC-BY,val
+ISIC_6659177,IP_3237217,IL_9134179,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Lower extremity,data/raw/isic_clinical/ISIC_6659177.jpg,CC-BY,val
+ISIC_0248842,IP_3237217,IL_4871937,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Lower extremity,data/raw/isic_clinical/ISIC_0248842.jpg,CC-BY,val
+ISIC_9309139,IP_3237217,IL_3094566,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Lower extremity,data/raw/isic_clinical/ISIC_9309139.jpg,CC-BY,val
+ISIC_7875277,IP_3237217,IL_9559125,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Upper extremity,data/raw/isic_clinical/ISIC_7875277.jpg,CC-BY,val
+ISIC_8578609,IP_3237217,IL_3145050,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Trunk,data/raw/isic_clinical/ISIC_8578609.jpg,CC-BY,val
+ISIC_7313028,IP_3237217,IL_5161011,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Trunk,data/raw/isic_clinical/ISIC_7313028.jpg,CC-BY,val
+ISIC_7708732,IP_3237217,IL_6647602,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Head and neck,data/raw/isic_clinical/ISIC_7708732.jpg,CC-BY,val
+ISIC_4041895,IP_3237217,IL_3101700,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Upper extremity,data/raw/isic_clinical/ISIC_4041895.jpg,CC-BY,val
+ISIC_0284587,IP_3237217,IL_0475052,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Trunk,data/raw/isic_clinical/ISIC_0284587.jpg,CC-BY,val
+ISIC_1127759,IP_3237217,IL_5003723,isic_clinical,unmapped,unmapped,0,Benign - Other,70.0,male,Trunk,data/raw/isic_clinical/ISIC_1127759.jpg,CC-BY,val
+ISIC_7387099,IP_7474298,IL_8591833,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_7387099.jpg,CC-BY,val
+ISIC_7559938,IP_7474298,IL_1276775,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_7559938.jpg,CC-BY,val
+ISIC_3024815,IP_7474298,IL_2231467,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Head and neck,data/raw/isic_clinical/ISIC_3024815.jpg,CC-BY,val
+ISIC_5895126,IP_4292758,IL_6973162,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5895126.jpg,CC-BY,val
+ISIC_9371522,IP_4292758,IL_3095918,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_9371522.jpg,CC-BY,val
+ISIC_0124392,IP_4292758,IL_8946561,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Trunk,data/raw/isic_clinical/ISIC_0124392.jpg,CC-BY,val
+ISIC_1270033,IP_4292758,IL_9208401,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Lower extremity,data/raw/isic_clinical/ISIC_1270033.jpg,CC-BY,val
+ISIC_0936321,IP_4292758,IL_7311077,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Trunk,data/raw/isic_clinical/ISIC_0936321.jpg,CC-BY,val
+ISIC_1824779,IP_4292758,IL_8378492,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Trunk,data/raw/isic_clinical/ISIC_1824779.jpg,CC-BY,val
+ISIC_2481396,IP_4292758,IL_6659364,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Upper extremity,data/raw/isic_clinical/ISIC_2481396.jpg,CC-BY,val
+ISIC_6996673,IP_4292758,IL_0809344,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Trunk,data/raw/isic_clinical/ISIC_6996673.jpg,CC-BY,val
+ISIC_6739268,IP_4292758,IL_5147451,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,female,Head and neck,data/raw/isic_clinical/ISIC_6739268.jpg,CC-BY,val
+ISIC_6242772,IP_1842674,IL_7444582,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Trunk,data/raw/isic_clinical/ISIC_6242772.jpg,CC-BY,val
+ISIC_9926616,IP_7410598,IL_2799825,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Trunk,data/raw/isic_clinical/ISIC_9926616.jpg,CC-BY,val
+ISIC_8079421,IP_4326782,IL_3490634,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Lower extremity,data/raw/isic_clinical/ISIC_8079421.jpg,CC-BY,val
+ISIC_2923702,IP_4326782,IL_7796845,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Trunk,data/raw/isic_clinical/ISIC_2923702.jpg,CC-BY,val
+ISIC_3292403,IP_7410598,IL_3300294,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Trunk,data/raw/isic_clinical/ISIC_3292403.jpg,CC-BY,val
+ISIC_2727787,IP_5945369,IL_0861969,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Upper extremity,data/raw/isic_clinical/ISIC_2727787.jpg,CC-BY,val
+ISIC_9071212,IP_1842674,IL_7154900,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_9071212.jpg,CC-BY,val
+ISIC_1848953,IP_9399019,IL_1428414,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Lower extremity,data/raw/isic_clinical/ISIC_1848953.jpg,CC-BY,val
+ISIC_3291967,IP_9399019,IL_2480505,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Head and neck,data/raw/isic_clinical/ISIC_3291967.jpg,CC-BY,val
+ISIC_1254394,IP_9399019,IL_3699949,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_1254394.jpg,CC-BY,val
+ISIC_9072993,IP_1689191,IL_3545974,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Head and neck,data/raw/isic_clinical/ISIC_9072993.jpg,CC-BY,val
+ISIC_4034192,IP_1842674,IL_7817741,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_4034192.jpg,CC-BY,val
+ISIC_1855287,IP_5945369,IL_0382442,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Upper extremity,data/raw/isic_clinical/ISIC_1855287.jpg,CC-BY,val
+ISIC_3960763,IP_9399019,IL_5489906,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Lower extremity,data/raw/isic_clinical/ISIC_3960763.jpg,CC-BY,val
+ISIC_7112801,IP_7410598,IL_6914231,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Trunk,data/raw/isic_clinical/ISIC_7112801.jpg,CC-BY,val
+ISIC_5199307,IP_4326782,IL_9514073,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Lower extremity,data/raw/isic_clinical/ISIC_5199307.jpg,CC-BY,val
+ISIC_6534176,IP_5945369,IL_5652404,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Lower extremity,data/raw/isic_clinical/ISIC_6534176.jpg,CC-BY,val
+ISIC_6051697,IP_1689191,IL_3189284,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Trunk,data/raw/isic_clinical/ISIC_6051697.jpg,CC-BY,val
+ISIC_9664679,IP_4704108,IL_0647241,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Upper extremity,data/raw/isic_clinical/ISIC_9664679.jpg,CC-BY,val
+ISIC_0694295,IP_7410598,IL_2336859,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Lower extremity,data/raw/isic_clinical/ISIC_0694295.jpg,CC-BY,val
+ISIC_0402088,IP_7410598,IL_7360736,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Lower extremity,data/raw/isic_clinical/ISIC_0402088.jpg,CC-BY,val
+ISIC_0438429,IP_5945369,IL_6071295,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Trunk,data/raw/isic_clinical/ISIC_0438429.jpg,CC-BY,val
+ISIC_6791041,IP_1689191,IL_4017753,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_6791041.jpg,CC-BY,val
+ISIC_6723685,IP_1842674,IL_6291710,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Upper extremity,data/raw/isic_clinical/ISIC_6723685.jpg,CC-BY,val
+ISIC_5423147,IP_7410598,IL_2121867,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Upper extremity,data/raw/isic_clinical/ISIC_5423147.jpg,CC-BY,val
+ISIC_6827822,IP_9399019,IL_6447245,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_6827822.jpg,CC-BY,val
+ISIC_3211469,IP_4326782,IL_3123670,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Trunk,data/raw/isic_clinical/ISIC_3211469.jpg,CC-BY,val
+ISIC_7428208,IP_4704108,IL_5577013,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Head and neck,data/raw/isic_clinical/ISIC_7428208.jpg,CC-BY,val
+ISIC_9469643,IP_1689191,IL_0120410,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Trunk,data/raw/isic_clinical/ISIC_9469643.jpg,CC-BY,val
+ISIC_0705860,IP_4704108,IL_5639587,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Trunk,data/raw/isic_clinical/ISIC_0705860.jpg,CC-BY,val
+ISIC_6852493,IP_4704108,IL_2293389,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Trunk,data/raw/isic_clinical/ISIC_6852493.jpg,CC-BY,val
+ISIC_4773528,IP_1689191,IL_4605254,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_4773528.jpg,CC-BY,val
+ISIC_0112733,IP_4326782,IL_3873836,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Trunk,data/raw/isic_clinical/ISIC_0112733.jpg,CC-BY,val
+ISIC_4736780,IP_1842674,IL_1310035,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Trunk,data/raw/isic_clinical/ISIC_4736780.jpg,CC-BY,val
+ISIC_2872245,IP_4704108,IL_3707715,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Upper extremity,data/raw/isic_clinical/ISIC_2872245.jpg,CC-BY,val
+ISIC_1483742,IP_1689191,IL_2088359,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Trunk,data/raw/isic_clinical/ISIC_1483742.jpg,CC-BY,val
+ISIC_3001013,IP_7410598,IL_6755541,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Upper extremity,data/raw/isic_clinical/ISIC_3001013.jpg,CC-BY,val
+ISIC_4593111,IP_4326782,IL_9312178,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Head and neck,data/raw/isic_clinical/ISIC_4593111.jpg,CC-BY,val
+ISIC_3948232,IP_1689191,IL_5563881,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Trunk,data/raw/isic_clinical/ISIC_3948232.jpg,CC-BY,val
+ISIC_1219513,IP_7410598,IL_2161376,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Head and neck,data/raw/isic_clinical/ISIC_1219513.jpg,CC-BY,val
+ISIC_8357322,IP_7410598,IL_2402127,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8357322.jpg,CC-BY,val
+ISIC_3481568,IP_1842674,IL_8763866,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Head and neck,data/raw/isic_clinical/ISIC_3481568.jpg,CC-BY,val
+ISIC_3772238,IP_7410598,IL_0115789,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Trunk,data/raw/isic_clinical/ISIC_3772238.jpg,CC-BY,val
+ISIC_3914752,IP_9399019,IL_7895994,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_3914752.jpg,CC-BY,val
+ISIC_9537742,IP_5945369,IL_2163189,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Head and neck,data/raw/isic_clinical/ISIC_9537742.jpg,CC-BY,val
+ISIC_7062718,IP_9399019,IL_3396766,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_7062718.jpg,CC-BY,val
+ISIC_5353097,IP_4704108,IL_5093460,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5353097.jpg,CC-BY,val
+ISIC_3435506,IP_5945369,IL_3556364,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Trunk,data/raw/isic_clinical/ISIC_3435506.jpg,CC-BY,val
+ISIC_6238009,IP_1842674,IL_8594281,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Trunk,data/raw/isic_clinical/ISIC_6238009.jpg,CC-BY,val
+ISIC_4804184,IP_5945369,IL_1620076,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Lower extremity,data/raw/isic_clinical/ISIC_4804184.jpg,CC-BY,val
+ISIC_7888400,IP_9399019,IL_2475847,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_7888400.jpg,CC-BY,val
+ISIC_9211178,IP_1842674,IL_0569468,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Trunk,data/raw/isic_clinical/ISIC_9211178.jpg,CC-BY,val
+ISIC_6424913,IP_4704108,IL_8042924,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Upper extremity,data/raw/isic_clinical/ISIC_6424913.jpg,CC-BY,val
+ISIC_9546634,IP_5945369,IL_1924200,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Upper extremity,data/raw/isic_clinical/ISIC_9546634.jpg,CC-BY,val
+ISIC_1654189,IP_4326782,IL_9193048,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Upper extremity,data/raw/isic_clinical/ISIC_1654189.jpg,CC-BY,val
+ISIC_5384128,IP_1689191,IL_6635526,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Upper extremity,data/raw/isic_clinical/ISIC_5384128.jpg,CC-BY,val
+ISIC_2351469,IP_4704108,IL_6882817,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Trunk,data/raw/isic_clinical/ISIC_2351469.jpg,CC-BY,val
+ISIC_5358142,IP_1689191,IL_0099310,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5358142.jpg,CC-BY,val
+ISIC_0832526,IP_5945369,IL_8122570,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Trunk,data/raw/isic_clinical/ISIC_0832526.jpg,CC-BY,val
+ISIC_5443717,IP_4704108,IL_4139570,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5443717.jpg,CC-BY,val
+ISIC_5364866,IP_4326782,IL_4489613,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Trunk,data/raw/isic_clinical/ISIC_5364866.jpg,CC-BY,val
+ISIC_8445675,IP_1842674,IL_2580293,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Lower extremity,data/raw/isic_clinical/ISIC_8445675.jpg,CC-BY,val
+ISIC_1432998,IP_4326782,IL_2281642,isic_clinical,unmapped,unmapped,0,Benign - Other,65.0,male,Lower extremity,data/raw/isic_clinical/ISIC_1432998.jpg,CC-BY,val
+ISIC_1428987,IP_7410598,IL_3561573,isic_clinical,unmapped,unmapped,0,Benign - Other,75.0,female,Upper extremity,data/raw/isic_clinical/ISIC_1428987.jpg,CC-BY,val
+ISIC_9115714,IP_4704108,IL_2058218,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Trunk,data/raw/isic_clinical/ISIC_9115714.jpg,CC-BY,val
+ISIC_3902813,IP_5945369,IL_2095554,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Trunk,data/raw/isic_clinical/ISIC_3902813.jpg,CC-BY,val
+ISIC_2503324,IP_4704108,IL_5289555,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,female,Lower extremity,data/raw/isic_clinical/ISIC_2503324.jpg,CC-BY,val
+ISIC_1328368,IP_9399019,IL_5635988,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Trunk,data/raw/isic_clinical/ISIC_1328368.jpg,CC-BY,val
+ISIC_0351418,IP_1842674,IL_2886191,isic_clinical,unmapped,unmapped,0,Benign - Other,60.0,male,Lower extremity,data/raw/isic_clinical/ISIC_0351418.jpg,CC-BY,val
+ISIC_4544035,IP_1689191,IL_5752365,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Lower extremity,data/raw/isic_clinical/ISIC_4544035.jpg,CC-BY,val
+ISIC_8827276,IP_1689191,IL_1447275,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,female,Lower extremity,data/raw/isic_clinical/ISIC_8827276.jpg,CC-BY,val
+ISIC_4753033,IP_5945369,IL_8861795,isic_clinical,unmapped,unmapped,0,Benign - Other,40.0,male,Lower extremity,data/raw/isic_clinical/ISIC_4753033.jpg,CC-BY,val
+ISIC_5100758,IP_9399019,IL_7551535,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Lower extremity,data/raw/isic_clinical/ISIC_5100758.jpg,CC-BY,val
+ISIC_2493138,IP_9399019,IL_0106469,isic_clinical,unmapped,unmapped,0,Benign - Other,50.0,female,Upper extremity,data/raw/isic_clinical/ISIC_2493138.jpg,CC-BY,val

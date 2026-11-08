@@ -1,0 +1,2680 @@
+{
+  "experiment_id": "EXP-018",
+  "title": "Validation Round 2 Closure, Classical ML vs Deep Head Benchmark & DS-5 GrabCut",
+  "elapsed_seconds": 656.05,
+  "section_1_isic_cohort_age_shift": {
+    "pad_ufes_20": {
+      "malignant_count": 1089,
+      "malignant_age_mean_sd": "63.9 ± 13.3",
+      "malignant_age_median_iqr": "65.0 (55.0-75.0)",
+      "benign_count": 479,
+      "benign_age_mean_sd": "50.3 ± 20.7",
+      "benign_age_median_iqr": "55.0 (35.0-65.0)",
+      "ack_count": 730,
+      "ack_age_mean_sd": "61.7 ± 12.7"
+    },
+    "isic_clinical": {
+      "malignant_count": 64,
+      "malignant_age_mean_sd": "67.3 ± 14.1",
+      "malignant_age_median_iqr": "70.0 (58.8-80.0)",
+      "benign_count": 1228,
+      "benign_age_mean_sd": "58.8 ± 13.1",
+      "benign_age_median_iqr": "60.0 (50.0-70.0)",
+      "ack_count": 0,
+      "ack_age_mean_sd": "N/A (0 ACK)"
+    }
+  },
+  "section_2_exp018a_classifier_and_encoder_tournament": {
+    "classifier_comparison_5fold_oof": {
+      "1_LogReg_L2_ImageOnly_896D": {
+        "global_oof_macro_f1": 0.651,
+        "pad_ufes20_oof_macro_f1": 0.6367,
+        "triage_auc_with_ack": 0.925,
+        "triage_auc_no_ack": 0.9449,
+        "ddi_auc_all_656": 0.6593,
+        "ddi_auc_in_scope_301": 0.7633,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 127,
+          "fn": 15,
+          "tn": 2167,
+          "fp": 238,
+          "recall": 0.8944,
+          "recall_95ci": [
+            0.833,
+            0.9349
+          ],
+          "specificity": 0.901,
+          "specificity_95ci": [
+            0.8885,
+            0.9123
+          ],
+          "ppv_precision": 0.3479,
+          "npv": 0.9931,
+          "fpr": 0.099
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 139,
+          "fn": 3,
+          "tn": 1716,
+          "fp": 689,
+          "recall": 0.9789,
+          "recall_95ci": [
+            0.9397,
+            0.9928
+          ],
+          "specificity": 0.7135,
+          "specificity_95ci": [
+            0.6951,
+            0.7312
+          ],
+          "ppv_precision": 0.1679,
+          "npv": 0.9983,
+          "fpr": 0.2865
+        }
+      },
+      "2_LogReg_L2_DeConfounded_903D": {
+        "global_oof_macro_f1": 0.661,
+        "pad_ufes20_oof_macro_f1": 0.6408,
+        "triage_auc_with_ack": 0.8577,
+        "triage_auc_no_ack": 0.8454,
+        "ddi_auc_all_656": 0.6074,
+        "ddi_auc_in_scope_301": 0.6566,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 103,
+          "fn": 39,
+          "tn": 2328,
+          "fp": 77,
+          "recall": 0.7254,
+          "recall_95ci": [
+            0.6467,
+            0.7921
+          ],
+          "specificity": 0.968,
+          "specificity_95ci": [
+            0.9602,
+            0.9743
+          ],
+          "ppv_precision": 0.5722,
+          "npv": 0.9835,
+          "fpr": 0.032
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 111,
+          "fn": 31,
+          "tn": 2294,
+          "fp": 111,
+          "recall": 0.7817,
+          "recall_95ci": [
+            0.7068,
+            0.8417
+          ],
+          "specificity": 0.9538,
+          "specificity_95ci": [
+            0.9447,
+            0.9615
+          ],
+          "ppv_precision": 0.5,
+          "npv": 0.9867,
+          "fpr": 0.0462
+        }
+      },
+      "3_LinearSVM_Calibrated_896D": {
+        "global_oof_macro_f1": 0.617,
+        "pad_ufes20_oof_macro_f1": 0.6087,
+        "triage_auc_with_ack": 0.9382,
+        "triage_auc_no_ack": 0.9581,
+        "ddi_auc_all_656": 0.6527,
+        "ddi_auc_in_scope_301": 0.7591,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 118,
+          "fn": 24,
+          "tn": 2277,
+          "fp": 128,
+          "recall": 0.831,
+          "recall_95ci": [
+            0.7608,
+            0.8837
+          ],
+          "specificity": 0.9468,
+          "specificity_95ci": [
+            0.9371,
+            0.9551
+          ],
+          "ppv_precision": 0.4797,
+          "npv": 0.9896,
+          "fpr": 0.0532
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 131,
+          "fn": 11,
+          "tn": 2068,
+          "fp": 337,
+          "recall": 0.9225,
+          "recall_95ci": [
+            0.8666,
+            0.9562
+          ],
+          "specificity": 0.8599,
+          "specificity_95ci": [
+            0.8454,
+            0.8732
+          ],
+          "ppv_precision": 0.2799,
+          "npv": 0.9947,
+          "fpr": 0.1401
+        }
+      },
+      "4_LightGBM_GBDT_896D": {
+        "global_oof_macro_f1": 0.6121,
+        "pad_ufes20_oof_macro_f1": 0.5883,
+        "triage_auc_with_ack": 0.9144,
+        "triage_auc_no_ack": 0.9314,
+        "ddi_auc_all_656": 0.6026,
+        "ddi_auc_in_scope_301": 0.7352,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 95,
+          "fn": 47,
+          "tn": 2330,
+          "fp": 75,
+          "recall": 0.669,
+          "recall_95ci": [
+            0.5881,
+            0.7411
+          ],
+          "specificity": 0.9688,
+          "specificity_95ci": [
+            0.9611,
+            0.975
+          ],
+          "ppv_precision": 0.5588,
+          "npv": 0.9802,
+          "fpr": 0.0312
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 117,
+          "fn": 25,
+          "tn": 2237,
+          "fp": 168,
+          "recall": 0.8239,
+          "recall_95ci": [
+            0.753,
+            0.8778
+          ],
+          "specificity": 0.9301,
+          "specificity_95ci": [
+            0.9193,
+            0.9397
+          ],
+          "ppv_precision": 0.4105,
+          "npv": 0.9889,
+          "fpr": 0.0699
+        }
+      },
+      "5_XGBoost_Hist_896D": {
+        "global_oof_macro_f1": 0.6097,
+        "pad_ufes20_oof_macro_f1": 0.5848,
+        "triage_auc_with_ack": 0.9083,
+        "triage_auc_no_ack": 0.926,
+        "ddi_auc_all_656": 0.6037,
+        "ddi_auc_in_scope_301": 0.7361,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 109,
+          "fn": 33,
+          "tn": 2268,
+          "fp": 137,
+          "recall": 0.7676,
+          "recall_95ci": [
+            0.6916,
+            0.8295
+          ],
+          "specificity": 0.943,
+          "specificity_95ci": [
+            0.933,
+            0.9516
+          ],
+          "ppv_precision": 0.4431,
+          "npv": 0.9857,
+          "fpr": 0.057
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 131,
+          "fn": 11,
+          "tn": 2002,
+          "fp": 403,
+          "recall": 0.9225,
+          "recall_95ci": [
+            0.8666,
+            0.9562
+          ],
+          "specificity": 0.8324,
+          "specificity_95ci": [
+            0.817,
+            0.8468
+          ],
+          "ppv_precision": 0.2453,
+          "npv": 0.9945,
+          "fpr": 0.1676
+        }
+      },
+      "6_Sklearn_MLP_896D": {
+        "global_oof_macro_f1": 0.637,
+        "pad_ufes20_oof_macro_f1": 0.6289,
+        "triage_auc_with_ack": 0.9205,
+        "triage_auc_no_ack": 0.935,
+        "ddi_auc_all_656": 0.6498,
+        "ddi_auc_in_scope_301": 0.7492,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 117,
+          "fn": 25,
+          "tn": 2317,
+          "fp": 88,
+          "recall": 0.8239,
+          "recall_95ci": [
+            0.753,
+            0.8778
+          ],
+          "specificity": 0.9634,
+          "specificity_95ci": [
+            0.9551,
+            0.9702
+          ],
+          "ppv_precision": 0.5707,
+          "npv": 0.9893,
+          "fpr": 0.0366
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 132,
+          "fn": 10,
+          "tn": 2142,
+          "fp": 263,
+          "recall": 0.9296,
+          "recall_95ci": [
+            0.8752,
+            0.9613
+          ],
+          "specificity": 0.8906,
+          "specificity_95ci": [
+            0.8775,
+            0.9025
+          ],
+          "ppv_precision": 0.3342,
+          "npv": 0.9954,
+          "fpr": 0.1094
+        }
+      },
+      "7_PyTorch_ImageOnly_Consilium_896D": {
+        "global_oof_macro_f1": 0.6561,
+        "pad_ufes20_oof_macro_f1": 0.6434,
+        "triage_auc_with_ack": 0.8898,
+        "triage_auc_no_ack": 0.987,
+        "ddi_auc_all_656": 0.7383,
+        "ddi_auc_in_scope_301": 0.8241,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 120,
+          "fn": 22,
+          "tn": 2272,
+          "fp": 133,
+          "recall": 0.8451,
+          "recall_95ci": [
+            0.7766,
+            0.8954
+          ],
+          "specificity": 0.9447,
+          "specificity_95ci": [
+            0.9348,
+            0.9531
+          ],
+          "ppv_precision": 0.4743,
+          "npv": 0.9904,
+          "fpr": 0.0553
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 134,
+          "fn": 8,
+          "tn": 2099,
+          "fp": 306,
+          "recall": 0.9437,
+          "recall_95ci": [
+            0.8928,
+            0.9712
+          ],
+          "specificity": 0.8728,
+          "specificity_95ci": [
+            0.8588,
+            0.8855
+          ],
+          "ppv_precision": 0.3045,
+          "npv": 0.9962,
+          "fpr": 0.1272
+        }
+      },
+      "8_PyTorch_DeConfounded_Consilium_903D": {
+        "global_oof_macro_f1": 0.7161,
+        "pad_ufes20_oof_macro_f1": 0.7079,
+        "triage_auc_with_ack": 0.9453,
+        "triage_auc_no_ack": 0.9917,
+        "ddi_auc_all_656": 0.7348,
+        "ddi_auc_in_scope_301": 0.825,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 127,
+          "fn": 15,
+          "tn": 2292,
+          "fp": 113,
+          "recall": 0.8944,
+          "recall_95ci": [
+            0.833,
+            0.9349
+          ],
+          "specificity": 0.953,
+          "specificity_95ci": [
+            0.9438,
+            0.9608
+          ],
+          "ppv_precision": 0.5292,
+          "npv": 0.9935,
+          "fpr": 0.047
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 136,
+          "fn": 6,
+          "tn": 2134,
+          "fp": 271,
+          "recall": 0.9577,
+          "recall_95ci": [
+            0.9109,
+            0.9805
+          ],
+          "specificity": 0.8873,
+          "specificity_95ci": [
+            0.8741,
+            0.8993
+          ],
+          "ppv_precision": 0.3342,
+          "npv": 0.9972,
+          "fpr": 0.1127
+        }
+      },
+      "9_LogReg_TripleEncoder_DINO_Bio_ConvNeXt_1664D": {
+        "global_oof_macro_f1": 0.6481,
+        "pad_ufes20_oof_macro_f1": 0.6278,
+        "triage_auc_with_ack": 0.9342,
+        "triage_auc_no_ack": 0.9585,
+        "ddi_auc_all_656": null,
+        "ddi_auc_in_scope_301": null,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 131,
+          "fn": 11,
+          "tn": 2158,
+          "fp": 247,
+          "recall": 0.9225,
+          "recall_95ci": [
+            0.8666,
+            0.9562
+          ],
+          "specificity": 0.8973,
+          "specificity_95ci": [
+            0.8845,
+            0.9088
+          ],
+          "ppv_precision": 0.3466,
+          "npv": 0.9949,
+          "fpr": 0.1027
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 140,
+          "fn": 2,
+          "tn": 1604,
+          "fp": 801,
+          "recall": 0.9859,
+          "recall_95ci": [
+            0.9501,
+            0.9961
+          ],
+          "specificity": 0.6669,
+          "specificity_95ci": [
+            0.6479,
+            0.6855
+          ],
+          "ppv_precision": 0.1488,
+          "npv": 0.9988,
+          "fpr": 0.3331
+        }
+      },
+      "10_Hybrid_PyTorch_Consilium_plus_LogReg_L2": {
+        "global_oof_macro_f1": 0.7091,
+        "pad_ufes20_oof_macro_f1": 0.701,
+        "triage_auc_with_ack": 0.9576,
+        "triage_auc_no_ack": 0.9902,
+        "ddi_auc_all_656": 0.7313,
+        "ddi_auc_in_scope_301": 0.8266,
+        "mel_at_tau_015": {
+          "threshold": 0.15,
+          "tp": 120,
+          "fn": 22,
+          "tn": 2293,
+          "fp": 112,
+          "recall": 0.8451,
+          "recall_95ci": [
+            0.7766,
+            0.8954
+          ],
+          "specificity": 0.9534,
+          "specificity_95ci": [
+            0.9443,
+            0.9612
+          ],
+          "ppv_precision": 0.5172,
+          "npv": 0.9905,
+          "fpr": 0.0466
+        },
+        "mel_at_tau_005": {
+          "threshold": 0.05,
+          "tp": 134,
+          "fn": 8,
+          "tn": 2166,
+          "fp": 239,
+          "recall": 0.9437,
+          "recall_95ci": [
+            0.8928,
+            0.9712
+          ],
+          "specificity": 0.9006,
+          "specificity_95ci": [
+            0.888,
+            0.9119
+          ],
+          "ppv_precision": 0.3592,
+          "npv": 0.9963,
+          "fpr": 0.0994
+        }
+      }
+    },
+    "visual_encoder_comparison_5fold_oof": {
+      "DINOv2_Small_384D": {
+        "dim": 384,
+        "global_oof_macro_f1": 0.6043,
+        "pad_ufes20_oof_macro_f1": 0.5859,
+        "triage_auc_with_ack": 0.8857,
+        "triage_auc_no_ack": 0.9055
+      },
+      "BiomedCLIP_512D": {
+        "dim": 512,
+        "global_oof_macro_f1": 0.5919,
+        "pad_ufes20_oof_macro_f1": 0.5807,
+        "triage_auc_with_ack": 0.9175,
+        "triage_auc_no_ack": 0.9477
+      },
+      "ConvNeXt_Tiny_768D": {
+        "dim": 768,
+        "global_oof_macro_f1": 0.5832,
+        "pad_ufes20_oof_macro_f1": 0.5561,
+        "triage_auc_with_ack": 0.914,
+        "triage_auc_no_ack": 0.9473
+      },
+      "Swin_Tiny_768D": {
+        "dim": 768,
+        "global_oof_macro_f1": 0.5538,
+        "pad_ufes20_oof_macro_f1": 0.5251,
+        "triage_auc_with_ack": 0.897,
+        "triage_auc_no_ack": 0.9321
+      },
+      "DINOv2_plus_BiomedCLIP_896D": {
+        "dim": 896,
+        "global_oof_macro_f1": 0.651,
+        "pad_ufes20_oof_macro_f1": 0.6367,
+        "triage_auc_with_ack": 0.925,
+        "triage_auc_no_ack": 0.9449
+      },
+      "DINOv2_plus_BiomedCLIP_plus_ConvNeXt_1664D": {
+        "dim": 1664,
+        "global_oof_macro_f1": 0.6573,
+        "pad_ufes20_oof_macro_f1": 0.6411,
+        "triage_auc_with_ack": 0.9336,
+        "triage_auc_no_ack": 0.9549
+      }
+    }
+  },
+  "section_3_paired_recall_specificity_ppv_tables": {
+    "DeConfounded_Multimodal_OOF": {
+      "global_3767": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 136,
+            "fn": 6,
+            "tn": 2134,
+            "fp": 271,
+            "recall": 0.9577,
+            "recall_95ci": [
+              0.9109,
+              0.9805
+            ],
+            "specificity": 0.8873,
+            "specificity_95ci": [
+              0.8741,
+              0.8993
+            ],
+            "ppv_precision": 0.3342,
+            "npv": 0.9972,
+            "fpr": 0.1127
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 129,
+            "fn": 13,
+            "tn": 2244,
+            "fp": 161,
+            "recall": 0.9085,
+            "recall_95ci": [
+              0.8497,
+              0.9457
+            ],
+            "specificity": 0.9331,
+            "specificity_95ci": [
+              0.9224,
+              0.9424
+            ],
+            "ppv_precision": 0.4448,
+            "npv": 0.9942,
+            "fpr": 0.0669
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 127,
+            "fn": 15,
+            "tn": 2292,
+            "fp": 113,
+            "recall": 0.8944,
+            "recall_95ci": [
+              0.833,
+              0.9349
+            ],
+            "specificity": 0.953,
+            "specificity_95ci": [
+              0.9438,
+              0.9608
+            ],
+            "ppv_precision": 0.5292,
+            "npv": 0.9935,
+            "fpr": 0.047
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 119,
+            "fn": 23,
+            "tn": 2317,
+            "fp": 88,
+            "recall": 0.838,
+            "recall_95ci": [
+              0.7687,
+              0.8896
+            ],
+            "specificity": 0.9634,
+            "specificity_95ci": [
+              0.9551,
+              0.9702
+            ],
+            "ppv_precision": 0.5749,
+            "npv": 0.9902,
+            "fpr": 0.0366
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 117,
+            "fn": 25,
+            "tn": 2340,
+            "fp": 65,
+            "recall": 0.8239,
+            "recall_95ci": [
+              0.753,
+              0.8778
+            ],
+            "specificity": 0.973,
+            "specificity_95ci": [
+              0.9657,
+              0.9787
+            ],
+            "ppv_precision": 0.6429,
+            "npv": 0.9894,
+            "fpr": 0.027
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 112,
+            "fn": 30,
+            "tn": 2371,
+            "fp": 34,
+            "recall": 0.7887,
+            "recall_95ci": [
+              0.7144,
+              0.8478
+            ],
+            "specificity": 0.9859,
+            "specificity_95ci": [
+              0.9803,
+              0.9899
+            ],
+            "ppv_precision": 0.7671,
+            "npv": 0.9875,
+            "fpr": 0.0141
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 1221,
+            "fn": 2,
+            "tn": 717,
+            "fp": 1827,
+            "sensitivity": 0.9984,
+            "specificity": 0.2818,
+            "ppv_precision": 0.4006,
+            "npv": 0.9972,
+            "balanced_acc": 0.6401
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 1220,
+            "fn": 3,
+            "tn": 1251,
+            "fp": 1293,
+            "sensitivity": 0.9975,
+            "specificity": 0.4917,
+            "ppv_precision": 0.4855,
+            "npv": 0.9976,
+            "balanced_acc": 0.7446
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 1217,
+            "fn": 6,
+            "tn": 1496,
+            "fp": 1048,
+            "sensitivity": 0.9951,
+            "specificity": 0.5881,
+            "ppv_precision": 0.5373,
+            "npv": 0.996,
+            "balanced_acc": 0.7916
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 1215,
+            "fn": 8,
+            "tn": 1649,
+            "fp": 895,
+            "sensitivity": 0.9935,
+            "specificity": 0.6482,
+            "ppv_precision": 0.5758,
+            "npv": 0.9952,
+            "balanced_acc": 0.8208
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 1212,
+            "fn": 11,
+            "tn": 1752,
+            "fp": 792,
+            "sensitivity": 0.991,
+            "specificity": 0.6887,
+            "ppv_precision": 0.6048,
+            "npv": 0.9938,
+            "balanced_acc": 0.8398
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 1207,
+            "fn": 16,
+            "tn": 1896,
+            "fp": 648,
+            "sensitivity": 0.9869,
+            "specificity": 0.7453,
+            "ppv_precision": 0.6507,
+            "npv": 0.9916,
+            "balanced_acc": 0.8661
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 0.9984,
+            "specificity": 0.3947,
+            "ppv_precision": 0.5265,
+            "balanced_acc": 0.6965
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9975,
+            "specificity": 0.6814,
+            "ppv_precision": 0.6785,
+            "balanced_acc": 0.8395
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9951,
+            "specificity": 0.8037,
+            "ppv_precision": 0.7737,
+            "balanced_acc": 0.8994
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9935,
+            "specificity": 0.8616,
+            "ppv_precision": 0.8288,
+            "balanced_acc": 0.9275
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.991,
+            "specificity": 0.8975,
+            "ppv_precision": 0.867,
+            "balanced_acc": 0.9442
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9869,
+            "specificity": 0.9355,
+            "ppv_precision": 0.9116,
+            "balanced_acc": 0.9612
+          }
+        }
+      },
+      "pad_ufes_20_2298": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 48,
+            "fn": 4,
+            "tn": 2083,
+            "fp": 163,
+            "recall": 0.9231,
+            "recall_95ci": [
+              0.8183,
+              0.9697
+            ],
+            "specificity": 0.9274,
+            "specificity_95ci": [
+              0.916,
+              0.9374
+            ],
+            "ppv_precision": 0.2275,
+            "npv": 0.9981,
+            "fpr": 0.0726
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 47,
+            "fn": 5,
+            "tn": 2159,
+            "fp": 87,
+            "recall": 0.9038,
+            "recall_95ci": [
+              0.7939,
+              0.9582
+            ],
+            "specificity": 0.9613,
+            "specificity_95ci": [
+              0.9525,
+              0.9685
+            ],
+            "ppv_precision": 0.3507,
+            "npv": 0.9977,
+            "fpr": 0.0387
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 45,
+            "fn": 7,
+            "tn": 2196,
+            "fp": 50,
+            "recall": 0.8654,
+            "recall_95ci": [
+              0.7473,
+              0.9332
+            ],
+            "specificity": 0.9777,
+            "specificity_95ci": [
+              0.9708,
+              0.9831
+            ],
+            "ppv_precision": 0.4737,
+            "npv": 0.9968,
+            "fpr": 0.0223
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 41,
+            "fn": 11,
+            "tn": 2211,
+            "fp": 35,
+            "recall": 0.7885,
+            "recall_95ci": [
+              0.6597,
+              0.8776
+            ],
+            "specificity": 0.9844,
+            "specificity_95ci": [
+              0.9784,
+              0.9888
+            ],
+            "ppv_precision": 0.5395,
+            "npv": 0.995,
+            "fpr": 0.0156
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 40,
+            "fn": 12,
+            "tn": 2223,
+            "fp": 23,
+            "recall": 0.7692,
+            "recall_95ci": [
+              0.6387,
+              0.8628
+            ],
+            "specificity": 0.9898,
+            "specificity_95ci": [
+              0.9847,
+              0.9932
+            ],
+            "ppv_precision": 0.6349,
+            "npv": 0.9946,
+            "fpr": 0.0102
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 39,
+            "fn": 13,
+            "tn": 2233,
+            "fp": 13,
+            "recall": 0.75,
+            "recall_95ci": [
+              0.6179,
+              0.8477
+            ],
+            "specificity": 0.9942,
+            "specificity_95ci": [
+              0.9901,
+              0.9966
+            ],
+            "ppv_precision": 0.75,
+            "npv": 0.9942,
+            "fpr": 0.0058
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 1089,
+            "fn": 0,
+            "tn": 93,
+            "fp": 1116,
+            "sensitivity": 1.0,
+            "specificity": 0.0769,
+            "ppv_precision": 0.4939,
+            "npv": 1.0,
+            "balanced_acc": 0.5385
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 1088,
+            "fn": 1,
+            "tn": 270,
+            "fp": 939,
+            "sensitivity": 0.9991,
+            "specificity": 0.2233,
+            "ppv_precision": 0.5368,
+            "npv": 0.9963,
+            "balanced_acc": 0.6112
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 1087,
+            "fn": 2,
+            "tn": 356,
+            "fp": 853,
+            "sensitivity": 0.9982,
+            "specificity": 0.2945,
+            "ppv_precision": 0.5603,
+            "npv": 0.9944,
+            "balanced_acc": 0.6463
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 1087,
+            "fn": 2,
+            "tn": 439,
+            "fp": 770,
+            "sensitivity": 0.9982,
+            "specificity": 0.3631,
+            "ppv_precision": 0.5854,
+            "npv": 0.9955,
+            "balanced_acc": 0.6806
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 1085,
+            "fn": 4,
+            "tn": 505,
+            "fp": 704,
+            "sensitivity": 0.9963,
+            "specificity": 0.4177,
+            "ppv_precision": 0.6065,
+            "npv": 0.9921,
+            "balanced_acc": 0.707
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 1083,
+            "fn": 6,
+            "tn": 611,
+            "fp": 598,
+            "sensitivity": 0.9945,
+            "specificity": 0.5054,
+            "ppv_precision": 0.6443,
+            "npv": 0.9903,
+            "balanced_acc": 0.7499
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 1.0,
+            "specificity": 0.1921,
+            "ppv_precision": 0.7378,
+            "balanced_acc": 0.596
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9991,
+            "specificity": 0.5324,
+            "ppv_precision": 0.8293,
+            "balanced_acc": 0.7657
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9982,
+            "specificity": 0.6639,
+            "ppv_precision": 0.871,
+            "balanced_acc": 0.831
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9982,
+            "specificity": 0.737,
+            "ppv_precision": 0.8961,
+            "balanced_acc": 0.8676
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9963,
+            "specificity": 0.7954,
+            "ppv_precision": 0.9172,
+            "balanced_acc": 0.8959
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9945,
+            "specificity": 0.8601,
+            "ppv_precision": 0.9417,
+            "balanced_acc": 0.9273
+          }
+        }
+      },
+      "mednode_170": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 69,
+            "fn": 1,
+            "tn": 24,
+            "fp": 76,
+            "recall": 0.9857,
+            "recall_95ci": [
+              0.9234,
+              0.9975
+            ],
+            "specificity": 0.24,
+            "specificity_95ci": [
+              0.1669,
+              0.3323
+            ],
+            "ppv_precision": 0.4759,
+            "npv": 0.96,
+            "fpr": 0.76
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 67,
+            "fn": 3,
+            "tn": 48,
+            "fp": 52,
+            "recall": 0.9571,
+            "recall_95ci": [
+              0.8814,
+              0.9853
+            ],
+            "specificity": 0.48,
+            "specificity_95ci": [
+              0.3846,
+              0.5768
+            ],
+            "ppv_precision": 0.563,
+            "npv": 0.9412,
+            "fpr": 0.52
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 67,
+            "fn": 3,
+            "tn": 56,
+            "fp": 44,
+            "recall": 0.9571,
+            "recall_95ci": [
+              0.8814,
+              0.9853
+            ],
+            "specificity": 0.56,
+            "specificity_95ci": [
+              0.4623,
+              0.6533
+            ],
+            "ppv_precision": 0.6036,
+            "npv": 0.9492,
+            "fpr": 0.44
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 65,
+            "fn": 5,
+            "tn": 63,
+            "fp": 37,
+            "recall": 0.9286,
+            "recall_95ci": [
+              0.8434,
+              0.9691
+            ],
+            "specificity": 0.63,
+            "specificity_95ci": [
+              0.5322,
+              0.7182
+            ],
+            "ppv_precision": 0.6373,
+            "npv": 0.9265,
+            "fpr": 0.37
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 64,
+            "fn": 6,
+            "tn": 71,
+            "fp": 29,
+            "recall": 0.9143,
+            "recall_95ci": [
+              0.8253,
+              0.9601
+            ],
+            "specificity": 0.71,
+            "specificity_95ci": [
+              0.6146,
+              0.7899
+            ],
+            "ppv_precision": 0.6882,
+            "npv": 0.9221,
+            "fpr": 0.29
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 60,
+            "fn": 10,
+            "tn": 83,
+            "fp": 17,
+            "recall": 0.8571,
+            "recall_95ci": [
+              0.7566,
+              0.9205
+            ],
+            "specificity": 0.83,
+            "specificity_95ci": [
+              0.7445,
+              0.8911
+            ],
+            "ppv_precision": 0.7792,
+            "npv": 0.8925,
+            "fpr": 0.17
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 70,
+            "fn": 0,
+            "tn": 1,
+            "fp": 99,
+            "sensitivity": 1.0,
+            "specificity": 0.01,
+            "ppv_precision": 0.4142,
+            "npv": 1.0,
+            "balanced_acc": 0.505
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 70,
+            "fn": 0,
+            "tn": 7,
+            "fp": 93,
+            "sensitivity": 1.0,
+            "specificity": 0.07,
+            "ppv_precision": 0.4294,
+            "npv": 1.0,
+            "balanced_acc": 0.535
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 69,
+            "fn": 1,
+            "tn": 29,
+            "fp": 71,
+            "sensitivity": 0.9857,
+            "specificity": 0.29,
+            "ppv_precision": 0.4929,
+            "npv": 0.9667,
+            "balanced_acc": 0.6379
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 69,
+            "fn": 1,
+            "tn": 40,
+            "fp": 60,
+            "sensitivity": 0.9857,
+            "specificity": 0.4,
+            "ppv_precision": 0.5349,
+            "npv": 0.9756,
+            "balanced_acc": 0.6929
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 69,
+            "fn": 1,
+            "tn": 53,
+            "fp": 47,
+            "sensitivity": 0.9857,
+            "specificity": 0.53,
+            "ppv_precision": 0.5948,
+            "npv": 0.9815,
+            "balanced_acc": 0.7579
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 67,
+            "fn": 3,
+            "tn": 70,
+            "fp": 30,
+            "sensitivity": 0.9571,
+            "specificity": 0.7,
+            "ppv_precision": 0.6907,
+            "npv": 0.9589,
+            "balanced_acc": 0.8286
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 1.0,
+            "specificity": 0.01,
+            "ppv_precision": 0.4142,
+            "balanced_acc": 0.505
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 1.0,
+            "specificity": 0.07,
+            "ppv_precision": 0.4294,
+            "balanced_acc": 0.535
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9857,
+            "specificity": 0.29,
+            "ppv_precision": 0.4929,
+            "balanced_acc": 0.6379
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9857,
+            "specificity": 0.4,
+            "ppv_precision": 0.5349,
+            "balanced_acc": 0.6929
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9857,
+            "specificity": 0.53,
+            "ppv_precision": 0.5948,
+            "balanced_acc": 0.7579
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9571,
+            "specificity": 0.7,
+            "ppv_precision": 0.6907,
+            "balanced_acc": 0.8286
+          }
+        }
+      },
+      "isic_clinical_1299": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 19,
+            "fn": 1,
+            "tn": 27,
+            "fp": 32,
+            "recall": 0.95,
+            "recall_95ci": [
+              0.7639,
+              0.9911
+            ],
+            "specificity": 0.4576,
+            "specificity_95ci": [
+              0.337,
+              0.5834
+            ],
+            "ppv_precision": 0.3725,
+            "npv": 0.9643,
+            "fpr": 0.5424
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 15,
+            "fn": 5,
+            "tn": 37,
+            "fp": 22,
+            "recall": 0.75,
+            "recall_95ci": [
+              0.5313,
+              0.8881
+            ],
+            "specificity": 0.6271,
+            "specificity_95ci": [
+              0.4995,
+              0.7392
+            ],
+            "ppv_precision": 0.4054,
+            "npv": 0.881,
+            "fpr": 0.3729
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 15,
+            "fn": 5,
+            "tn": 40,
+            "fp": 19,
+            "recall": 0.75,
+            "recall_95ci": [
+              0.5313,
+              0.8881
+            ],
+            "specificity": 0.678,
+            "specificity_95ci": [
+              0.5511,
+              0.7831
+            ],
+            "ppv_precision": 0.4412,
+            "npv": 0.8889,
+            "fpr": 0.322
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 13,
+            "fn": 7,
+            "tn": 43,
+            "fp": 16,
+            "recall": 0.65,
+            "recall_95ci": [
+              0.4329,
+              0.8188
+            ],
+            "specificity": 0.7288,
+            "specificity_95ci": [
+              0.604,
+              0.8256
+            ],
+            "ppv_precision": 0.4483,
+            "npv": 0.86,
+            "fpr": 0.2712
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 13,
+            "fn": 7,
+            "tn": 46,
+            "fp": 13,
+            "recall": 0.65,
+            "recall_95ci": [
+              0.4329,
+              0.8188
+            ],
+            "specificity": 0.7797,
+            "specificity_95ci": [
+              0.6587,
+              0.8665
+            ],
+            "ppv_precision": 0.5,
+            "npv": 0.8679,
+            "fpr": 0.2203
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 13,
+            "fn": 7,
+            "tn": 55,
+            "fp": 4,
+            "recall": 0.65,
+            "recall_95ci": [
+              0.4329,
+              0.8188
+            ],
+            "specificity": 0.9322,
+            "specificity_95ci": [
+              0.8382,
+              0.9733
+            ],
+            "ppv_precision": 0.7647,
+            "npv": 0.8871,
+            "fpr": 0.0678
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 62,
+            "fn": 2,
+            "tn": 623,
+            "fp": 612,
+            "sensitivity": 0.9688,
+            "specificity": 0.5045,
+            "ppv_precision": 0.092,
+            "npv": 0.9968,
+            "balanced_acc": 0.7366
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 62,
+            "fn": 2,
+            "tn": 974,
+            "fp": 261,
+            "sensitivity": 0.9688,
+            "specificity": 0.7887,
+            "ppv_precision": 0.192,
+            "npv": 0.998,
+            "balanced_acc": 0.8787
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 61,
+            "fn": 3,
+            "tn": 1111,
+            "fp": 124,
+            "sensitivity": 0.9531,
+            "specificity": 0.8996,
+            "ppv_precision": 0.3297,
+            "npv": 0.9973,
+            "balanced_acc": 0.9264
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 59,
+            "fn": 5,
+            "tn": 1170,
+            "fp": 65,
+            "sensitivity": 0.9219,
+            "specificity": 0.9474,
+            "ppv_precision": 0.4758,
+            "npv": 0.9957,
+            "balanced_acc": 0.9346
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 58,
+            "fn": 6,
+            "tn": 1194,
+            "fp": 41,
+            "sensitivity": 0.9062,
+            "specificity": 0.9668,
+            "ppv_precision": 0.5859,
+            "npv": 0.995,
+            "balanced_acc": 0.9365
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 57,
+            "fn": 7,
+            "tn": 1215,
+            "fp": 20,
+            "sensitivity": 0.8906,
+            "specificity": 0.9838,
+            "ppv_precision": 0.7403,
+            "npv": 0.9943,
+            "balanced_acc": 0.9372
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 0.9688,
+            "specificity": 0.5045,
+            "ppv_precision": 0.092,
+            "balanced_acc": 0.7366
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9688,
+            "specificity": 0.7887,
+            "ppv_precision": 0.192,
+            "balanced_acc": 0.8787
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9531,
+            "specificity": 0.8996,
+            "ppv_precision": 0.3297,
+            "balanced_acc": 0.9264
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9219,
+            "specificity": 0.9474,
+            "ppv_precision": 0.4758,
+            "balanced_acc": 0.9346
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9062,
+            "specificity": 0.9668,
+            "ppv_precision": 0.5859,
+            "balanced_acc": 0.9365
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.8906,
+            "specificity": 0.9838,
+            "ppv_precision": 0.7403,
+            "balanced_acc": 0.9372
+          }
+        }
+      }
+    },
+    "ImageOnly_Consilium_OOF": {
+      "global_3767": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 134,
+            "fn": 8,
+            "tn": 2099,
+            "fp": 306,
+            "recall": 0.9437,
+            "recall_95ci": [
+              0.8928,
+              0.9712
+            ],
+            "specificity": 0.8728,
+            "specificity_95ci": [
+              0.8588,
+              0.8855
+            ],
+            "ppv_precision": 0.3045,
+            "npv": 0.9962,
+            "fpr": 0.1272
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 128,
+            "fn": 14,
+            "tn": 2215,
+            "fp": 190,
+            "recall": 0.9014,
+            "recall_95ci": [
+              0.8413,
+              0.9404
+            ],
+            "specificity": 0.921,
+            "specificity_95ci": [
+              0.9095,
+              0.9311
+            ],
+            "ppv_precision": 0.4025,
+            "npv": 0.9937,
+            "fpr": 0.079
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 120,
+            "fn": 22,
+            "tn": 2272,
+            "fp": 133,
+            "recall": 0.8451,
+            "recall_95ci": [
+              0.7766,
+              0.8954
+            ],
+            "specificity": 0.9447,
+            "specificity_95ci": [
+              0.9348,
+              0.9531
+            ],
+            "ppv_precision": 0.4743,
+            "npv": 0.9904,
+            "fpr": 0.0553
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 117,
+            "fn": 25,
+            "tn": 2314,
+            "fp": 91,
+            "recall": 0.8239,
+            "recall_95ci": [
+              0.753,
+              0.8778
+            ],
+            "specificity": 0.9622,
+            "specificity_95ci": [
+              0.9538,
+              0.9691
+            ],
+            "ppv_precision": 0.5625,
+            "npv": 0.9893,
+            "fpr": 0.0378
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 110,
+            "fn": 32,
+            "tn": 2327,
+            "fp": 78,
+            "recall": 0.7746,
+            "recall_95ci": [
+              0.6992,
+              0.8356
+            ],
+            "specificity": 0.9676,
+            "specificity_95ci": [
+              0.9597,
+              0.9739
+            ],
+            "ppv_precision": 0.5851,
+            "npv": 0.9864,
+            "fpr": 0.0324
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 98,
+            "fn": 44,
+            "tn": 2360,
+            "fp": 45,
+            "recall": 0.6901,
+            "recall_95ci": [
+              0.6099,
+              0.7604
+            ],
+            "specificity": 0.9813,
+            "specificity_95ci": [
+              0.9751,
+              0.986
+            ],
+            "ppv_precision": 0.6853,
+            "npv": 0.9817,
+            "fpr": 0.0187
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 1219,
+            "fn": 4,
+            "tn": 1022,
+            "fp": 1522,
+            "sensitivity": 0.9967,
+            "specificity": 0.4017,
+            "ppv_precision": 0.4447,
+            "npv": 0.9961,
+            "balanced_acc": 0.6992
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 1217,
+            "fn": 6,
+            "tn": 1307,
+            "fp": 1237,
+            "sensitivity": 0.9951,
+            "specificity": 0.5138,
+            "ppv_precision": 0.4959,
+            "npv": 0.9954,
+            "balanced_acc": 0.7544
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 1215,
+            "fn": 8,
+            "tn": 1441,
+            "fp": 1103,
+            "sensitivity": 0.9935,
+            "specificity": 0.5664,
+            "ppv_precision": 0.5242,
+            "npv": 0.9945,
+            "balanced_acc": 0.7799
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 1214,
+            "fn": 9,
+            "tn": 1536,
+            "fp": 1008,
+            "sensitivity": 0.9926,
+            "specificity": 0.6038,
+            "ppv_precision": 0.5464,
+            "npv": 0.9942,
+            "balanced_acc": 0.7982
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 1211,
+            "fn": 12,
+            "tn": 1601,
+            "fp": 943,
+            "sensitivity": 0.9902,
+            "specificity": 0.6293,
+            "ppv_precision": 0.5622,
+            "npv": 0.9926,
+            "balanced_acc": 0.8098
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 1188,
+            "fn": 35,
+            "tn": 1689,
+            "fp": 855,
+            "sensitivity": 0.9714,
+            "specificity": 0.6639,
+            "ppv_precision": 0.5815,
+            "npv": 0.9797,
+            "balanced_acc": 0.8176
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 0.9967,
+            "specificity": 0.5634,
+            "ppv_precision": 0.6062,
+            "balanced_acc": 0.7801
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9951,
+            "specificity": 0.7189,
+            "ppv_precision": 0.7047,
+            "balanced_acc": 0.857
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9935,
+            "specificity": 0.7911,
+            "ppv_precision": 0.7622,
+            "balanced_acc": 0.8923
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9926,
+            "specificity": 0.8407,
+            "ppv_precision": 0.8077,
+            "balanced_acc": 0.9167
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9902,
+            "specificity": 0.8738,
+            "ppv_precision": 0.841,
+            "balanced_acc": 0.932
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9714,
+            "specificity": 0.914,
+            "ppv_precision": 0.8839,
+            "balanced_acc": 0.9427
+          }
+        }
+      },
+      "pad_ufes_20_2298": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 48,
+            "fn": 4,
+            "tn": 2038,
+            "fp": 208,
+            "recall": 0.9231,
+            "recall_95ci": [
+              0.8183,
+              0.9697
+            ],
+            "specificity": 0.9074,
+            "specificity_95ci": [
+              0.8947,
+              0.9187
+            ],
+            "ppv_precision": 0.1875,
+            "npv": 0.998,
+            "fpr": 0.0926
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 44,
+            "fn": 8,
+            "tn": 2129,
+            "fp": 117,
+            "recall": 0.8462,
+            "recall_95ci": [
+              0.7248,
+              0.9199
+            ],
+            "specificity": 0.9479,
+            "specificity_95ci": [
+              0.9379,
+              0.9564
+            ],
+            "ppv_precision": 0.2733,
+            "npv": 0.9963,
+            "fpr": 0.0521
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 41,
+            "fn": 11,
+            "tn": 2169,
+            "fp": 77,
+            "recall": 0.7885,
+            "recall_95ci": [
+              0.6597,
+              0.8776
+            ],
+            "specificity": 0.9657,
+            "specificity_95ci": [
+              0.9574,
+              0.9725
+            ],
+            "ppv_precision": 0.3475,
+            "npv": 0.995,
+            "fpr": 0.0343
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 40,
+            "fn": 12,
+            "tn": 2194,
+            "fp": 52,
+            "recall": 0.7692,
+            "recall_95ci": [
+              0.6387,
+              0.8628
+            ],
+            "specificity": 0.9768,
+            "specificity_95ci": [
+              0.9698,
+              0.9823
+            ],
+            "ppv_precision": 0.4348,
+            "npv": 0.9946,
+            "fpr": 0.0232
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 36,
+            "fn": 16,
+            "tn": 2203,
+            "fp": 43,
+            "recall": 0.6923,
+            "recall_95ci": [
+              0.5573,
+              0.8009
+            ],
+            "specificity": 0.9809,
+            "specificity_95ci": [
+              0.9743,
+              0.9858
+            ],
+            "ppv_precision": 0.4557,
+            "npv": 0.9928,
+            "fpr": 0.0191
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 32,
+            "fn": 20,
+            "tn": 2224,
+            "fp": 22,
+            "recall": 0.6154,
+            "recall_95ci": [
+              0.4796,
+              0.7353
+            ],
+            "specificity": 0.9902,
+            "specificity_95ci": [
+              0.9852,
+              0.9935
+            ],
+            "ppv_precision": 0.5926,
+            "npv": 0.9911,
+            "fpr": 0.0098
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 1088,
+            "fn": 1,
+            "tn": 58,
+            "fp": 1151,
+            "sensitivity": 0.9991,
+            "specificity": 0.048,
+            "ppv_precision": 0.4859,
+            "npv": 0.9831,
+            "balanced_acc": 0.5235
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 1087,
+            "fn": 2,
+            "tn": 153,
+            "fp": 1056,
+            "sensitivity": 0.9982,
+            "specificity": 0.1266,
+            "ppv_precision": 0.5072,
+            "npv": 0.9871,
+            "balanced_acc": 0.5624
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 1086,
+            "fn": 3,
+            "tn": 223,
+            "fp": 986,
+            "sensitivity": 0.9972,
+            "specificity": 0.1844,
+            "ppv_precision": 0.5241,
+            "npv": 0.9867,
+            "balanced_acc": 0.5908
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 1085,
+            "fn": 4,
+            "tn": 282,
+            "fp": 927,
+            "sensitivity": 0.9963,
+            "specificity": 0.2333,
+            "ppv_precision": 0.5393,
+            "npv": 0.986,
+            "balanced_acc": 0.6148
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 1083,
+            "fn": 6,
+            "tn": 324,
+            "fp": 885,
+            "sensitivity": 0.9945,
+            "specificity": 0.268,
+            "ppv_precision": 0.5503,
+            "npv": 0.9818,
+            "balanced_acc": 0.6312
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 1068,
+            "fn": 21,
+            "tn": 393,
+            "fp": 816,
+            "sensitivity": 0.9807,
+            "specificity": 0.3251,
+            "ppv_precision": 0.5669,
+            "npv": 0.9493,
+            "balanced_acc": 0.6529
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 0.9991,
+            "specificity": 0.1211,
+            "ppv_precision": 0.721,
+            "balanced_acc": 0.5601
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9982,
+            "specificity": 0.3132,
+            "ppv_precision": 0.7677,
+            "balanced_acc": 0.6557
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9972,
+            "specificity": 0.453,
+            "ppv_precision": 0.8056,
+            "balanced_acc": 0.7251
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9963,
+            "specificity": 0.5658,
+            "ppv_precision": 0.8391,
+            "balanced_acc": 0.781
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9945,
+            "specificity": 0.643,
+            "ppv_precision": 0.8636,
+            "balanced_acc": 0.8187
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9807,
+            "specificity": 0.7557,
+            "ppv_precision": 0.9013,
+            "balanced_acc": 0.8682
+          }
+        }
+      },
+      "mednode_170": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 70,
+            "fn": 0,
+            "tn": 29,
+            "fp": 71,
+            "recall": 1.0,
+            "recall_95ci": [
+              0.948,
+              1.0
+            ],
+            "specificity": 0.29,
+            "specificity_95ci": [
+              0.2101,
+              0.3854
+            ],
+            "ppv_precision": 0.4965,
+            "npv": 1.0,
+            "fpr": 0.71
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 68,
+            "fn": 2,
+            "tn": 48,
+            "fp": 52,
+            "recall": 0.9714,
+            "recall_95ci": [
+              0.9017,
+              0.9921
+            ],
+            "specificity": 0.48,
+            "specificity_95ci": [
+              0.3846,
+              0.5768
+            ],
+            "ppv_precision": 0.5667,
+            "npv": 0.96,
+            "fpr": 0.52
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 66,
+            "fn": 4,
+            "tn": 61,
+            "fp": 39,
+            "recall": 0.9429,
+            "recall_95ci": [
+              0.8621,
+              0.9776
+            ],
+            "specificity": 0.61,
+            "specificity_95ci": [
+              0.512,
+              0.6998
+            ],
+            "ppv_precision": 0.6286,
+            "npv": 0.9385,
+            "fpr": 0.39
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 64,
+            "fn": 6,
+            "tn": 70,
+            "fp": 30,
+            "recall": 0.9143,
+            "recall_95ci": [
+              0.8253,
+              0.9601
+            ],
+            "specificity": 0.7,
+            "specificity_95ci": [
+              0.6042,
+              0.7811
+            ],
+            "ppv_precision": 0.6809,
+            "npv": 0.9211,
+            "fpr": 0.3
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 63,
+            "fn": 7,
+            "tn": 73,
+            "fp": 27,
+            "recall": 0.9,
+            "recall_95ci": [
+              0.8077,
+              0.9507
+            ],
+            "specificity": 0.73,
+            "specificity_95ci": [
+              0.6357,
+              0.8073
+            ],
+            "ppv_precision": 0.7,
+            "npv": 0.9125,
+            "fpr": 0.27
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 56,
+            "fn": 14,
+            "tn": 81,
+            "fp": 19,
+            "recall": 0.8,
+            "recall_95ci": [
+              0.6918,
+              0.877
+            ],
+            "specificity": 0.81,
+            "specificity_95ci": [
+              0.7222,
+              0.8749
+            ],
+            "ppv_precision": 0.7467,
+            "npv": 0.8526,
+            "fpr": 0.19
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 70,
+            "fn": 0,
+            "tn": 7,
+            "fp": 93,
+            "sensitivity": 1.0,
+            "specificity": 0.07,
+            "ppv_precision": 0.4294,
+            "npv": 1.0,
+            "balanced_acc": 0.535
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 70,
+            "fn": 0,
+            "tn": 23,
+            "fp": 77,
+            "sensitivity": 1.0,
+            "specificity": 0.23,
+            "ppv_precision": 0.4762,
+            "npv": 1.0,
+            "balanced_acc": 0.615
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 69,
+            "fn": 1,
+            "tn": 37,
+            "fp": 63,
+            "sensitivity": 0.9857,
+            "specificity": 0.37,
+            "ppv_precision": 0.5227,
+            "npv": 0.9737,
+            "balanced_acc": 0.6779
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 69,
+            "fn": 1,
+            "tn": 53,
+            "fp": 47,
+            "sensitivity": 0.9857,
+            "specificity": 0.53,
+            "ppv_precision": 0.5948,
+            "npv": 0.9815,
+            "balanced_acc": 0.7579
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 68,
+            "fn": 2,
+            "tn": 63,
+            "fp": 37,
+            "sensitivity": 0.9714,
+            "specificity": 0.63,
+            "ppv_precision": 0.6476,
+            "npv": 0.9692,
+            "balanced_acc": 0.8007
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 64,
+            "fn": 6,
+            "tn": 71,
+            "fp": 29,
+            "sensitivity": 0.9143,
+            "specificity": 0.71,
+            "ppv_precision": 0.6882,
+            "npv": 0.9221,
+            "balanced_acc": 0.8121
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 1.0,
+            "specificity": 0.07,
+            "ppv_precision": 0.4294,
+            "balanced_acc": 0.535
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 1.0,
+            "specificity": 0.23,
+            "ppv_precision": 0.4762,
+            "balanced_acc": 0.615
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9857,
+            "specificity": 0.37,
+            "ppv_precision": 0.5227,
+            "balanced_acc": 0.6779
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9857,
+            "specificity": 0.53,
+            "ppv_precision": 0.5948,
+            "balanced_acc": 0.7579
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9714,
+            "specificity": 0.63,
+            "ppv_precision": 0.6476,
+            "balanced_acc": 0.8007
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.9143,
+            "specificity": 0.71,
+            "ppv_precision": 0.6882,
+            "balanced_acc": 0.8121
+          }
+        }
+      },
+      "isic_clinical_1299": {
+        "melanoma_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 16,
+            "fn": 4,
+            "tn": 32,
+            "fp": 27,
+            "recall": 0.8,
+            "recall_95ci": [
+              0.584,
+              0.9193
+            ],
+            "specificity": 0.5424,
+            "specificity_95ci": [
+              0.4166,
+              0.663
+            ],
+            "ppv_precision": 0.3721,
+            "npv": 0.8889,
+            "fpr": 0.4576
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 16,
+            "fn": 4,
+            "tn": 38,
+            "fp": 21,
+            "recall": 0.8,
+            "recall_95ci": [
+              0.584,
+              0.9193
+            ],
+            "specificity": 0.6441,
+            "specificity_95ci": [
+              0.5166,
+              0.754
+            ],
+            "ppv_precision": 0.4324,
+            "npv": 0.9048,
+            "fpr": 0.3559
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 13,
+            "fn": 7,
+            "tn": 42,
+            "fp": 17,
+            "recall": 0.65,
+            "recall_95ci": [
+              0.4329,
+              0.8188
+            ],
+            "specificity": 0.7119,
+            "specificity_95ci": [
+              0.5862,
+              0.8116
+            ],
+            "ppv_precision": 0.4333,
+            "npv": 0.8571,
+            "fpr": 0.2881
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 13,
+            "fn": 7,
+            "tn": 50,
+            "fp": 9,
+            "recall": 0.65,
+            "recall_95ci": [
+              0.4329,
+              0.8188
+            ],
+            "specificity": 0.8475,
+            "specificity_95ci": [
+              0.7348,
+              0.9176
+            ],
+            "ppv_precision": 0.5909,
+            "npv": 0.8772,
+            "fpr": 0.1525
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 11,
+            "fn": 9,
+            "tn": 51,
+            "fp": 8,
+            "recall": 0.55,
+            "recall_95ci": [
+              0.3421,
+              0.7418
+            ],
+            "specificity": 0.8644,
+            "specificity_95ci": [
+              0.7546,
+              0.9297
+            ],
+            "ppv_precision": 0.5789,
+            "npv": 0.85,
+            "fpr": 0.1356
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 10,
+            "fn": 10,
+            "tn": 55,
+            "fp": 4,
+            "recall": 0.5,
+            "recall_95ci": [
+              0.2993,
+              0.7007
+            ],
+            "specificity": 0.9322,
+            "specificity_95ci": [
+              0.8382,
+              0.9733
+            ],
+            "ppv_precision": 0.7143,
+            "npv": 0.8462,
+            "fpr": 0.0678
+          }
+        },
+        "triage_with_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "tp": 61,
+            "fn": 3,
+            "tn": 957,
+            "fp": 278,
+            "sensitivity": 0.9531,
+            "specificity": 0.7749,
+            "ppv_precision": 0.1799,
+            "npv": 0.9969,
+            "balanced_acc": 0.864
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "tp": 60,
+            "fn": 4,
+            "tn": 1131,
+            "fp": 104,
+            "sensitivity": 0.9375,
+            "specificity": 0.9158,
+            "ppv_precision": 0.3659,
+            "npv": 0.9965,
+            "balanced_acc": 0.9266
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "tp": 60,
+            "fn": 4,
+            "tn": 1181,
+            "fp": 54,
+            "sensitivity": 0.9375,
+            "specificity": 0.9563,
+            "ppv_precision": 0.5263,
+            "npv": 0.9966,
+            "balanced_acc": 0.9469
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "tp": 60,
+            "fn": 4,
+            "tn": 1201,
+            "fp": 34,
+            "sensitivity": 0.9375,
+            "specificity": 0.9725,
+            "ppv_precision": 0.6383,
+            "npv": 0.9967,
+            "balanced_acc": 0.955
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "tp": 60,
+            "fn": 4,
+            "tn": 1214,
+            "fp": 21,
+            "sensitivity": 0.9375,
+            "specificity": 0.983,
+            "ppv_precision": 0.7407,
+            "npv": 0.9967,
+            "balanced_acc": 0.9602
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "tp": 56,
+            "fn": 8,
+            "tn": 1225,
+            "fp": 10,
+            "sensitivity": 0.875,
+            "specificity": 0.9919,
+            "ppv_precision": 0.8485,
+            "npv": 0.9935,
+            "balanced_acc": 0.9335
+          }
+        },
+        "triage_no_ack_operating_points": {
+          "tau_0.05": {
+            "threshold": 0.05,
+            "sensitivity": 0.9531,
+            "specificity": 0.7749,
+            "ppv_precision": 0.1799,
+            "balanced_acc": 0.864
+          },
+          "tau_0.10": {
+            "threshold": 0.1,
+            "sensitivity": 0.9375,
+            "specificity": 0.9158,
+            "ppv_precision": 0.3659,
+            "balanced_acc": 0.9266
+          },
+          "tau_0.15": {
+            "threshold": 0.15,
+            "sensitivity": 0.9375,
+            "specificity": 0.9563,
+            "ppv_precision": 0.5263,
+            "balanced_acc": 0.9469
+          },
+          "tau_0.20": {
+            "threshold": 0.2,
+            "sensitivity": 0.9375,
+            "specificity": 0.9725,
+            "ppv_precision": 0.6383,
+            "balanced_acc": 0.955
+          },
+          "tau_0.25": {
+            "threshold": 0.25,
+            "sensitivity": 0.9375,
+            "specificity": 0.983,
+            "ppv_precision": 0.7407,
+            "balanced_acc": 0.9602
+          },
+          "tau_0.35": {
+            "threshold": 0.35,
+            "sensitivity": 0.875,
+            "specificity": 0.9919,
+            "ppv_precision": 0.8485,
+            "balanced_acc": 0.9335
+          }
+        }
+      }
+    }
+  },
+  "section_4_oof_3zone_and_ddi_false_negative_breakdown": {
+    "policy_A_exp017_035_065": {
+      "green_malignant_fn_total": 19,
+      "green_malignant_fn_rate_of_171": 0.1111,
+      "fn_in_scope_count": 6,
+      "fn_in_scope_diseases": {
+        "melanoma-in-situ": 2,
+        "squamous-cell-carcinoma-keratoacanthoma": 1,
+        "squamous-cell-carcinoma-in-situ": 1,
+        "melanoma": 2
+      },
+      "fn_open_set_count": 13,
+      "fn_open_set_diseases": {
+        "mycosis-fungoides": 11,
+        "kaposi-sarcoma": 2
+      }
+    },
+    "policy_B_oof_calibrated_plus_saerens_and_ood_guard": {
+      "tau_low_oof": 0.4502,
+      "tau_high_oof": 0.9677,
+      "estimated_ddi_prior_saerens_em": 1.0,
+      "ood_similarity_threshold": 0.7986,
+      "green_count": 0,
+      "yellow_count": 0,
+      "red_count": 656,
+      "green_npv": 0.0,
+      "red_ppv": 0.2607,
+      "overall_malignant_captured_in_yellow_or_red": 171,
+      "overall_malignant_capture_rate": 1.0,
+      "in_scope_malignant_total": 124,
+      "in_scope_malignant_captured": 124,
+      "in_scope_malignant_capture_rate": 1.0,
+      "green_malignant_fn_total": 0,
+      "fn_in_scope_count": 0,
+      "fn_in_scope_diseases": {},
+      "fn_open_set_count": 0,
+      "fn_open_set_diseases": {}
+    },
+    "oof_ack_routing": {
+      "total_ack_lesions": 730,
+      "ack_mean_malignancy_prob": 0.5675,
+      "ack_mean_subtype_prob": 0.6882,
+      "ack_routed_to_yellow_or_red_when_p_ack_ge_020": 0.9973,
+      "clinical_policy": "If predicted top-1 is ACK or P(ack) >= 0.20, route lesion directly to Yellow Zone (Planned Dermatology Consultation for Pre-Cancerous Actinic Keratosis)."
+    },
+    "policy_B_oof_calibrated_plus_ood_guard": {
+      "tau_low_oof": 0.4477,
+      "tau_high_oof": 0.3801,
+      "ood_similarity_threshold": 0.6829,
+      "green_count": 160,
+      "yellow_count": 52,
+      "red_count": 491,
+      "green_npv": 0.8562,
+      "red_ppv": 0.3055,
+      "overall_malignant_captured_in_yellow_or_red": 148,
+      "overall_malignant_capture_rate": 0.8655,
+      "in_scope_malignant_total": 124,
+      "in_scope_malignant_captured": 117,
+      "in_scope_malignant_capture_rate": 0.9435,
+      "green_malignant_fn_total": 23,
+      "fn_in_scope_count": 7,
+      "fn_in_scope_diseases": {
+        "melanoma-in-situ": 2,
+        "squamous-cell-carcinoma-keratoacanthoma": 1,
+        "melanoma": 2,
+        "basal-cell-carcinoma": 1,
+        "basal-cell-carcinoma-nodular": 1
+      },
+      "fn_open_set_count": 16,
+      "fn_open_set_diseases": {
+        "mycosis-fungoides": 13,
+        "kaposi-sarcoma": 3
+      }
+    }
+  },
+  "section_5_ddi_100x_repeated_calibration": {
+    "ddi_columns": [
+      "Unnamed: 0",
+      "DDI_ID",
+      "DDI_file",
+      "skin_tone",
+      "malignant",
+      "disease"
+    ],
+    "patient_id_column_in_stanford_ddi": false,
+    "dataset_note": "Stanford DDI public release (ddi_metadata.csv) contains columns ['Unnamed: 0', 'DDI_ID', 'DDI_file', 'skin_tone', 'malignant', 'disease'] with no patient_id column. Why 4-fold CV in EXP-017 gave 70.6% sensitivity: EXP-017 used Youden's J (argmax(TPR - FPR)) rather than a target sensitivity constraint. Below we evaluate 100x repeated splits with explicit Target Sensitivity constraints (>=80% and >=85%) as well as Youden's J.",
+    "all_ddi_656_target_sens_80": {
+      "n_splits": 100,
+      "calib_fraction": 0.25,
+      "eval_fraction": 0.75,
+      "threshold_mean_sd": "0.4934 ± 0.0693",
+      "heldout_sensitivity_mean": 0.7886,
+      "heldout_sensitivity_sd": 0.0627,
+      "heldout_sensitivity_95ci": [
+        0.6659,
+        0.9074
+      ],
+      "heldout_specificity_mean": 0.4866,
+      "heldout_specificity_sd": 0.0832,
+      "heldout_specificity_95ci": [
+        0.3615,
+        0.6743
+      ],
+      "heldout_bal_acc_mean": 0.6376
+    },
+    "all_ddi_656_target_sens_85": {
+      "n_splits": 100,
+      "calib_fraction": 0.25,
+      "eval_fraction": 0.75,
+      "threshold_mean_sd": "0.4258 ± 0.0610",
+      "heldout_sensitivity_mean": 0.8366,
+      "heldout_sensitivity_sd": 0.058,
+      "heldout_sensitivity_95ci": [
+        0.7132,
+        0.9306
+      ],
+      "heldout_specificity_mean": 0.4113,
+      "heldout_specificity_sd": 0.0705,
+      "heldout_specificity_95ci": [
+        0.2933,
+        0.5772
+      ],
+      "heldout_bal_acc_mean": 0.6239
+    },
+    "in_scope_ddi_301_target_sens_80": {
+      "n_splits": 100,
+      "calib_fraction": 0.25,
+      "eval_fraction": 0.75,
+      "threshold_mean_sd": "0.6222 ± 0.0787",
+      "heldout_sensitivity_mean": 0.7651,
+      "heldout_sensitivity_sd": 0.0854,
+      "heldout_sensitivity_95ci": [
+        0.6064,
+        0.8992
+      ],
+      "heldout_specificity_mean": 0.6927,
+      "heldout_specificity_sd": 0.1057,
+      "heldout_specificity_95ci": [
+        0.4935,
+        0.8603
+      ],
+      "heldout_bal_acc_mean": 0.7289
+    },
+    "in_scope_ddi_301_target_sens_85": {
+      "n_splits": 100,
+      "calib_fraction": 0.25,
+      "eval_fraction": 0.75,
+      "threshold_mean_sd": "0.5614 ± 0.0833",
+      "heldout_sensitivity_mean": 0.8122,
+      "heldout_sensitivity_sd": 0.079,
+      "heldout_sensitivity_95ci": [
+        0.6697,
+        0.9311
+      ],
+      "heldout_specificity_mean": 0.6154,
+      "heldout_specificity_sd": 0.1127,
+      "heldout_specificity_95ci": [
+        0.4286,
+        0.8067
+      ],
+      "heldout_bal_acc_mean": 0.7138
+    }
+  },
+  "section_6_ds5_attention_grabcut_benchmark": {
+    "n_evaluated_images": 120,
+    "off_center_shift_56px_mask_consistency_iou": {
+      "legacy_center_prior_otsu_mean_iou": 0.5655,
+      "ds5_attention_seeded_grabcut_mean_iou": 0.6202,
+      "relative_iou_gain_pct": 9.67
+    },
+    "off_center_asymmetry_drift_mae": {
+      "legacy_center_prior_otsu_mae": 0.108,
+      "ds5_attention_seeded_grabcut_mae": 0.1114
+    },
+    "hair_occlusion_handling": {
+      "images_with_significant_hair_strands": 114,
+      "mean_spurious_border_irregularity_reduction": 63.7224
+    },
+    "abcde_12d_malignancy_discriminative_auc": {
+      "legacy_center_prior_otsu_auc": 0.7804,
+      "ds5_attention_seeded_grabcut_auc": 0.776
+    }
+  }
+}
