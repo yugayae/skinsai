@@ -69,12 +69,23 @@ def _format_prediction_response(data: Dict[str, Any], lang: str) -> str:
         disclaimer = data.get("disclaimer_ru") or data.get("disclaimer_en", "")
 
     if status == "rejected_quality":
-        reason = data.get("rejection_reason", "low_quality")
-        reason_label = "Причина" if lang == "ru" else ("사유" if lang == "ko" else "Reason")
+        raw_reason = data.get("rejection_reason", "low_quality")
+        if "excessive_blur" in raw_reason:
+            localized_reason = t("rejection_excessive_blur", lang)
+        elif "dimension_too_small" in raw_reason:
+            localized_reason = t("rejection_dimension_too_small", lang)
+        elif "payload_exceeds_max_size" in raw_reason:
+            localized_reason = t("rejection_payload_exceeds_max_size", lang)
+        elif "invalid_magic_bytes" in raw_reason or "decode_error" in raw_reason:
+            localized_reason = t("rejection_corrupted", lang)
+        else:
+            localized_reason = raw_reason
+
+        reason_label = t("rejection_reason_label", lang)
         text_lines = [
             f"{t('status_rejected_quality_title', lang)}",
             "",
-            f"🔍 **{reason_label}:** {reason}",
+            f"🔍 **{reason_label}:** {localized_reason}",
             "",
             f"{t('quality_advice', lang)}",
         ]
@@ -85,26 +96,9 @@ def _format_prediction_response(data: Dict[str, Any], lang: str) -> str:
     if status == "abstained":
         rej_reason = data.get("rejection_reason") or ""
         if "out_of_distribution_non_skin" in rej_reason:
-            if lang == "ru":
-                abstain_msg = (
-                    "⚠️ **Внедоменное изображение (OOD / Non-Skin Gate):** "
-                    "В кадре обнаружено недостаточно характерного кожного покрова (фильтр оттенков кожи CIE Lab). "
-                    "Модель воздерживается от оценки."
-                )
-            elif lang == "ko":
-                abstain_msg = "⚠️ **피부 외 이미지 감지 (OOD Gate):** 피부 색도 기준(CIE Lab)을 충족하지 않아 판정을 유보합니다."
-            else:
-                abstain_msg = (
-                    "⚠️ **Out-of-Distribution / Non-Skin Input Detected:** "
-                    "Insufficient human skin chromaticity detected (CIE Lab gate). The model abstains from evaluation."
-                )
+            abstain_msg = t("abstain_ood_non_skin", lang)
         else:
-            if lang == "ru":
-                abstain_msg = "Уверенность модели ниже безопасного порога (порог 40%). Модель воздерживается от оценки."
-            elif lang == "ko":
-                abstain_msg = "모델의 신뢰도가 안전 임계값(40%) 미만입니다. 판정을 유보합니다."
-            else:
-                abstain_msg = "Model confidence is below the safety threshold (40%). The model abstains from evaluation."
+            abstain_msg = t("abstain_low_confidence", lang)
         text_lines = [
             f"{t('status_abstained_title', lang)}",
             "",
@@ -180,21 +174,19 @@ def _format_prediction_response(data: Dict[str, Any], lang: str) -> str:
     # Add Deterministic XAI #2: Top-3 Biopsy Atlas k-NN Twins if available
     twins = data.get("similar_biopsy_cases")
     if twins:
-        if lang == "ru":
-            lines.append("")
-            lines.append("🧬 **Атлас биопсий (Top-3 гистологических близнеца):**")
-        elif lang == "ko":
-            lines.append("")
-            lines.append("🧬 **조직검사 아틀라스 (상위 3개 유사 사례):**")
-        else:
-            lines.append("")
-            lines.append("🧬 **Biopsy Reference Atlas (Top-3 Histological Twins):**")
+        lines.append("")
+        lines.append(t("biopsy_atlas_title", lang))
+        sim_label = t("biopsy_similarity", lang)
         for tw in twins[:3]:
             sub_u = str(tw.get("subtype_id", "")).upper()
             sim_pct = float(tw.get("cosine_similarity", 0.0)) * 100.0
-            mal_tag = tw.get("malignancy_label", "")
+            raw_tag = str(tw.get("malignancy_label", "")).lower()
+            if "mal" in raw_tag or "зло" in raw_tag or "악성" in raw_tag:
+                mal_tag = t("label_malignant", lang)
+            else:
+                mal_tag = t("label_benign", lang)
             raw_id = str(tw.get("image_id", "")).replace("_", " ")
-            lines.append(f"  • `#{tw.get('rank', 1)}` `{sub_u}` ({mal_tag}) — sim `{sim_pct:.1f}%` ({raw_id})")
+            lines.append(f"  • `#{tw.get('rank', 1)}` `{sub_u}` ({mal_tag}) — {sim_label} `{sim_pct:.1f}%` ({raw_id})")
 
     # Add clinical anamnesis note if present
     anamnesis_eval = data.get("anamnesis_evaluation")
@@ -321,17 +313,14 @@ async def handle_lesion_photo(message: Message, state: FSMContext, bot: Bot) -> 
     """Ingest skin lesion image into ephemeral memory and offer optional Glasgow anamnesis."""
     user_id = message.from_user.id if message.from_user else 0
 
+    lang = get_user_lang(user_id)
+
     if not is_user_allowed(user_id):
         await message.answer(
-            f"🔒 **Режим закрытого пилотного тестирования**\n\n"
-            f"Бот SkinAI в настоящее время доступен только для участников закрытого врачебного тестирования.\n\n"
-            f"Ваш Telegram ID: `{user_id}`.\n"
-            f"Для запроса доступа передайте ваш ID координатору проекта.",
+            t("pilot_mode_restricted", lang, user_id=user_id),
             parse_mode="Markdown",
         )
         return
-
-    lang = get_user_lang(user_id)
 
     # Check terms agreement
     if not is_disclaimer_accepted(user_id):
@@ -345,7 +334,7 @@ async def handle_lesion_photo(message: Message, state: FSMContext, bot: Bot) -> 
         file_id = message.photo[-1].file_id
     elif message.document:
         if not (message.document.mime_type and message.document.mime_type.startswith("image/")):
-            await message.answer("⚠️ Пожалуйста, отправьте файл в формате изображения (JPEG, PNG или WebP).")
+            await message.answer(t("invalid_image_format", lang))
             return
         file_id = message.document.file_id
     else:
@@ -392,7 +381,7 @@ async def cb_skip_glasgow(callback: CallbackQuery, state: FSMContext) -> None:
     if not image_bytes:
         if callback.message:
             await callback.message.edit_text(
-                "⚠️ Сессия устарела. Пожалуйста, отправьте фото кожи заново.",
+                t("session_expired", lang),
                 parse_mode="Markdown",
             )
         return
@@ -433,7 +422,7 @@ async def cb_start_glasgow(callback: CallbackQuery, state: FSMContext) -> None:
     if not data.get("image_bytes"):
         if callback.message:
             await callback.message.edit_text(
-                "⚠️ Сессия устарела. Пожалуйста, отправьте фото кожи заново.",
+                t("session_expired", lang),
                 parse_mode="Markdown",
             )
         return
@@ -442,7 +431,13 @@ async def cb_start_glasgow(callback: CallbackQuery, state: FSMContext) -> None:
     await state.update_data(current_question_idx=0, glasgow_answers={})
 
     field_name, question_key = GLASGOW_QUESTIONS[0]
-    prompt_text = f"📋 **Шкала Глазго (Вопрос 1 из 7):**\n\n{t(question_key, lang)}"
+    prompt_text = t(
+        "glasgow_question_step",
+        lang,
+        current=1,
+        total=len(GLASGOW_QUESTIONS),
+        question=t(question_key, lang),
+    )
 
     if callback.message:
         try:
@@ -480,7 +475,7 @@ async def cb_answer_glasgow_question(callback: CallbackQuery, state: FSMContext)
     if not image_bytes:
         if callback.message:
             await callback.message.edit_text(
-                "⚠️ Сессия устарела. Пожалуйста, отправьте фото кожи заново.",
+                t("session_expired", lang),
                 parse_mode="Markdown",
             )
         return
@@ -521,15 +516,7 @@ async def cb_answer_glasgow_question(callback: CallbackQuery, state: FSMContext)
     # If all 7 Glasgow questions answered, offer fast De-Confounded Age Group step (FS-6)
     if next_idx >= len(GLASGOW_QUESTIONS):
         await state.update_data(glasgow_answers=answers)
-        age_prompt = (
-            "👤 **Демографический контекст (Шаг 1/2):**\nУкажите возрастную группу пациента:"
-            if lang == "ru"
-            else (
-                "👤 **인구통계 정보 (1/2):**\n연령대를 선택하세요:"
-                if lang == "ko"
-                else "👤 **Clinical Context (Step 1/2):**\nSelect approximate patient age group:"
-            )
-        )
+        age_prompt = t("age_step_prompt", lang)
         if callback.message:
             await callback.message.edit_text(
                 age_prompt,
@@ -542,7 +529,13 @@ async def cb_answer_glasgow_question(callback: CallbackQuery, state: FSMContext)
     await state.set_state(AnalysisStates.answering_glasgow)
     await state.update_data(current_question_idx=next_idx, glasgow_answers=answers)
     next_field, next_key = GLASGOW_QUESTIONS[next_idx]
-    prompt_text = f"📋 **Шкала Глазго (Вопрос {next_idx + 1} из 7):**\n\n{t(next_key, lang)}"
+    prompt_text = t(
+        "glasgow_question_step",
+        lang,
+        current=next_idx + 1,
+        total=len(GLASGOW_QUESTIONS),
+        question=t(next_key, lang),
+    )
 
     if callback.message:
         try:
@@ -573,15 +566,7 @@ async def cb_set_age_group(callback: CallbackQuery, state: FSMContext) -> None:
         answers["patient_age"] = int(val)
     await state.update_data(glasgow_answers=answers)
 
-    site_prompt = (
-        "📍 **Демографический контекст (Шаг 2/2):**\nУкажите анатомическую зону расположения очага:"
-        if lang == "ru"
-        else (
-            "📍 **인구통계 정보 (2/2):**\n병변 위치를 선택하세요:"
-            if lang == "ko"
-            else "📍 **Clinical Context (Step 2/2):**\nSelect anatomical lesion site:"
-        )
-    )
+    site_prompt = t("site_step_prompt", lang)
     if callback.message:
         await callback.message.edit_text(
             site_prompt,
@@ -610,7 +595,7 @@ async def cb_set_anatom_site(callback: CallbackQuery, state: FSMContext) -> None
     if not image_bytes:
         if callback.message:
             await callback.message.edit_text(
-                "⚠️ Сессия устарела. Пожалуйста, отправьте фото кожи заново.",
+                t("session_expired", lang),
                 parse_mode="Markdown",
             )
         return

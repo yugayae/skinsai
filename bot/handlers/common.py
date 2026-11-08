@@ -66,11 +66,9 @@ async def cmd_start(message: Message, state: FSMContext) -> None:
     user_id = message.from_user.id if message.from_user else 0
 
     if not is_user_allowed(user_id):
+        lang = get_user_lang(user_id)
         await message.answer(
-            f"🔒 **Режим закрытого пилотного тестирования**\n\n"
-            f"Бот SkinAI в настоящее время доступен только для участников закрытого врачебного тестирования.\n\n"
-            f"Ваш Telegram ID: `{user_id}`.\n"
-            f"Для запроса доступа передайте ваш ID координатору проекта.",
+            t("pilot_mode_restricted", lang, user_id=user_id),
             parse_mode="Markdown",
         )
         return

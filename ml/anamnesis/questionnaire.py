@@ -27,6 +27,9 @@ class TriageDecision(BaseModel):
     recommendation_en: str
     recommendation_ko: Optional[str] = None
     rationale: list[str] = Field(default_factory=list)
+    rationales_ru: list[str] = Field(default_factory=list)
+    rationales_en: list[str] = Field(default_factory=list)
+    rationales_ko: list[str] = Field(default_factory=list)
     referral_recommended: bool
     is_benign_observation: bool = False
     urgency_days: Optional[int] = None
@@ -223,10 +226,11 @@ class AnamnesisEngine:
         if thresholds:
             th.update(thresholds)
 
-        rationale = []
-
         # 1. Quality / Blurry Gate
         if is_blurry:
+            rat_ru = ["Низкая резкость (размытие кадра)"]
+            rat_en = ["Low image sharpness (excessive blur)"]
+            rat_ko = ["낮은 선명도 (과도한 흔들림 또는 흐림)"]
             return TriageDecision(
                 tier="inconclusive_quality",
                 triage_zone="yellow",
@@ -245,7 +249,10 @@ class AnamnesisEngine:
                     "선명도가 부족합니다. 밝은 자연광 아래에서 초점을 정확히 맞추고 다시 촬영하시거나 "
                     "의사와 직접 상담하세요."
                 ),
-                rationale=["Низкая резкость (размытие кадра)"],
+                rationale=rat_ru,
+                rationales_ru=rat_ru,
+                rationales_en=rat_en,
+                rationales_ko=rat_ko,
                 referral_recommended=False,
             )
 
@@ -276,14 +283,23 @@ class AnamnesisEngine:
         benign_p = image_probabilities.get("nev", 0.0) + image_probabilities.get("sek", 0.0)
 
         # 3. URGENT REFERRAL check (RED ZONE)
+        rat_ru = []
+        rat_en = []
+        rat_ko = []
         if glasgow_res and glasgow_res.is_high_risk:
-            rationale.append(f"Шкала Глазго: {glasgow_res.score} баллов (критический порог NICE NG12 >= 3)")
+            rat_ru.append(f"Шкала Глазго: {glasgow_res.score} баллов (критический порог NICE NG12 >= 3)")
+            rat_en.append(f"Glasgow checklist score: {glasgow_res.score} points (NICE NG12 threshold >= 3)")
+            rat_ko.append(f"글래스고 체크리스트: {glasgow_res.score}점 (NICE NG12 고위험 기준 >= 3점)")
         if mel_p >= th["mel_threshold"]:
-            rationale.append(f"Модельная оценка подозрения на меланому ({mel_p * 100:.1f}%)")
+            rat_ru.append(f"Модельная оценка подозрения на меланому ({mel_p * 100:.1f}%)")
+            rat_en.append(f"Model assessment of melanoma suspicion ({mel_p * 100:.1f}%)")
+            rat_ko.append(f"악성 흑색종 의심 모델 평가 ({mel_p * 100:.1f}%)")
         if scc_p >= th["scc_threshold"]:
-            rationale.append(f"Модельная оценка подозрения на плоскоклеточную карциному ({scc_p * 100:.1f}%)")
+            rat_ru.append(f"Модельная оценка подозрения на плоскоклеточную карциному ({scc_p * 100:.1f}%)")
+            rat_en.append(f"Model assessment of squamous cell carcinoma suspicion ({scc_p * 100:.1f}%)")
+            rat_ko.append(f"편평세포암종 의심 모델 평가 ({scc_p * 100:.1f}%)")
 
-        if rationale:
+        if rat_ru:
             return TriageDecision(
                 tier="urgent_referral",
                 triage_zone="red",
@@ -302,27 +318,44 @@ class AnamnesisEngine:
                     "피부과 또는 종양내과 전문의의 우선 대면 진찰 및 더모스코피 검사가 "
                     "필요한 임상적 또는 영상적 징후가 감지되었습니다."
                 ),
-                rationale=rationale,
+                rationale=rat_ru,
+                rationales_ru=rat_ru,
+                rationales_en=rat_en,
+                rationales_ko=rat_ko,
                 referral_recommended=True,
                 urgency_days=14,
             )
 
         # 4. ROUTINE CONSULTATION check (YELLOW / GREY ZONE — includes ACK pre-cancer routing)
-        routine_rationale = []
+        routine_ru = []
+        routine_en = []
+        routine_ko = []
         if bcc_p >= th["bcc_threshold"]:
-            routine_rationale.append(f"Подозрение на базальноклеточную карциному ({bcc_p * 100:.1f}%)")
+            routine_ru.append(f"Подозрение на базальноклеточную карциному ({bcc_p * 100:.1f}%)")
+            routine_en.append(f"Suspicion of basal cell carcinoma ({bcc_p * 100:.1f}%)")
+            routine_ko.append(f"기저세포암 의심 소견 ({bcc_p * 100:.1f}%)")
         if ack_p >= th["ack_threshold"]:
-            routine_rationale.append(f"Подозрение на предраковый актинический кератоз ({ack_p * 100:.1f}%)")
+            routine_ru.append(f"Подозрение на предраковый актинический кератоз ({ack_p * 100:.1f}%)")
+            routine_en.append(f"Suspicion of actinic keratosis pre-cancer ({ack_p * 100:.1f}%)")
+            routine_ko.append(f"광선각화증(전암병변) 의심 소견 ({ack_p * 100:.1f}%)")
         if glasgow_res and glasgow_res.score in (1, 2):
-            routine_rationale.append(f"Шкала Глазго: {glasgow_res.score} балл(а) (единичные симптомы)")
+            routine_ru.append(f"Шкала Глазго: {glasgow_res.score} балл(а) (единичные симптомы)")
+            routine_en.append(f"Glasgow checklist: {glasgow_res.score} point(s) (isolated features)")
+            routine_ko.append(f"글래스고 체크리스트: {glasgow_res.score}점 (단일 소견 관찰)")
         if is_skipped:
-            routine_rationale.append("Опросник анамнеза не заполнен")
+            routine_ru.append("Опросник анамнеза не заполнен")
+            routine_en.append("Clinical anamnesis questionnaire was skipped")
+            routine_ko.append("임상 문진 설문 건너뜀")
         if entropy is not None and entropy > th["entropy_limit"]:
-            routine_rationale.append("Повышенная неопределенность распределения вероятностей")
+            routine_ru.append("Повышенная неопределенность распределения вероятностей")
+            routine_en.append("Elevated prediction distribution entropy (model uncertainty)")
+            routine_ko.append("예측 확률 분포의 불확실성(엔트로피) 증가")
 
-        if routine_rationale or benign_p < th["benign_confidence"]:
-            if not routine_rationale:
-                routine_rationale.append("Недостаточная уверенность модели в доброкачественности")
+        if routine_ru or benign_p < th["benign_confidence"]:
+            if not routine_ru:
+                routine_ru.append("Недостаточная уверенность модели в доброкачественности")
+                routine_en.append("Insufficient model confidence for purely benign classification")
+                routine_ko.append("양성 병변 판정을 위한 모델 신뢰도 부족")
             return TriageDecision(
                 tier="routine_consultation",
                 triage_zone="yellow",
@@ -340,12 +373,27 @@ class AnamnesisEngine:
                 recommendation_ko=(
                     "정확한 감별 진단을 위해 피부과 전문의와의 정기 대면 상담을 권장합니다."
                 ),
-                rationale=routine_rationale,
+                rationale=routine_ru,
+                rationales_ru=routine_ru,
+                rationales_en=routine_en,
+                rationales_ko=routine_ko,
                 referral_recommended=False,
                 urgency_days=30,
             )
 
         # 5. NO HIGH RISK DETECTED (GREEN ZONE — Strict conjunction only)
+        green_ru = [
+            "Опросник Глазго: 0 баллов (симптомы эволюции отсутствуют)",
+            f"Высокая модельная оценка доброкачественности ({benign_p * 100:.1f}%)",
+        ]
+        green_en = [
+            "Glasgow score: 0 points (no alarming evolutionary signs)",
+            f"High model confidence for benign lesion ({benign_p * 100:.1f}%)",
+        ]
+        green_ko = [
+            "글래스고 점수: 0점 (의심스러운 변화 징후 없음)",
+            f"양성 병변에 대한 높은 모델 신뢰도 ({benign_p * 100:.1f}%)",
+        ]
         return TriageDecision(
             tier="self_monitoring",
             triage_zone="green",
@@ -368,10 +416,10 @@ class AnamnesisEngine:
                 "⚠️ 주의: 스마트폰 사진을 통한 자동 분석은 질환을 완전히 배제하지 못하며 "
                 "의사의 대면 진료를 대신할 수 없습니다. 크기나 형태 변화 시 피부과를 방문하세요."
             ),
-            rationale=[
-                "Опросник Глазго: 0 баллов (симптомы эволюции отсутствуют)",
-                f"Высокая модельная оценка доброкачественности ({benign_p * 100:.1f}%)",
-            ],
+            rationale=green_ru,
+            rationales_ru=green_ru,
+            rationales_en=green_en,
+            rationales_ko=green_ko,
             referral_recommended=False,
             is_benign_observation=True,
         )

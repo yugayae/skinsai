@@ -112,7 +112,7 @@ def get_analysis_result_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
 
 def get_age_group_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
     """De-Confounded demographic age group selector (FS-6)."""
-    skip_lbl = "Пропустить" if lang == "ru" else ("건너뛰기" if lang == "ko" else "Skip")
+    skip_lbl = t("btn_skip", lang)
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
@@ -129,30 +129,11 @@ def get_age_group_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
 
 def get_anatom_site_keyboard(lang: str = "ru") -> InlineKeyboardMarkup:
     """De-Confounded anatomical lesion site selector (FS-6)."""
-    if lang == "ru":
-        lbl_head, lbl_trunk, lbl_upper, lbl_lower, lbl_skip = (
-            "Голова / Шея",
-            "Туловище",
-            "Верхние конечности",
-            "Нижние конечности",
-            "Пропустить",
-        )
-    elif lang == "ko":
-        lbl_head, lbl_trunk, lbl_upper, lbl_lower, lbl_skip = (
-            "머리 / 목",
-            "몸통",
-            "팔 / 손",
-            "다리 / 발",
-            "건너뛰기",
-        )
-    else:
-        lbl_head, lbl_trunk, lbl_upper, lbl_lower, lbl_skip = (
-            "Head / Neck",
-            "Trunk",
-            "Upper Extremity",
-            "Lower Extremity",
-            "Skip",
-        )
+    lbl_head = t("site_head_neck", lang)
+    lbl_trunk = t("site_trunk", lang)
+    lbl_upper = t("site_upper_extremity", lang)
+    lbl_lower = t("site_lower_extremity", lang)
+    lbl_skip = t("btn_skip", lang)
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
